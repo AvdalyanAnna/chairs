@@ -8,7 +8,7 @@
 //@import "default/variables";
 //@import "default/mixins";
 @import "default/reset";
-//@import "default/typography";
+@import "default/typography";
 //@import "default/shortcode";
 //@import "default/spacing";
 //@import "default/edu-common";
@@ -83,6 +83,9 @@ input, select {
     color: #fc6519;
   }
 }
+.text-center{
+  text-align: center;
+}
 /**************************************
              Layout Styles
 ***************************************/
@@ -92,5 +95,6 @@ input, select {
 /**************************************
              Blocks Styles
 ***************************************/
+@import "blocks/advantages";
 @import "blocks/blog";
 @import "blocks/subscribe";
