@@ -1,0 +1,53 @@
+/**************************************
+             Default Styles
+***************************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;500;600;700&display=swap');
+//////@import "vendor/bootstrap";
+//
+//@import "default/variables";
+//@import "default/mixins";
+@import "default/reset";
+//@import "default/typography";
+//@import "default/shortcode";
+//@import "default/spacing";
+//@import "default/edu-common";
+//@import "default/forms";
+//@import "default/text-animation";
+//
+
+body{
+  font-family: "Montserrat", Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
+.wrapper{
+  max-width: 1245px;
+  width: 100%;
+    margin: 0 auto;
+  padding: 0 15px;
+}
+
+input,select{
+  background: #fff;
+  border: 1px solid #d6d6d6;
+  color: #343434;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 9px 8px;
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/**************************************
+             Layout Styles
+***************************************/
+@import "layout/header";
