@@ -1086,8 +1086,58 @@ select {
   background: #c98d9f;
 }
 
+.reviews {
+  margin: 58px 0 50px;
+}
+
+.reviews-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #F6F6F6;
+  padding: 32px 130px 35px 58px;
+}
+
+.reviews-left {
+  max-width: 499px;
+  width: 100%;
+}
+
+.reviews-right {
+  max-width: 440px;
+  width: 100%;
+}
+
+.reviews-right iframe {
+  max-width: 440px;
+  width: 100%;
+  min-height: 393px;
+  font-size: 10px;
+}
+
+.reviews-title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 39px;
+  color: #000000;
+  margin-bottom: 24px;
+  margin-top: -10px;
+}
+
+.reviews-desc {
+  font-size: 20px;
+  line-height: 28px;
+  color: #000000;
+}
+
 .advantages {
-  padding: 40px 0;
+  padding: 40px 0 5px;
 }
 
 .advantages-title {
