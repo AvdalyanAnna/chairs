@@ -38,6 +38,23 @@
         margin-right: 14px;
       }
     }
+    &__title{
+      display: block;
+      padding: 0 0 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #333436;
+      font-size: 12.7px;
+    }
+    &__menu{
+      &-link{
+        color: #fc6519;
+        display: block;
+        margin-bottom: 7px;
+        font-size: 13px;
+        line-height: 1;
+      }
+    }
   }
 
   &-bottom {

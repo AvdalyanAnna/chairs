@@ -740,6 +740,23 @@ select {
   margin-right: 14px;
 }
 
+.footer-top__title {
+  display: block;
+  padding: 0 0 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #333436;
+  font-size: 12.7px;
+}
+
+.footer-top__menu-link {
+  color: #fc6519;
+  display: block;
+  margin-bottom: 7px;
+  font-size: 13px;
+  line-height: 1;
+}
+
 .footer-bottom {
   text-align: center;
   border-top: 1px solid #818181;
