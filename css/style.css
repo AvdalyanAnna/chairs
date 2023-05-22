@@ -363,6 +363,14 @@ a {
   color: inherit;
 }
 
+h2,
+.h2 {
+  font-size: 23px;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 28px;
+}
+
 body {
   font-family: "Montserrat", Verdana, Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -447,6 +455,10 @@ select {
 
 .section-more {
   color: #fc6519;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /**************************************
@@ -883,6 +895,52 @@ select {
 /**************************************
              Blocks Styles
 ***************************************/
+
+.advantages {
+  padding: 40px 0;
+}
+
+.advantages-title {
+  margin: 0 0 40px;
+}
+
+.advantages-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.advantages-item {
+  max-width: 292px;
+  width: 100%;
+  text-align: center;
+}
+
+.advantages-item img {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 16px;
+}
+
+.advantages-item__title {
+  font-size: 20px;
+  line-height: 30px;
+  color: #EA6E34;
+  margin-bottom: 16px;
+}
+
+.advantages-item__desc {
+  max-width: 182px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #000000;
+}
 
 .blog {
   background: #f6f6f6;
