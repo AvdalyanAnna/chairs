@@ -975,6 +975,117 @@ select {
   grid-row: 1/2;
 }
 
+.products {
+  margin: 58px 0 50px;
+}
+
+.products-title {
+  font-size: 26px;
+  margin-bottom: 28px;
+}
+
+.products-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  border-left: 1px solid #f2f2f0;
+}
+
+.products-item {
+  max-width: 25%;
+  width: 100%;
+  position: relative;
+  letter-spacing: normal;
+  border: 1px solid #f2f2f0;
+  border-left: 0;
+  padding: 0 20px 0 15px;
+  text-align: center;
+}
+
+.products-item__status {
+  margin-bottom: 3px;
+  display: block;
+  vertical-align: top;
+  white-space: nowrap;
+  padding: 5px 15px;
+  font-size: 7px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  z-index: 1;
+}
+
+.products-item__statuses {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+}
+
+.products-item__status.success {
+  background: #A7C248;
+}
+
+.products-item__status.red {
+  background: #ea3d3d;
+}
+
+.products-item__img {
+  max-width: 140px;
+  width: 100%;
+  margin: 30px auto 18px;
+}
+
+.products-item__img img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.products-item__title {
+  border-bottom: 1px solid transparent;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #a38c76;
+  font-size: 12px;
+  line-height: 1.8;
+  height: 45px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.products-item__price {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.products-item__price span.old-price {
+  font-size: 17px;
+  line-height: 14px;
+  font-style: italic;
+  color: #868686;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+}
+
+.products-item__price span.old-price::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 47%;
+  width: 100%;
+  height: 1px;
+  background: #c98d9f;
+}
+
 .advantages {
   padding: 40px 0;
 }
