@@ -1,0 +1,173 @@
+.footer {
+  background: #e8e8e8;
+  padding: 50px 0 55px;
+
+  ul {
+    list-style: none;
+  }
+
+  &-logo {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: rebeccapurple;
+    font-size: 19px;
+    margin-bottom: 25px;
+
+    img {
+      max-width: 154px;
+      max-height: 50px;
+      width: 100%;
+    }
+  }
+
+  &-top {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin-bottom: 8px;
+    }
+
+    &__item {
+      width: 20%;
+
+      &:nth-last-child(1) {
+        max-width: 200px;
+        margin-right: 14px;
+      }
+    }
+  }
+
+  &-bottom {
+    text-align: center;
+    border-top: 1px solid #818181;
+    font-style: italic;
+    font-weight: 300;
+    color: rgba(52, 52, 52, 0.75);
+    font-size: 12px;
+  }
+
+  &-info {
+    color: rgba(52, 52, 52, .75);
+    font-weight: 300;
+    font-size: 10.5px;
+    padding-bottom: 2px;
+    line-height: 1.8;
+
+    &-p {
+      font-size: 13.5px;
+    }
+
+    &__list {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0;
+      margin-top: -3px;
+
+    }
+
+    &__item {
+      margin-right: 8px;
+
+      img {
+        height: 16px;
+      }
+    }
+  }
+
+  &-phone {
+    text-align: center;
+
+    a {
+      font-size: 19px;
+      color: #fc6519;
+    }
+
+    button {
+      max-width: 194px;
+      width: 100%;
+      height: 30px;
+      padding: 4px 0 0 0;
+      text-align: center;
+      border: none;
+      background: transparent;
+      transition: all .3s ease-in-out;
+      font-size: 14px;
+
+      &:hover {
+        background: #ff742e;
+        color: #fff;
+        box-shadow: 0 5px 30px -10px #ff742e;
+      }
+    }
+  }
+
+  &-email {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    margin-left: 20px;
+    color: #fc6519;
+  }
+
+  &-address {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rebeccapurple;
+    margin-left: 20px;
+    margin-top: 6px;
+  }
+
+  &-yandex-market {
+    margin-top: 4px;
+    margin-left: 20px;
+    display: block;
+
+    img {
+      max-height: 17px;
+    }
+  }
+
+  &-social {
+    &s {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-left: 20px;
+      margin-top: 19px;
+      margin-bottom: 0;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #2c2c2c;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      background: #2c2c2c;
+      border-color: #2c2c2c;
+
+      svg {
+        fill: #fff;
+      }
+    }
+
+    svg {
+      width: 20px;
+      transition: all .3s ease-in-out;
+      height: 20px;
+
+    }
+
+    &:not(:nth-last-child(1)) {
+      margin-right: 8px;
+    }
+  }
+}

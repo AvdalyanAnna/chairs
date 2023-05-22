@@ -17,21 +17,28 @@
 //@import "default/text-animation";
 //
 
-body{
+body {
   font-family: "Montserrat", Verdana, Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 23px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.wrapper{
+main {
+  flex: 1;
+}
+
+.wrapper {
   max-width: 1245px;
   width: 100%;
-    margin: 0 auto;
+  margin: 0 auto;
   padding: 0 15px;
 }
 
-input,select{
+input, select {
   background: #fff;
   border: 1px solid #d6d6d6;
   color: #343434;
@@ -51,3 +58,4 @@ input,select{
              Layout Styles
 ***************************************/
 @import "layout/header";
+@import "layout/footer";
