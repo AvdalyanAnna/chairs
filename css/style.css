@@ -391,10 +391,17 @@ main {
   padding: 0 15px;
 }
 
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
 input,
 select {
   background: #fff;
   border: 1px solid #d6d6d6;
+  outline: none;
   color: #343434;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -837,4 +844,73 @@ select {
 
 .footer-social:not(:nth-last-child(1)) {
   margin-right: 8px;
+}
+
+/**************************************
+             Blocks Styles
+***************************************/
+
+.subscribe {
+  padding: 20px 0;
+}
+
+.subscribe-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.subscribe-form__text {
+  color: #343434;
+  text-transform: uppercase;
+  display: block;
+  padding: 0 0 3px;
+  letter-spacing: 1px;
+  line-height: 13px;
+  font-size: 12.6px;
+}
+
+.subscribe-form__input {
+  max-width: 383px;
+  width: 100%;
+  position: relative;
+}
+
+.subscribe-form__input input {
+  width: 100%;
+  height: 40px;
+  -webkit-box-shadow: 0px 0px 22px -3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 22px -3px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 13px 23px;
+}
+
+.subscribe-form__input button {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  z-index: 2;
+  fill: #fc6519;
+}
+
+.subscribe-info {
+  text-align: center;
+  font-size: 12px;
+  padding-left: 55px;
 }
