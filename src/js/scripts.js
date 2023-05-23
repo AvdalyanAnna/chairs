@@ -1,12 +1,19 @@
 // Custom Scripts
 // @@include('main.js')
-@@include('./libs/jquery-3.6.0.js')
 @@include('./libs/swiper.js')
-@@include('./libs/aos.js')
-AOS.init({
-    once:true,
-    duration: 800,
-    // disable: 'mobile'
+var homeSwiper = new Swiper(".home-slider__inner .homeSwiper", {
+    loop: true,
+    navigation: {
+        nextEl: ".home-slider__inner .swiper-button-next",
+        prevEl: ".home-slider__inner .swiper-button-prev",
+    },
+    pagination: {
+        el: ".home-slider__inner .swiper-pagination",
+    },
 });
 
 
+const homePagination = document.querySelectorAll('.home-slider__inner .swiper-pagination-bullet');
+for (let i = 0; i < homePagination.length; i++) {
+    homePagination[i].addEventListener('click', () => homeSwiper.slideTo(i))
+}

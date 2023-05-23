@@ -86,6 +86,9 @@ input, select {
 .text-center{
   text-align: center;
 }
+
+@import "libs/swiper";
+
 /**************************************
              Layout Styles
 ***************************************/
@@ -95,6 +98,7 @@ input, select {
 /**************************************
              Blocks Styles
 ***************************************/
+@import "blocks/homeSlider";
 @import "blocks/categories";
 @import "blocks/products";
 @import "blocks/reviews";
