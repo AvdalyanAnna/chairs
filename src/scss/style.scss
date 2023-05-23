@@ -89,6 +89,15 @@ input, select {
 
 @import "libs/swiper";
 
+:root{
+  --swiper-navigation-sides-offset:25px;
+  --swiper-pagination-bullet-height:12px;
+  --swiper-pagination-bullet-width:12px;
+  --swiper-pagination-bullet-horizontal-gap:8px;
+  --swiper-pagination-color: #EA6E34;
+  --transition:all .3s ease-in-out;
+}
+
 /**************************************
              Layout Styles
 ***************************************/
@@ -103,5 +112,6 @@ input, select {
 @import "blocks/products";
 @import "blocks/reviews";
 @import "blocks/advantages";
+@import "blocks/youtubeSlider";
 @import "blocks/blog";
 @import "blocks/subscribe";
