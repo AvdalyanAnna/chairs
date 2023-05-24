@@ -46,6 +46,14 @@
     overflow: hidden;
     padding: 0;
     border-radius: 8px;
+    img{
+        transition: var(--transition);
+    }
+    &:hover{
+      img {
+        opacity: 0.5;
+      }
+    }
     &-1{
       grid-column: 1/2;
       grid-row: 1/2;

@@ -13,6 +13,12 @@
   margin: 0 10px;
   border-radius: 8px;
   text-align: center;
+  cursor: pointer;
+  &:hover{
+    img{
+        opacity: 0.5;
+    }
+  }
 }
 &-img{
   display: flex;
@@ -39,11 +45,15 @@
   display: block;
   height: 55px;
   overflow: hidden;
-  margin-bottom: -8px;
   font-size: 16px;
   line-height: 26px;
   font-family: 'Montserrat', Georgia, serif;
   font-weight: 700;
+  transition: var(--transition);
+  &:hover{
+    color: #FC6519;
+    text-decoration: underline;
+  }
 }
 &-desc{
   height: 48px;

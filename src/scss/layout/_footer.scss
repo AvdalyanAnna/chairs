@@ -11,7 +11,7 @@
     flex-direction: column;
     font-family: Arial, sans-serif;
     font-weight: bold;
-    color: rebeccapurple;
+    color: #343434;
     font-size: 19px;
     margin-bottom: 25px;
 
@@ -53,6 +53,25 @@
         margin-bottom: 7px;
         font-size: 13px;
         line-height: 1;
+        transition: var(--transition);
+        position: relative;
+        width: fit-content;
+        &:hover{
+          color: #fc6519;
+          &::before{
+            width: 100%;
+          }
+        }
+        &::before{
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 1px;
+          transition: var(--transition);
+          background: #FC6519;
+        }
       }
     }
   }
@@ -128,12 +147,15 @@
     font-size: 16px;
     margin-left: 20px;
     color: #fc6519;
+    transition: var(--transition);
+    &:hover{
+      color: #fc6519;
+    }
   }
 
   &-address {
     font-size: 14px;
     line-height: 1.5;
-    color: rebeccapurple;
     margin-left: 20px;
     margin-top: 6px;
   }
