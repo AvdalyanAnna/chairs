@@ -31,6 +31,7 @@
     cursor: pointer;
     img{
       transition: var(--transition);
+      z-index: -1;
     }
     &:hover{
       img{
