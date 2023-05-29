@@ -3822,16 +3822,8 @@ swiper-container .swiper-notification {
   text-decoration: underline;
 }
 
-body {
-  position: relative;
-}
-
-.fix {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 7;
-  display: none;
+@media screen and (max-width: 1800px) {
+  .header-actions__item-content {
+    margin-left: -41vw;
+  }
 }

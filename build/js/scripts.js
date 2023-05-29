@@ -123,11 +123,6 @@ $(document).on('click', function (e) {
         $('.header-actions__item-inner').removeClass('active')
         $('.header-call__button-content').toggle()
         $('.header-call__button-content').toggleClass('active')
-        if ($('.header-call__button-content').has('active')) {
-            $('.fix').show()
-        } else {
-            $('.fix').hide()
-        }
     } else if (e.target.classList.contains('header-actions__item-inner-1') || e.target.classList.contains('header-actions__item-inner-svg-1') ) {
         $('.header-actions__item-content.account-popup-shadow').hide()
          $('.header-actions__item-inner').removeClass('active')
@@ -135,11 +130,9 @@ $(document).on('click', function (e) {
         $('.header-actions__item-inner').removeClass('active')
         $('.header-actions__item-content-1.account-popup-shadow').toggle()
         $('.header-actions__item-content-1.account-popup-shadow').toggleClass('active')
-        if ($('.header-actions__item-content-1.account-popup-shadow').has('active')) {
-            $('.fix').show()
-        } else {
-            $('.fix').hide()
-        }
+        $('.header-actions__item-inner-1').toggleClass('active')
+
+
     } else if (e.target.classList.contains('header-actions__item-inner-2') || e.target.classList.contains('header-actions__item-inner-svg-2') ) {
         $('.header-actions__item-content.account-popup-shadow').hide()
          $('.header-actions__item-inner').removeClass('active')
@@ -147,17 +140,14 @@ $(document).on('click', function (e) {
         $('.header-actions__item-inner').removeClass('active')
         $('.header-actions__item-content-2.account-popup-shadow').toggle()
         $('.header-actions__item-content-2.account-popup-shadow').toggleClass('active')
-        if ($('.header-actions__item-content-2.account-popup-shadow').has('active')) {
-            $('.fix').show()
-        } else {
-            $('.fix').hide()
-        }
+        $('.header-actions__item-inner-2').toggleClass('active')
+
     } else {
         $('.header-actions__item-content.account-popup-shadow').hide()
         $('.header-actions__item-inner').removeClass('active')
         $('.header-call__button-content').hide()
         $('.header-call__button-content').removeClass('active')
-        $('.fix').hide()
+
     }
 
 })
