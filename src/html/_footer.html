@@ -97,4 +97,70 @@
 
     </div>
 </footer>
+<button id="scroll-to-top" class="scroll-to-top js-stt   ">
+    <svg class="icon-chevron-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"/>
+    </svg>
+</button>
+
+<div class="modal modal-bag" id="modal-bag">
+    <div class="modal__container modal-bag__container">
+        <div class="cart-popup__top">
+            <span class="close cart-popup__close js-cart-close">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                  <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+              </svg>
+            </span>
+            <span class="cart-popup__title js-cart-title">
+                <span class="js-cart-items">Корзина (0)</span>
+            </span>
+        </div>
+        <div class="cart-popup_bottom js-cart-bottom">
+            <div class="scroll-container">
+                <span class="cart-popup__discount">Ваша корзина пуста!</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal modal-city" id="modal-city">
+    <div class="modal__container modal-city__container">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+                <span>×</span>
+            </button>
+            <h4 class="modal-title">Выберите город</h4>
+        </div>
+        <div class="modal-body">
+            <div class="prmn-cmngr-cities__search-block form-inline">
+                <div class="form-group">
+                    <label class="prmn-cmngr-cities__search-label">Поиск:</label>
+                    <input class="prmn-cmngr-cities__search form-control" type="text"
+                           placeholder="Введите название города" autocomplete="off">
+                    <ul class="dropdown-menu" style="max-height: 300px; overflow: hidden auto;"></ul>
+                </div>
+            </div>
+            <div class="prmn-cmngr-cities__search-list">
+                <div class="prmn-cmngr-cities__search-item">
+                    <span class="prmn-cmngr-cities__city-name" data-id="4759">Владимир</span>
+                </div>
+                <div class="prmn-cmngr-cities__search-item">
+                    <span class="prmn-cmngr-cities__city-name" data-id="3145">Воронеж</span>
+                </div>
+                <div class="prmn-cmngr-cities__search-item">
+                    <span class="prmn-cmngr-cities__city-name" data-id="2749"> Липецк</span>
+                </div>
+                <div class="prmn-cmngr-cities__search-item">
+                    <span class="prmn-cmngr-cities__city-name" data-id="41"> Москва</span>
+                </div>
+                <div class="prmn-cmngr-cities__search-item">
+                    <span class="prmn-cmngr-cities__city-name" data-id="2990">Нижний Новгород</span>
+                </div>
+                <div class="prmn-cmngr-cities__search-item">
+                    <span class="prmn-cmngr-cities__city-name" data-id="86">Санкт-Петербург</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!--  Footer end -->
+<div class="fix footer-fix"></div>

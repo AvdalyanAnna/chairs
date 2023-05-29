@@ -1,6 +1,8 @@
 .home-slider{
   border-bottom: 1px solid #f3f3f3;
  &__inner{
+   border-radius: 20px;
+   overflow: hidden;
    margin: 21px 7px 16px;
    .swiper-pagination{
      position: relative;
@@ -43,7 +45,7 @@
     margin-bottom: 40px;
   }
   &__tag{
-    max-width: 188px;
+    max-width: 195px;
     width: 100%;
     padding: 12px;
     background: #FFFFFF;

@@ -210,3 +210,24 @@
     }
   }
 }
+
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  background: rgba(20, 25, 30, 0.5);
+  text-align: center;
+  line-height: 0;
+  cursor: pointer;
+  transition: all .2s ease;
+  z-index: 100;
+  display: none;
+  padding-top: 10px;
+  svg {
+    fill: #fff;
+    width: 10px;
+    height: 10px;
+  }
+}
