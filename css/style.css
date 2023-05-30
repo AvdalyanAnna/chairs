@@ -2728,11 +2728,15 @@ swiper-container .swiper-notification {
   margin-top: 20px;
 }
 
+.home-slider__inner .swiper {
+  border-radius: 20px;
+  background: #eb6e34;
+}
+
 .home-slider__item {
   position: relative;
   min-height: 360px;
   padding: 50px 100px;
-  border-radius: 20px;
   overflow: hidden;
   background: #EA6E34;
 }
