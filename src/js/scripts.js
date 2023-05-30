@@ -111,9 +111,20 @@ $(document).on('click', function (e) {
          $('.header-actions__item-inner').removeClass('active')
         $('.header-call__button-content').hide()
         $('.header-actions__item-inner').removeClass('active')
-        $('.header-actions__item-content-1.account-popup-shadow').toggle()
-        $('.header-actions__item-content-1.account-popup-shadow').toggleClass('active')
-        $('.header-actions__item-inner-1').toggleClass('active')
+        console.log($('.header-actions__item-content-1.account-popup-shadow'))
+        if( $('.header-actions__item-content-1.account-popup-shadow').hasClass('active')){
+            $('.header-actions__item-content-1.account-popup-shadow').hide()
+            $('.header-actions__item-content-1.account-popup-shadow').removeClass('active')
+            $('.header-actions__item-inner-1').removeClass('active')
+        }else{
+            $('.header-actions__item-content-1.account-popup-shadow').show()
+            $('.header-actions__item-content-1.account-popup-shadow').addClass('active')
+            $('.header-actions__item-inner-1').addClass('active')
+
+        }
+        // $('.header-actions__item-content-1.account-popup-shadow').toggle()
+        // $('.header-actions__item-content-1.account-popup-shadow').toggleClass('active')
+        // $('.header-actions__item-inner-1').toggleClass('active')
 
 
     } else if (e.target.classList.contains('header-actions__item-inner-2') || e.target.classList.contains('header-actions__item-inner-svg-2') ) {
@@ -121,9 +132,16 @@ $(document).on('click', function (e) {
          $('.header-actions__item-inner').removeClass('active')
         $('.header-call__button-content').hide()
         $('.header-actions__item-inner').removeClass('active')
-        $('.header-actions__item-content-2.account-popup-shadow').toggle()
-        $('.header-actions__item-content-2.account-popup-shadow').toggleClass('active')
-        $('.header-actions__item-inner-2').toggleClass('active')
+        if( $('.header-actions__item-content-2.account-popup-shadow').hasClass('active')){
+            $('.header-actions__item-content-2.account-popup-shadow').hide()
+            $('.header-actions__item-content-2.account-popup-shadow').removeClass('active')
+            $('.header-actions__item-inner-2').removeClass('active')
+        }else{
+            $('.header-actions__item-content-2.account-popup-shadow').show()
+            $('.header-actions__item-content-2.account-popup-shadow').addClass('active')
+            $('.header-actions__item-inner-2').addClass('active')
+
+        }
 
     } else {
         $('.header-actions__item-content.account-popup-shadow').hide()
