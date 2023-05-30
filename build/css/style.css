@@ -549,6 +549,10 @@ button {
   outline: none;
 }
 
+input {
+  outline: none;
+}
+
 input,
 textarea,
 select {
@@ -3825,6 +3829,8 @@ swiper-container .swiper-notification {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-height: 200px;
+  overflow: auto;
 }
 
 .prmn-cmngr-cities__search-item {
@@ -3844,6 +3850,10 @@ swiper-container .swiper-notification {
 
 .prmn-cmngr-cities__search-item .prmn-cmngr-cities__city-name:hover {
   text-decoration: underline;
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (max-width: 1800px) {

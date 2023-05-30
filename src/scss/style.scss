@@ -43,7 +43,10 @@ button {
   border: none;
   outline: none;
 }
+input{
+  outline: none;
 
+}
 input, textarea, select {
   background: #fff;
   border: 1px solid #d6d6d6;
@@ -557,6 +560,7 @@ input, textarea, select {
 
 .prmn-cmngr-cities {
   &__search {
+
     &-block {
       margin-bottom: 15px;
     }
@@ -569,6 +573,8 @@ input, textarea, select {
     &-list {
       display: flex;
       flex-wrap: wrap;
+      max-height: 200px;
+      overflow: auto;
     }
 
     &-item {
@@ -588,4 +594,7 @@ input, textarea, select {
       }
     }
   }
+}
+.hidden{
+  display: none;
 }
