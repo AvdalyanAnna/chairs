@@ -91,6 +91,40 @@ $(document).ready(function () {
     $('.header-top__city-pop__btn').on('click', function () {
         $('.header-top__city-pop').hide()
     })
+    function getCities(){
+       let cities =  $('#cities').text()
+        cities = JSON.parse(cities)
+        let html = ``
+        cities.forEach(item=>{
+            html += `<div class="prmn-cmngr-cities__search-item">
+                    <span class="prmn-cmngr-cities__city-name">${item.city}</span>
+                </div>`
+        })
+        if(html === '') html = '<p class="footer-info"> пусто </p>'
+
+        $('.prmn-cmngr-cities__search-list').html(html)
+
+    }
+    getCities()
+
+    $('.prmn-cmngr-cities__search.form-control').on('input',function(){
+        const search = $(this).val()
+        let cities =  $('#cities').text()
+        cities = JSON.parse(cities)
+        let html = ``
+        cities.forEach(item=>{
+            let test = item.city.toUpperCase()
+                if(item.city.toUpperCase().search(`${search.toUpperCase()}`) !== -1){
+                    html += `<div class="prmn-cmngr-cities__search-item">
+                    <span class="prmn-cmngr-cities__city-name">${item.city}</span>
+                </div>`
+            }
+
+        })
+        if(html === '') html = '<p class="footer-info"> пусто </p>'
+        $('.prmn-cmngr-cities__search-list').html(html)
+
+    })
 })
 
 $(document).on('click', function (e) {
