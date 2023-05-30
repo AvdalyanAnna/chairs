@@ -2063,6 +2063,7 @@ swiper-container .swiper-notification {
   -o-transition: var(--transition);
   transition: var(--transition);
   position: relative;
+  fill: #000;
 }
 
 .header-actions__item:not(:nth-last-child(1)) {

@@ -320,7 +320,7 @@
       width: 24px;
       transition: var(--transition);
       position: relative;
-
+      fill: #000;
       &:not(:nth-last-child(1)) {
         margin-right: 7px;
       }
