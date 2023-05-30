@@ -80,7 +80,7 @@ $(document).ready(function () {
         let html = ``
         cities.forEach(item=>{
             html += `<div class="prmn-cmngr-cities__search-item">
-                    <span class="prmn-cmngr-cities__city-name">${item.city}</span>
+                                        <a href="#" class="prmn-cmngr-cities__city-name">${item.city}</a>
                 </div>`
         })
         if(html === '') html = '<p class="footer-info"> пусто </p>'
@@ -99,7 +99,7 @@ $(document).ready(function () {
             let test = item.city.toUpperCase()
                 if(item.city.toUpperCase().search(`${search.toUpperCase()}`) !== -1){
                     html += `<div class="prmn-cmngr-cities__search-item">
-                    <span class="prmn-cmngr-cities__city-name">${item.city}</span>
+                    <a href="#" class="prmn-cmngr-cities__city-name">${item.city}</a>
                 </div>`
             }
 
