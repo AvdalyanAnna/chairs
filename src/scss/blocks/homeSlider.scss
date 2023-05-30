@@ -8,12 +8,18 @@
      position: relative;
      margin-top: 20px;
    }
+   .swiper {
+     border-radius: 20px;
+background: #eb6e34;
+   }
+
+
  }
+  //.swiper-slide home-slider__item swiper-slide-active
   &__item{
     position: relative;
     min-height: 360px;
     padding: 50px 100px;
-    border-radius: 20px;
     overflow: hidden;
     background: #EA6E34;
   }
