@@ -1,9 +1,15 @@
 .footer {
   background: #e8e8e8;
   padding: 25px 0;
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
+  }
 
   ul {
     list-style: none;
+    @media screen and (max-width: 767px) {
+      margin: 0;
+    }
   }
 
   &-logo {
@@ -28,26 +34,87 @@
       justify-content: space-between;
       padding: 0;
       margin-bottom: 8px;
+      @media screen and (max-width: 767px) {
+        flex-direction: column-reverse;
+      }
     }
 
     &__item {
       width: 20%;
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
 
       &:nth-last-child(1) {
         max-width: 200px;
         margin-right: 14px;
+        @media screen and (max-width: 767px) {
+          max-width: 100%;
+          margin: 0;
+          text-align: center;
+        }
+      }
+
+      &-1 {
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
       }
     }
-    &__title{
+
+    &__title {
       display: block;
-      padding: 0 0 18px;
+      margin: 0 0 18px;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: #333436;
       font-size: 12.7px;
+      position: relative;
+      transition: 0.2s ease-in-out;
+
+      &.active {
+        color: #FC6519;
+
+        span {
+          fill: #FC6519;
+          transform: translateY(-50%) rotate(180deg);
+        }
+      }
+
+      span {
+        display: none;
+        transition: 0.2s ease-in-out;
+        @media screen and (max-width: 767px) {
+          display: block;
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          fill: #343434;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+
+        }
+
+
+      }
+
+      @media screen and (max-width: 767px) {
+        font-size: 15px;
+        margin-top: 10px;
+        text-align: center;
+      }
     }
-    &__menu{
-      &-link{
+
+    &__menu {
+      @media screen and (max-width: 767px) {
+        display: none;
+        text-align: center;
+      }
+
+      &-link {
         color: #fc6519;
         display: block;
         margin-bottom: 7px;
@@ -56,13 +123,16 @@
         transition: var(--transition);
         position: relative;
         width: fit-content;
-        &:hover{
+
+        &:hover {
           color: #fc6519;
-          &::before{
+
+          &::before {
             width: 100%;
           }
         }
-        &::before{
+
+        &::before {
           content: '';
           position: absolute;
           bottom: 0;
@@ -71,6 +141,13 @@
           height: 1px;
           transition: var(--transition);
           background: #FC6519;
+          @media screen and (max-width: 767px) {
+            content: unset;
+          }
+        }
+
+        @media screen and (max-width: 767px) {
+          width: 100%;
         }
       }
     }
@@ -116,10 +193,16 @@
 
   &-phone {
     text-align: center;
+    @media screen and (max-width: 767px) {
+      order: 3;
+    }
 
     a {
       font-size: 19px;
       color: #fc6519;
+      @media screen and (max-width: 767px) {
+        font-size: 24px;
+      }
     }
 
     button {
@@ -138,6 +221,10 @@
         color: #fff;
         box-shadow: 0 5px 30px -10px #ff742e;
       }
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
     }
   }
 
@@ -148,8 +235,14 @@
     margin-left: 20px;
     color: #fc6519;
     transition: var(--transition);
-    &:hover{
+
+    &:hover {
       color: #fc6519;
+    }
+
+    @media screen and (max-width: 767px) {
+      order: 4;
+      font-size: 20px;
     }
   }
 
@@ -158,6 +251,10 @@
     line-height: 1.5;
     margin-left: 20px;
     margin-top: 6px;
+    @media screen and (max-width: 767px) {
+      order: 5;
+      font-size: 20px;
+    }
   }
 
   &-yandex-market {
@@ -167,6 +264,10 @@
 
     img {
       max-height: 17px;
+    }
+
+    @media screen and (max-width: 767px) {
+      display: none;
     }
   }
 
@@ -178,6 +279,24 @@
       margin-left: 20px;
       margin-top: 19px;
       margin-bottom: 0;
+      order: 2;
+
+      @media screen and (max-width: 767px) {
+        justify-content: center;
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+
+      &-title {
+        font-size: 20px;
+        line-height: 1.2;
+        text-align: center;
+        display: none;
+        order: 1;
+        @media screen and (max-width: 767px) {
+          display: block;
+        }
+      }
     }
 
     display: flex;
@@ -225,6 +344,7 @@
   z-index: 100;
   display: none;
   padding-top: 10px;
+
   svg {
     fill: #fff;
     width: 10px;

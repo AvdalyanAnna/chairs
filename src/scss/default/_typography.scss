@@ -3,6 +3,10 @@ h2,.h2{
   font-weight: 300;
   text-transform: uppercase;
   line-height: 28px;
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 h3, .h3 {

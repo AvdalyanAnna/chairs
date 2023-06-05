@@ -1,29 +1,67 @@
 .products {
   margin: 62px 0 58px;
+  @media screen and (max-width: 1000px) {
+    .wrapper{
+      padding: 0;
+    }
+  }
   &-first{
     margin-top: 33px;
   }
   &-inner {
+    ul{
+      padding: 0;
+    }
   }
   &-title{
     font-size: 26px;
     margin-bottom: 28px;
+    @media screen and (max-width: 767px) {
+      padding: 0 50px;
+      font-size: 28px;
+      line-height: 40px;
+
+    }
   }
 
   &-list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    border-left: 1px solid #f2f2f0;
+    //display: flex;
+    //flex-wrap: wrap;
+    //list-style: none;
+    //padding: 0;
+    //border-left: 1px solid #f2f2f0;
+
+.swiper-buttons{
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+  .swiper-button-next{
+    right: 0;
+  }
+  .swiper-button-prev{
+    left: 0;
+  }
+
+
+  .swiper-button-next,
+  .swiper-button-prev{
+    backdrop: #fff;
+    border: 1px solid #e8e8e8;
+    svg path{
+      stroke: #fc6519 !important;
+      width: 6px;
+      height: 9px;
+    }
+  }
+}
 
   }
 
   &-item {
-    max-width: calc(100% / 4);
+    //max-width: calc(100% / 4);
     width: 100%;
     position: relative;
-    letter-spacing: normal;
     border: 1px solid #f2f2f0;
     border-left: 0;
     padding: 0 20px 0 15px;
@@ -58,6 +96,7 @@
       letter-spacing: .5px;
       text-align: center;
       z-index: 1;
+
       &.success{
         background: #A7C248;
       }
@@ -71,9 +110,22 @@
       width: 100%;
       margin: 30px auto 18px;
       display: flex;
+      @media screen and (max-width: 767px) {
+        height: 220px;
+        padding-top: 35px;
+        padding-bottom: 25px;
+        margin: 0 auto;
+      }
       img {
         max-width: 100%;
         width: 100%;
+        transition: all .2s ease;
+        @media screen and (max-width: 767px) {
+          max-width: 100%;
+          max-height: 100%;
+          display: inline-block;
+          flex-shrink: 0;
+        }
       }
     }
 
@@ -89,7 +141,12 @@
       a{
         position: relative;
         transition: var(--transition);
-
+        height: 45px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       &:hover{
         a{
@@ -102,7 +159,13 @@
       font-size: 17px;
       font-weight: 700;
       margin-bottom: 12px;
+      @media screen and (max-width: 479px) {
+        font-size: 12px;
+      }
       span {
+        @media screen and (max-width: 479px) {
+          font-size: 17px;
+        }
         &.old-price {
           font-size: 17px;
           line-height: 14px;

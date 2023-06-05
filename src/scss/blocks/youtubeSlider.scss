@@ -1,6 +1,9 @@
 .youtube-slider{
   &__title{
     margin-bottom: 32px;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 16px;
+    }
   }
   &__inner{
     margin: 0 7px 45px;
@@ -8,12 +11,19 @@
       position: unset;
       margin-top: -53px;
       padding-bottom: 50px;
+      @media screen and (max-width: 767px) {
+        margin-top: -79px;
+        padding-bottom: 59px;
+      }
     }
     .swiper-buttons{
       display: flex;
       align-items: center;
       justify-content: flex-end;
       padding-top: 41px;
+      @media screen and (max-width: 767px) {
+        padding-top: 65px;
+      }
     }
     .swiper-button{
       background: #EA6E34;
@@ -48,13 +58,14 @@
       opacity: 0;
     }
   }
-  &__img{
+ img{
     border-radius: 20px;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
-
+    width: 100%;
+object-fit: cover;
   }
   &__content{
     font-size: 16px;
@@ -66,11 +77,18 @@
     bottom: 20px;
     left: 20px;
     z-index: 2;
+    @media screen and (max-width: 767px) {
+      left: 11px;
+      bottom: 24px;
+    }
   }
   &__player{
     margin-right: 8px;
   }
   &__text{
     max-width: 192px;
+    @media screen and (max-width: 767px) {
+      max-width: 100%;
+    }
   }
 }

@@ -16,7 +16,7 @@ const homeSwiper = new Swiper(".home-slider__inner .homeSwiper", {
 
 const youtubeSwiper = new Swiper(".youtube-slider__inner .youtubeSwiper", {
     // loop: true,
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
         nextEl: ".youtube-slider__inner .swiper-button-next",
@@ -24,6 +24,50 @@ const youtubeSwiper = new Swiper(".youtube-slider__inner .youtubeSwiper", {
     },
     pagination: {
         el: ".youtube-slider__inner .swiper-pagination",
+    },
+    breakpoints: {
+        "580": {
+            slidesPerView: 1,
+            spaceBetween: 40,
+        },
+        "767": {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        "800": {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        "1200": {
+            slidesPerView: 4,
+            spaceBetween: 50,
+        },
+    },
+})
+const productSwiper = new Swiper(".products-inner .productSwiper", {
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 5,
+    navigation: {
+        nextEl: ".productSwiper .swiper-button-next",
+        prevEl: ".productSwiper .swiper-button-prev",
+    },
+    // pagination: {
+    //     el: ".productSwiper .swiper-pagination",
+    // },
+    breakpoints: {
+        "767": {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        "800": {
+            slidesPerView: 3,
+            spaceBetween: 40,
+        },
+        "1000": {
+            slidesPerView: 4,
+            spaceBetween: 50,
+        },
     },
 })
 
@@ -107,6 +151,13 @@ $(document).ready(function () {
         if(html === '') html = '<p class="footer-info"> пусто </p>'
         $('.prmn-cmngr-cities__search-list').html(html)
 
+    })
+
+    $('.footer-top__title').on('click',function (){
+        const parent = $(this).parents('.footer-top__item')
+        const el = parent.find('.footer-top__menu')
+        el.toggle()
+        $(this).toggleClass('active')
     })
 })
 

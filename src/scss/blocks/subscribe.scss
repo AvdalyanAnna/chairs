@@ -1,13 +1,24 @@
-.subscribe{
+.subscribe {
   padding: 27px 0 18px;
-  &-inner{}
-  &-form{
+@media screen and (max-width: 767px) {
+  background: #e8e8e8;
+  margin-top: 80px;
+
+}
+  &-inner {
+  }
+
+  &-form {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1020px;
     margin: 0 auto;
-    &__text{
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+
+    &__text {
       color: #343434;
       text-transform: uppercase;
       display: block;
@@ -15,12 +26,34 @@
       letter-spacing: 1px;
       line-height: 13px;
       font-size: 12.6px;
+
+      &-mobile {
+        display: none;
+        @media screen and (max-width: 767px) {
+          display: block;
+        }
+        font-size: 14px;
+        line-height: 1.2;
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto 16px;
+        text-align: center;
+
+      }
+
+      &-desktop {
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
+      }
     }
-    &__input{
+
+    &__input {
       max-width: 383px;
       width: 100%;
       position: relative;
-      input{
+
+      input {
         width: 100%;
         height: 40px;
 
@@ -28,7 +61,8 @@
         border-radius: 8px;
         padding: 13px 23px;
       }
-      button{
+
+      button {
         position: absolute;
         display: flex;
         right: 16px;
@@ -38,12 +72,34 @@
         height: 18px;
         z-index: 2;
         fill: #fc6519;
+        @media screen and (max-width: 767px) {
+          width: auto;
+          color: #dc6519;
+          font-weight: bold;
+          font-size: 14px;
+        svg {
+          display: none;
+        }
+        }
+      }
+    }
+    &__button{
+      &-mobile{
+        display: none;
+        @media screen and (max-width: 767px) {
+          display: flex;
+        }
       }
     }
   }
-  &-info{
+
+
+  &-info {
     text-align: center;
     font-size: 12px;
     padding-left: 55px;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 }
