@@ -159,6 +159,18 @@ $(document).ready(function () {
         el.toggle()
         $(this).toggleClass('active')
     })
+    $('.nav-submenu__title.js-submenu-link').on('click',function (e){
+        e.preventDefault()
+        const parent = $(this).parents('.nav-submenu__list-item.nav-submenu__item')
+        const el = parent.find('.nav-submenu__list.nav-submenu__item')
+        el.toggleClass('active')
+    })
+    $('.nav-submenu__list-item.nav-submenu__list-item--title').on('click', function (e){
+        e.preventDefault()
+        const parent = $(this).parents('.nav-submenu__list-item.nav-submenu__item')
+        const el = parent.find('.nav-submenu__list.nav-submenu__item')
+        el.toggleClass('active')
+    })
 })
 
 $(document).on('click', function (e) {
