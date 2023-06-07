@@ -781,11 +781,14 @@ for (let i = 0; i < youtubePagination.length; i++) {
 }
 $(document).ready(function () {
     $('.account__tabs-item').on('click', function () {
-        const el = $(this).parent().find('.account__tabs-item')
-        const content = $('.account__tabs-content-item')
-        el.removeClass('active')
-        $(this).addClass('active')
-        content.hide()
+        const tab = $(this).data('tab')
+        const paret = $(this).parents('.account__col')
+        const child1 = paret.find('.account__tabs-content')
+        const child2 = paret.find('.account__tabs')
+        child2.find('.account__tabs-item').removeClass('active')
+        child2.find(`[data-tab="${tab}"]`).addClass('active')
+        child1.find('.account__tabs-content-item').hide()
+        child1.find(`[data-tab="${tab}"]`).show()
         $('.footer-fix').toggle()
     })
     if ($('select').hasClass('select')) {
@@ -910,7 +913,6 @@ $(document).on('click', function (e) {
             $('.header-actions__item-content-2.account-popup-shadow').show()
             $('.header-actions__item-content-2.account-popup-shadow').addClass('active')
             $('.header-actions__item-inner-2').addClass('active')
-
         }
 
     } else {
