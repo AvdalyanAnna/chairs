@@ -28,6 +28,13 @@
       top: 50%;
       left: 0;
       transform: translateY(-47%) scale(1.08);
+      @media screen and (max-width: 767px) {
+        object-fit: cover;
+        width: 100%;
+        height: 90%;
+        left: 50%;
+        transform: translate(-50%,-47%) scale(1);
+      }
     }
     &__text{
       font-size: 18px;

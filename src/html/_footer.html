@@ -62,7 +62,7 @@
                         info@vsestulya.ru
                     </a>
                     <p class="footer-address">г. Москва, 1-й проезд Перова Поля, дом 3, строение 6</p>
-                    <a href="#" class="footer-yandex-market">
+                    <a href="https://market.yandex.ru/business--vsestulia-ru/856230/reviews" class="footer-yandex-market">
                         <img src="img/yandmarket1.webp" alt="yandmarket1.webp">
                     </a>
                     <div class="footer-socials-title">Мы в социальных сетях:</div>
@@ -2193,11 +2193,11 @@
         <div class="cart-popup_bottom js-cart-bottom">
             <div class="account__col right js-tabs-box">
                 <div class="account__tabs">
-                    <span class="account__tabs-item active js-tab">Вход</span>
-                    <span class="account__tabs-item js-tab">Регистрация</span>
+                    <span class="account__tabs-item active js-tab" data-tab="#auth">Вход</span>
+                    <span class="account__tabs-item js-tab" data-tab="#reg">Регистрация</span>
                 </div>
                 <div class="account__tabs-content">
-                    <div class="account__tabs-content-item active js-tab-content">
+                    <div class="account__tabs-content-item active js-tab-content" data-tab="#auth">
                         <form action="#" enctype="multipart/form-data"
                               id="loginform" method="post">
                             <div class="account__input-box">
@@ -2216,7 +2216,7 @@
                             <button class="btn" form="loginform" type="submit">Войти</button>
                         </form>
                     </div>
-                    <div class="account__tabs-content-item js-tab-content" style="display: none;">
+                    <div class="account__tabs-content-item js-tab-content" style="display: none;" data-tab="#reg">
                         <div class="account__register-box ">
                             Создание учетной записи поможет делать следующие покупки быстрее (не
                             надо будет снова вводить адрес и контактную информацию), видеть
