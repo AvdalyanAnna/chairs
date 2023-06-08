@@ -515,6 +515,10 @@ h3,
   line-height: 24px;
 }
 
+*:focus {
+  outline: none;
+}
+
 a {
   all: unset;
   outline: none;
