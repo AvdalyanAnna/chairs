@@ -3904,6 +3904,8 @@ swiper-container .swiper-notification {
   position: absolute;
   top: 15px;
   right: 15px;
+  width: 24px;
+  height: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4178,6 +4180,10 @@ swiper-container .swiper-notification {
 
 .call-btn__phone:hover {
   color: #FFFFFF;
+}
+
+a:active {
+  background-color: transparent !important;
 }
 
 @media screen and (min-width: 1024px) {

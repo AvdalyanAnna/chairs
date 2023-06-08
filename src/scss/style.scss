@@ -510,6 +510,8 @@ input, textarea, select {
         position: absolute;
         top: 15px;
         right: 15px;
+        width: 24px;
+        height: 24px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -842,4 +844,8 @@ input, textarea, select {
       color: #FFFFFF;
     }
   }
+}
+
+a:active {
+  background-color: transparent !important;
 }
