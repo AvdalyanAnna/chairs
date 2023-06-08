@@ -515,14 +515,16 @@ h3,
   line-height: 24px;
 }
 
-*:focus {
-  outline: none;
-}
-
 a {
   all: unset;
-  outline: none;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none !important;
 }
 
 a,
