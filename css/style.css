@@ -515,6 +515,10 @@ h3,
   line-height: 24px;
 }
 
+a {
+  all: unset;
+}
+
 a,
 a:active {
   background-color: inherit;
