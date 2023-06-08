@@ -515,6 +515,11 @@ h3,
   line-height: 24px;
 }
 
+a,
+a:active {
+  background-color: inherit;
+}
+
 body {
   font-family: "Montserrat", Verdana, Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -3931,6 +3936,8 @@ swiper-container .swiper-notification {
   padding: 40px 0;
   max-width: 350px;
   margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .modal-call1__container {
@@ -4180,10 +4187,6 @@ swiper-container .swiper-notification {
 
 .call-btn__phone:hover {
   color: #FFFFFF;
-}
-
-a:active {
-  background-color: transparent !important;
 }
 
 @media screen and (min-width: 1024px) {

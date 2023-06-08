@@ -16,7 +16,11 @@
 //@import "default/forms";
 //@import "default/text-animation";
 //
-
+a{
+  &,&:active {
+    background-color: inherit ;
+  }
+}
 body {
   font-family: "Montserrat", Verdana, Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -525,6 +529,8 @@ input, textarea, select {
         padding: 40px 0;
         max-width: 350px;
         margin: 0;
+        position: relative;
+        z-index: 1;
       }
       &__container {
         height: auto;
@@ -846,6 +852,3 @@ input, textarea, select {
   }
 }
 
-a:active {
-  background-color: transparent !important;
-}
