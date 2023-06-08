@@ -18,6 +18,8 @@
 //
 a{
   all: unset;
+  outline: none;
+  color: inherit;
   &,&:active {
     background-color: inherit ;
   }
