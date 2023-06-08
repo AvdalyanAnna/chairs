@@ -17,6 +17,7 @@
 //@import "default/text-animation";
 //
 a{
+  all: unset;
   &,&:active {
     background-color: inherit ;
   }
