@@ -16,6 +16,7 @@
 //@import "default/forms";
 //@import "default/text-animation";
 //
+*:focus {outline:none}
 a{
   all: unset;
   outline: none;
