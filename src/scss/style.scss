@@ -505,11 +505,15 @@ input, textarea, select {
         display: none !important;
       }
       background: transparent;
-      z-index: 2;
+      z-index: 10;
       .close{
         position: absolute;
         top: 15px;
         right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9;
       }
       .cart-popup_bottom.js-cart-bottom{
         display: flex;

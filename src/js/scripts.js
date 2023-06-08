@@ -2,9 +2,7 @@
 // @@include('main.js')
 @@include('./libs/swiper.js')
 @@include('./libs/jquery-3.6.0.js')
-@@include('./libs/popperi.js')
 @@include('./libs/jquery.formstyler.min.js')
-@@include('./libs/popperi-el.js')
 const citiesList = [
     {
         "city":"Москва",
@@ -798,8 +796,10 @@ $(document).ready(function () {
         e.preventDefault();
         const $this = $(this);
         const modal = $this.attr('data-modal');
-        $("body").css("overflow", "hidden");
-        $('header').css('visibility', 'hidden')
+        if(!$(this).hasClass('with-scroll')){
+            $("body").css("overflow", "hidden");
+            $('header').css('visibility', 'hidden')
+        }
         $(`${modal}`).fadeIn();
     });
     $('.header-top__city-pop__btn').on('click', function () {
