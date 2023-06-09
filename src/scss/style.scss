@@ -10,6 +10,8 @@
 @import "libs/jquery.formstyler";
 @import "default/reset";
 @import "default/typography";
+@import "breadcrumb";
+@import "filter";
 //@import "default/shortcode";
 //@import "default/spacing";
 //@import "default/edu-common";
@@ -17,20 +19,8 @@
 //@import "default/text-animation";
 //
 
-a{
-  all: unset;
-  color: inherit;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  outline: none !important;
-  &,&:active {
-    background-color: inherit ;
-  }
+.ml--0{
+  margin-left: 0 !important;
 }
 body {
   font-family: "Montserrat", Verdana, Arial, Helvetica, sans-serif;
@@ -42,10 +32,21 @@ body {
   flex-direction: column;
 }
 
-main {
+.main{
   flex: 1;
-}
+  &-inner{
+    display: flex;
+  }
+  &-left{
+    width: 25%;
+    padding: 0 15px;
+  }
+  &-right{
+    width: 75%;
+    padding: 0 15px;
+  }
 
+}
 .wrapper {
   max-width: 1245px;
   width: 100%;
@@ -863,3 +864,6 @@ input, textarea, select {
   }
 }
 
+.content__title{
+  margin-bottom: 30px;
+}

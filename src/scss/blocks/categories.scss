@@ -100,4 +100,23 @@
   &-link{
 
   }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  &__item{
+    margin: 30px 0;
+    max-width: 150px;
+    width: 100%;
+    text-align: center;
+  }
+  &__picture{
+    margin-bottom: 15px;
+  }
+  &__caption{
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 600;
+  }
 }
