@@ -18,7 +18,11 @@
 //@import "default/forms";
 //@import "default/text-animation";
 //
-
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .ml--0{
   margin-left: 0 !important;
 }
@@ -44,6 +48,8 @@ body {
   &-right{
     width: 75%;
     padding: 0 15px;
+    display: flex;
+    flex-direction: column;
   }
 
 }
@@ -867,3 +873,5 @@ input, textarea, select {
 .content__title{
   margin-bottom: 30px;
 }
+
+

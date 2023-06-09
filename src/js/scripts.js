@@ -3,6 +3,7 @@
 @@include('./libs/swiper.js')
 @@include('./libs/jquery-3.6.0.js')
 @@include('./libs/jquery.formstyler.min.js')
+@@include('./filters.js')
 const citiesList = [
     {
         "city":"Москва",
