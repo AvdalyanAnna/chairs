@@ -4618,10 +4618,8 @@ swiper-container .swiper-notification {
   }
 
   .products-item__img {
-    height: 220px;
-    padding-top: 35px;
-    padding-bottom: 25px;
-    margin: 0 auto;
+    height: 140px;
+    margin: 35px auto 25px;
   }
 
   .products-item__img img {
