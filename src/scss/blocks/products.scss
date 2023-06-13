@@ -42,9 +42,15 @@
   gap: 15px;
   &-4{
     grid-template-columns: repeat(4,1fr);
+    .products-item{
+      max-width: 201px;
+    }
   }
   &-3{
     grid-template-columns: repeat(3,1fr);
+    .products-item{
+      max-width: 273px;
+    }
   }
   .products-item__price{
     font-weight: 400;
@@ -112,12 +118,20 @@
 
   .swiper-button-next,
   .swiper-button-prev{
-    backdrop: #fff;
+    background: #fff;
     border: 1px solid #e8e8e8;
+    transition: var(--transition);
     svg path{
+      transition: var(--transition);
       stroke: #fc6519 !important;
       width: 6px;
       height: 9px;
+    }
+    &:hover{
+      background: #FC6519;
+      svg path{
+        stroke: #fff !important;
+      }
     }
   }
 }
@@ -141,10 +155,62 @@
       transition: var(--transition);
       z-index: -1;
     }
-    &:hover{
+    &:not(.has-slider):hover{
       img{
         opacity: 0.5;
       }
+    }
+    &.has-slider{
+      .swiper-buttons{
+        display: block;
+      }
+
+      .products-big__slider-inner{
+        position: relative;
+        margin: 0 -15px;
+        padding: 0 15px;
+        .swiper-button{
+          top: 50%;
+          margin-top: 0;
+          transform: translateY(-50%);
+          bottom: auto;
+          svg{
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+      .products-min__slider-inner{
+        margin: 0 -15px;
+        padding: 0 15px;
+        position: relative;
+        img{
+          border-radius: 8px;
+        }
+        .swiper-wrapper{
+          //margin: 0 15px;
+        }
+        .swiper-slide-active{
+          border-radius: 8px;
+          box-shadow: none;
+          box-sizing: border-box;
+          border: 1px solid #fc6519;
+        }
+        .swiper-button{
+          width: 30px;
+          height: 30px;
+          top: 50%;
+          margin-top: 0;
+          transform: translateY(-50%);
+          bottom: auto;
+          svg{
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+
     }
 
     &__status {
@@ -256,4 +322,14 @@
       }
     }
   }
+}
+.catalogue__pagination{
+  padding: 45px 0 0;
+}
+.catalogue__description {
+  color: #7e7e7e;
+  margin: 40px 0 0;
+}
+.productNewSwiper .swiper-buttons{
+  display: block;
 }

@@ -4,6 +4,7 @@
 @@include('./libs/jquery-3.6.0.js')
 @@include('./libs/jquery.formstyler.min.js')
 @@include('./filters.js')
+@@include('./slider.js')
 const citiesList = [
     {
         "city":"Москва",

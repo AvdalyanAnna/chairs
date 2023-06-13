@@ -11,6 +11,7 @@
 @import "default/reset";
 @import "default/typography";
 @import "breadcrumb";
+@import "pagination";
 @import "filter";
 //@import "default/shortcode";
 //@import "default/spacing";
@@ -40,6 +41,7 @@ body {
   flex: 1;
   &-inner{
     display: flex;
+    margin-bottom: 45px;
   }
   &-left{
     width: 25%;
@@ -872,6 +874,13 @@ input, textarea, select {
 
 .content__title{
   margin-bottom: 30px;
+}
+
+.editor{
+  p{
+    padding: 0 0 23px;
+    margin: 0;
+  }
 }
 
 
