@@ -8,6 +8,7 @@
 //@import "default/variables";
 //@import "default/mixins";
 @import "libs/jquery.formstyler";
+@import "libs/jquery-ui";
 @import "default/reset";
 @import "default/typography";
 @import "breadcrumb";
@@ -26,6 +27,16 @@
 }
 .ml--0{
   margin-left: 0 !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 body {
   font-family: "Montserrat", Verdana, Arial, Helvetica, sans-serif;

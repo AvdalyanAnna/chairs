@@ -2,9 +2,12 @@
 // @@include('main.js')
 @@include('./libs/swiper.js')
 @@include('./libs/jquery-3.6.0.js')
+@@include('./libs/jquery-ui.js')
 @@include('./libs/jquery.formstyler.min.js')
 @@include('./filters.js')
 @@include('./slider.js')
+@@include('./jquery-range-slide.js')
+
 const citiesList = [
     {
         "city":"Москва",
@@ -924,4 +927,6 @@ $('.scroll-to-top').on('click', function () {
         scrollTop: 0
     }, 'slow');
 });
+
+
 
