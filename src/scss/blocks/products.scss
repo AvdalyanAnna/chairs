@@ -240,8 +240,10 @@
         }
 
         .swiper-button {
-          width: 30px;
-          height: 30px;
+          width: 15px;
+          height: 100%;
+          border: none;
+          border-radius: 0;
           top: 50%;
           margin-top: 0;
           transform: translateY(-50%);
@@ -250,6 +252,14 @@
           svg {
             width: 20px;
             height: 20px;
+          }
+
+          &:hover {
+            background: #fff;
+
+            svg path {
+              stroke: #fc6519 !important;
+            }
           }
         }
       }
