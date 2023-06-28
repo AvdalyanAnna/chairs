@@ -14,8 +14,10 @@ $(document).ready(function () {
         })
 
     }
-    const productMin = $slider('.products-min__slider-inner',{spaceBetween:8})
+    const productMin = $slider('.products-min__slider-inner',{slidesPerView:'auto',spaceBetween:8})
+    // const productMin1 = $slider('.products-list__grid-4 .products-min__slider-inner',{slidesPerView:auto,spaceBetween:8})
     const productBig = $slider('.products-big__slider-inner',{slidesPerView:1,spaceBetween:0})
     const productNewSwiper = $slider('.productNewSwiper',{})
     console.log({productMin,productBig,productNewSwiper})
+
 })

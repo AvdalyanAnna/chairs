@@ -66,11 +66,14 @@ $(document).ready(function () {
         })
 
     }
-    const productMin = $slider('.products-min__slider-inner',{spaceBetween:8})
+    const productMin = $slider('.products-min__slider-inner',{slidesPerView:'auto',spaceBetween:8})
+    // const productMin1 = $slider('.products-list__grid-4 .products-min__slider-inner',{slidesPerView:auto,spaceBetween:8})
     const productBig = $slider('.products-big__slider-inner',{slidesPerView:1,spaceBetween:0})
     const productNewSwiper = $slider('.productNewSwiper',{})
     console.log({productMin,productBig,productNewSwiper})
+
 })
+
 jQuery(document).ready(function ($) {
     $(function () {
         const el = $("#slider-range")
@@ -1047,5 +1050,18 @@ $('.scroll-to-top').on('click', function () {
     }, 'slow');
 });
 
-
+$(document).ready(function () {
+    const filterTags = $('.filter-tags-item')
+    const filterTagsMore = 'filter-tags-item-more'
+    filterTags.map(i =>{
+        if(i > 7 && !filterTags.eq(i).hasClass(filterTagsMore))filterTags.eq(i).hide()
+    })
+    $('.filter-tags-item-more').on('click',function (e){
+        e.preventDefault()
+        filterTags.map(i =>{
+            filterTags.eq(i).show()
+        })
+        $(this).hide()
+    })
+})
 

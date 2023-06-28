@@ -23,7 +23,7 @@
     margin-bottom: 40px;
   }
 &__slider{
-  background-color: #f0f2f5;
+  background-color: #e8e8e8;
   margin-bottom: 15px;
   padding: 15px 20px;
   border-radius: 5px;
@@ -43,16 +43,16 @@
     height: 4px;
   }
   .ui-slider .ui-slider-range {
-    background: #3366d5;
+    background: #fc6519;
   }
 
   .ui-slider-horizontal .ui-slider-handle {
-    background: #3366d5;
+    background: #fc6519;
     border: 2px solid #fff;
     border-radius: 50%;
   }
   input.ui-state-hover {
-    border-color: #3366d5 !important;
+    border-color: #fc6519 !important;
     color: #999;
     background: #fdfdfd;
   }
@@ -147,7 +147,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    border-radius: 5px;
     &__left {
       display: flex;
     }
@@ -288,22 +288,19 @@
     margin-bottom: 15px;
     padding: 15px 20px;
     border-radius: 5px;
-    background-color: #f0f2f5;
+    background-color: #e8e8e8;
 
     &__dropdown {
-      .filter-item__body {
+      &.filter-item__open{
         background-color: #fff;
-        padding: 55px 15px 15px;
-        position: absolute;
-        top: 0;
-        left: -3px;
-        right: -3px;
-        z-index: 20;
+        box-shadow: 0 5px 17px rgb(0 0 0 / 15%);
+      }
+      .filter-item__body {
         display: none;
         min-width: 100%;
-        box-shadow: 0 5px 17px rgb(0 0 0 / 15%);
         border-radius: 5px;
-        margin: -15px -17px 0;
+        margin: 0;
+        padding: 20px 0 0;
       }
 
       .filter-item__header {
@@ -398,7 +395,7 @@
             &:checked + .filter-item__list-item__input {
               &::before {
                 color: #fff;
-                border-color: #3366D5;
+                border-color: #fc6519;
               }
 
               &::after {

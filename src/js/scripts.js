@@ -928,5 +928,18 @@ $('.scroll-to-top').on('click', function () {
     }, 'slow');
 });
 
-
+$(document).ready(function () {
+    const filterTags = $('.filter-tags-item')
+    const filterTagsMore = 'filter-tags-item-more'
+    filterTags.map(i =>{
+        if(i > 7 && !filterTags.eq(i).hasClass(filterTagsMore))filterTags.eq(i).hide()
+    })
+    $('.filter-tags-item-more').on('click',function (e){
+        e.preventDefault()
+        filterTags.map(i =>{
+            filterTags.eq(i).show()
+        })
+        $(this).hide()
+    })
+})
 
