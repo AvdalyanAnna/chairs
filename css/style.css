@@ -2828,11 +2828,17 @@ h3,
 }
 
 .filter-item__arrow {
-  background-image: url(/img/arrow.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 10px;
   height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .filter-item__inner {
@@ -5856,8 +5862,10 @@ swiper-container .swiper-notification {
 }
 
 .products-item.has-slider .products-min__slider-inner .swiper-button {
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 100%;
+  border: none;
+  border-radius: 0;
   top: 50%;
   margin-top: 0;
   -webkit-transform: translateY(-50%);
@@ -5869,6 +5877,14 @@ swiper-container .swiper-notification {
 .products-item.has-slider .products-min__slider-inner .swiper-button svg {
   width: 20px;
   height: 20px;
+}
+
+.products-item.has-slider .products-min__slider-inner .swiper-button:hover {
+  background: #fff;
+}
+
+.products-item.has-slider .products-min__slider-inner .swiper-button:hover svg path {
+  stroke: #fc6519 !important;
 }
 
 .products-item__status {
