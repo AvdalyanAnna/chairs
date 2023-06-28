@@ -2465,7 +2465,7 @@ h3,
 }
 
 .filter__slider {
-  background-color: #f0f2f5;
+  background-color: #e8e8e8;
   margin-bottom: 15px;
   padding: 15px 20px;
   border-radius: 5px;
@@ -2495,17 +2495,17 @@ h3,
 }
 
 .filter__slider .ui-slider .ui-slider-range {
-  background: #3366d5;
+  background: #fc6519;
 }
 
 .filter__slider .ui-slider-horizontal .ui-slider-handle {
-  background: #3366d5;
+  background: #fc6519;
   border: 2px solid #fff;
   border-radius: 50%;
 }
 
 .filter__slider input.ui-state-hover {
-  border-color: #3366d5 !important;
+  border-color: #fc6519 !important;
   color: #999;
   background: #fdfdfd;
 }
@@ -2619,6 +2619,7 @@ h3,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 5px;
 }
 
 .filter-sort__left {
@@ -2773,23 +2774,21 @@ h3,
   margin-bottom: 15px;
   padding: 15px 20px;
   border-radius: 5px;
-  background-color: #f0f2f5;
+  background-color: #e8e8e8;
+}
+
+.filter-item__dropdown.filter-item__open {
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 17px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 5px 17px rgba(0, 0, 0, 0.15);
 }
 
 .filter-item__dropdown .filter-item__body {
-  background-color: #fff;
-  padding: 55px 15px 15px;
-  position: absolute;
-  top: 0;
-  left: -3px;
-  right: -3px;
-  z-index: 20;
   display: none;
   min-width: 100%;
-  -webkit-box-shadow: 0 5px 17px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 5px 17px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
-  margin: -15px -17px 0;
+  margin: 0;
+  padding: 20px 0 0;
 }
 
 .filter-item__dropdown .filter-item__header {
@@ -2912,7 +2911,7 @@ h3,
 
 .filter-item__list-item__label input:checked + .filter-item__list-item__input::before {
   color: #fff;
-  border-color: #3366D5;
+  border-color: #fc6519;
 }
 
 .filter-item__list-item__label input:checked + .filter-item__list-item__input::after {
@@ -5657,6 +5656,10 @@ swiper-container .swiper-notification {
   max-width: 282px;
 }
 
+.products-list__grid-3 .products-min__slider-inner .swiper-slide {
+  max-width: 54.5px !important;
+}
+
 .products-list__grid .products-item__price {
   font-weight: 400;
 }
@@ -5680,13 +5683,8 @@ swiper-container .swiper-notification {
   line-height: 1;
   text-transform: unset;
   border-radius: 4px;
-  background: #EA6E34;
-  color: #fff;
   outline: none;
   position: relative;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -5701,6 +5699,16 @@ swiper-container .swiper-notification {
   height: 40px;
   font-size: 16px;
   border: 1px solid #fc6519;
+  background: #fff;
+  color: #EA6E34;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.products-list__grid .products-list__btns-item .btn:hover {
+  background: #EA6E34;
+  color: #fff;
 }
 
 .products-list__grid .products-list__btns-item .btn--transparent {
@@ -5772,7 +5780,6 @@ swiper-container .swiper-notification {
   position: relative;
   border: 1px solid #f2f2f0;
   padding: 0 15px;
-  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5827,15 +5834,6 @@ swiper-container .swiper-notification {
   margin: 0 -15px;
   padding: 0 15px;
   position: relative;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-bottom: 20px;
 }
 
@@ -5850,6 +5848,11 @@ swiper-container .swiper-notification {
   border-radius: 8px;
   max-height: 38px;
   height: 100%;
+}
+
+.products-item.has-slider .products-min__slider-inner .swiper-slide {
+  max-width: 48px;
+  cursor: pointer;
 }
 
 .products-item.has-slider .products-min__slider-inner .swiper-slide-active {
@@ -6035,6 +6038,8 @@ swiper-container .swiper-notification {
 .products-item__art {
   color: #A38C76;
   font-size: 15px;
+  cursor: pointer;
+  display: block;
 }
 
 .products-item__reviews {
