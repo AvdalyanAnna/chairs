@@ -125,7 +125,16 @@
         border-radius: 8px;
       }
     }
+&__new{
+  grid-template-columns: repeat(4, 1fr);
+  .products-item {
+    max-width: 300px;
+    &.has-slider .products-min__slider-inner .swiper-slide{
+      max-width: 46px;
+    }
+  }
 
+}
     .swiper-buttons {
       display: none;
       @media screen and (max-width: 767px) {
