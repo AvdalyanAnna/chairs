@@ -51,7 +51,6 @@ $(document).ready(function () {
     })
 })
 $(document).ready(function () {
-
     function $slider(elClass, params) {
         return new Swiper(elClass, {
             loop: true,
@@ -63,7 +62,6 @@ $(document).ready(function () {
                 prevEl: `${elClass} .swiper-button-prev`,
             },
         })
-
     }
 
     const productMin = $slider('.products-min__slider-inner', {
@@ -74,9 +72,8 @@ $(document).ready(function () {
         slidesPerView: 1,
         spaceBetween: 0
     })
-    const productNewSwiper = $slider('.productNewSwiper', {})
-    console.log({productMin, productBig, productNewSwiper})
-    $('.products-min__slider-inner .swiper-slide').on('click', function () {
+
+    $(' .products-min__slider-inner .swiper-slide').on('click', function () {
         const data = $(this).data('swiper-slide-index')
         const parentIndex = $(this).parents('.products-item').data('index') || 0
         productBig[parentIndex].slideTo(data + 1)
