@@ -5734,6 +5734,18 @@ swiper-container .swiper-notification {
   border-radius: 8px;
 }
 
+.products-list__new {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.products-list__new .products-item {
+  max-width: 300px;
+}
+
+.products-list__new .products-item.has-slider .products-min__slider-inner .swiper-slide {
+  max-width: 46px;
+}
+
 .products-list .swiper-buttons {
   display: none;
 }
