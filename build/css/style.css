@@ -5600,8 +5600,31 @@ swiper-container .swiper-notification {
   text-align: center;
 }
 
+.categories__item:hover img {
+  display: none;
+}
+
+.categories__item:hover .categories__picture-hover {
+  display: block;
+  opacity: 1;
+}
+
 .categories__picture {
   margin-bottom: 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.categories__picture-hover {
+  display: none;
 }
 
 .categories__caption {
