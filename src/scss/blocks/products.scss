@@ -36,11 +36,6 @@
   }
 
   &-list {
-    //display: flex;
-    //flex-wrap: wrap;
-    //list-style: none;
-    //padding: 0;
-    //border-left: 1px solid #f2f2f0;
     &__grid {
       display: grid;
       gap: 15px;
@@ -59,7 +54,8 @@
         .products-item {
           max-width: 282px;
         }
-        .products-min__slider-inner .swiper-slide{
+
+        .products-min__slider-inner .swiper-slide {
           max-width: 54.5px !important;
         }
       }
@@ -95,7 +91,8 @@
           background: #fff;
           color: #EA6E34;
           transition: var(--transition);
-          &:hover{
+
+          &:hover {
             background: #EA6E34;
             color: #fff;
           }
@@ -125,16 +122,20 @@
         border-radius: 8px;
       }
     }
-&__new{
-  grid-template-columns: repeat(4, 1fr);
-  .products-item {
-    max-width: 300px;
-    &.has-slider .products-min__slider-inner .swiper-slide{
-      max-width: 46px;
-    }
-  }
 
-}
+    &__new {
+      grid-template-columns: repeat(4, 1fr);
+
+      .products-item {
+        max-width: 300px;
+
+        &.has-slider .products-min__slider-inner .swiper-slide {
+          max-width: 46px;
+        }
+      }
+
+    }
+
     .swiper-buttons {
       display: none;
       @media screen and (max-width: 767px) {
@@ -230,13 +231,15 @@
         //align-items: center;
         //justify-content: center;
         margin-bottom: 20px;
-        .swiper-slide{
+
+        .swiper-slide {
           max-height: 40px;
           //display: flex;
           text-align: center;
           border: 1px solid #DCDCDC;
           border-radius: 8px;
         }
+
         img {
           border-radius: 8px;
           max-height: 38px;
@@ -369,9 +372,11 @@
       font-size: 20px;
       font-weight: 700;
       margin-bottom: 10px;
-      &-small{
+
+      &-small {
         font-size: 17px;
       }
+
       @media screen and (max-width: 479px) {
         font-size: 12px;
       }
@@ -416,7 +421,7 @@
     }
 
     &__info {
-      margin-bottom:  8px;
+      margin-bottom: 8px;
 
       &-item {
         display: flex;
@@ -494,17 +499,20 @@
         }
       }
     }
-    &__like{
+
+    &__like {
       position: absolute;
       top: 16px;
       right: 16px;
       z-index: 99;
-      svg path{
+
+      svg path {
         fill: transparent;
         transition: 0.3s ease;
       }
-      &:hover{
-        svg path{
+
+      &:hover {
+        svg path {
           stroke: red;
           fill: red;
         }
