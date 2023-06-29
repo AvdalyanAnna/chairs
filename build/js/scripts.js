@@ -77,6 +77,7 @@ $(document).ready(function () {
         const data = $(this).data('swiper-slide-index')
         const parentIndex = $(this).parents('.products-item').data('index') || 0
         productBig[parentIndex].slideTo(data + 1)
+        productMin[parentIndex].slideTo(data )
     })
 })
 
