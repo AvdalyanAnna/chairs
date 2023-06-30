@@ -1,3 +1,20 @@
+@media screen and (max-width: 1250px) {
+  .main-left{
+    display: none;
+    padding: 0;
+
+  }
+  .main-right{
+    width: auto;
+    flex: 1;
+    padding: 15px 0;
+    position: relative;
+    .products-inner-p{
+      padding: 0;
+      border-left: 0;
+    }
+  }
+}
 .filter {
   &-tags {
     display: flex;
@@ -21,6 +38,7 @@
 
   &s {
     margin-bottom: 40px;
+    display: none;
   }
 &__slider{
   background-color: #e8e8e8;
@@ -148,6 +166,9 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
     &__left {
       display: flex;
     }

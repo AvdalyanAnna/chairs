@@ -14,4 +14,9 @@ $(document).ready(function () {
         })
         $('.products-list__grid').addClass($(this).data('columns'))
     })
+
+    $('.open-filter').on('click',function (e){
+        e.preventDefault()
+        $('.catalog-block-filter').toggle()
+    })
 })
