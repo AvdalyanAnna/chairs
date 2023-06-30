@@ -49,11 +49,16 @@ $(document).ready(function () {
         })
         $('.products-list__grid').addClass($(this).data('columns'))
     })
+
+    $('.open-filter').on('click',function (e){
+        e.preventDefault()
+        $('.catalog-block-filter').toggle()
+    })
 })
 $(document).ready(function () {
     function $slider(elClass, params) {
         return new Swiper(elClass, {
-            loop: true,
+            loop: params.loop || false,
             slidesPerView: params.slidesPerView || 4,
             spaceBetween: params.spaceBetween || 0,
             centeredSlides: params.centeredSlides || false,
@@ -61,23 +66,49 @@ $(document).ready(function () {
                 nextEl: `${elClass} .swiper-button-next`,
                 prevEl: `${elClass} .swiper-button-prev`,
             },
+            breakpoints:params.breakpoints || {},
         })
     }
 
     const productMin = $slider('.products-min__slider-inner', {
         slidesPerView: 'auto',
-        spaceBetween: 8
+        spaceBetween: 8,
+        loop: true,
     })
     const productBig = $slider('.products-big__slider-inner', {
         slidesPerView: 1,
-        spaceBetween: 0
+        spaceBetween: 0,
+        loop: true,
     })
-
+    const categoriesList = $slider('.categories__list', {
+        slidesPerView:2,
+        spaceBetween: 30,
+        breakpoints: {
+            // "580": {
+            //     slidesPerView: 1,
+            //     spaceBetween: 40,
+            // },
+            "580": {
+                slidesPerView: 4,
+                spaceBetween: 40,
+            },
+            "900": {
+                slidesPerView: 5,
+            },
+            "1200": {
+                slidesPerView: 6,
+            },
+            "1600": {
+                slidesPerView: 7,
+            }
+        },
+    })
+    console.log(categoriesList)
     $(' .products-min__slider-inner .swiper-slide').on('click', function () {
         const data = $(this).data('swiper-slide-index')
         const parentIndex = $(this).parents('.products-item').data('index') || 0
         productBig[parentIndex].slideTo(data + 1)
-        productMin[parentIndex].slideTo(data )
+        productMin[parentIndex].slideTo(data)
     })
 })
 
@@ -110,6 +141,30 @@ jQuery(document).ready(function ($) {
             let endvalue = $("#endmiles").val();
             $("#slider-range").slider("option", "values", [startvalue, endvalue]);
         });
+
+        $("#slider-range1").slider({
+            range: true,
+            min: minMileage,
+            max: maxMileage,
+            values: [minMileage, maxMileage],
+            slide: function (event, ui) {
+                $("#startmiles1").val(ui.values[0]);
+                $("#endmiles1").val(ui.values[1]);
+            }
+        });
+
+        $("#startmiles1").val($("#slider-range1").slider("values", 0));
+        $("#endmiles1").val($("#slider-range1").slider("values", 1));
+        $("#startmiles1").change(function () {
+            let startvalue = $("#startmiles1").val();
+            let endvalue = $("#endmiles1").val();
+            $("#slider-range1").slider("option", "values", [startvalue, endvalue]);
+        });
+        $("#endmiles1").change(function () {
+            let startvalue = $("#startmiles1").val();
+            let endvalue = $("#endmiles1").val();
+            $("#slider-range1").slider("option", "values", [startvalue, endvalue]);
+        });
     });
 
     function hoverPairing(sourceEl, targetEl) {
@@ -133,6 +188,17 @@ jQuery(document).ready(function ($) {
     $("#slider-range").on("slidestop", function (event, ui) {
         $("#startmiles").removeClass("ui-state-hover");
         $("#endmiles").removeClass("ui-state-hover");
+    });
+    $("#slider-range1").on("slidestart", function (event, ui) {
+        if (ui.handleIndex == 0) {
+            $("#startmiles1").addClass("ui-state-hover");
+        } else if (ui.handleIndex == 1) {
+            $("#endmiles1").addClass("ui-state-hover");
+        }
+    });
+    $("#slider-range1").on("slidestop", function (event, ui) {
+        $("#startmiles1").removeClass("ui-state-hover");
+        $("#endmiles1").removeClass("ui-state-hover");
     });
 });
 
