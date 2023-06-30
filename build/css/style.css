@@ -6237,7 +6237,6 @@ swiper-container .swiper-notification {
 }
 
 .catalog-block-btn {
-  padding: 9px 16px 9px 13px;
   color: #343434;
   font-size: 14px;
   font-weight: 400;
@@ -6251,6 +6250,7 @@ swiper-container .swiper-notification {
       -ms-flex-align: center;
           align-items: center;
   white-space: nowrap;
+  position: relative;
 }
 
 .catalog-block-btn img {
@@ -6279,6 +6279,67 @@ swiper-container .swiper-notification {
   font-weight: 700;
 }
 
+.catalog-block-btn__inner {
+  padding: 9px 16px 9px 13px;
+  color: #343434;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 5px;
+  background: #E5E5E5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  white-space: nowrap;
+}
+
+.catalog-block-btn__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 41px;
+  background: #fff;
+  left: 0;
+  height: 170px;
+  width: 100%;
+  padding: 15px;
+  z-index: 999;
+  border: 1px solid #E5E5E5;
+  text-align: center;
+  border-radius: 0 0 5px 5px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.catalog-block-btn__body .filter-sort__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.catalog-block-btn__filter:hover .catalog-block-btn__inner {
+  border-radius: 5px 5px 0 0;
+}
+
+.catalog-block-btn__filter:hover .catalog-block-btn__body {
+  opacity: 1;
+  visibility: visible;
+}
+
 .catalog-block-btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6286,7 +6347,6 @@ swiper-container .swiper-notification {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin: 0 -15px 15px;
   padding: 6px 0;
-  overflow: auto;
   max-width: 100vw;
 }
 
