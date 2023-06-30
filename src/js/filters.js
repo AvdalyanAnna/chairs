@@ -17,6 +17,11 @@ $(document).ready(function () {
 
     $('.open-filter').on('click',function (e){
         e.preventDefault()
-        $('.catalog-block-filter').toggle()
+        $('.filters').toggleClass('active')
+    })
+
+    $('.close-filter').on('click',function (e){
+        e.preventDefault()
+        $('.filters').removeClass('active')
     })
 })

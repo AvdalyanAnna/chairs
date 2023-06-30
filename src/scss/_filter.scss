@@ -1,6 +1,5 @@
 @media screen and (max-width: 1250px) {
   .main-left{
-    display: none;
     padding: 0;
 
   }
@@ -38,8 +37,29 @@
 
   &s {
     margin-bottom: 40px;
-    @media screen and  (max-width: 1250px) {
+    .close-filter{
       display: none;
+    }
+    @media screen and  (max-width: 1250px) {
+      //display: none;
+      position: fixed;
+      z-index: 99999;
+      width: 100%;
+      height: 100vh;
+      overflow: auto;
+      top: 0;
+      left: -120vw;
+      background: #fff;
+      padding: 0 15px;
+      transition: var(--transition);
+      &.active{
+        left: 0;
+      }
+      .close-filter{
+        display: block;
+        margin-left: auto;
+        margin-top: 5px;
+      }
     }
   }
 &__slider{
@@ -107,6 +127,14 @@
 
     svg {
       margin-right: 10px;
+    }
+    @media screen and  (max-width: 1250px) {
+      background-color: #e8e8e8;
+      margin: 0 -15px 10px;
+      padding: 10px 15px 15px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
   }
 
