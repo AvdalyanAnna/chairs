@@ -38,7 +38,9 @@
 
   &s {
     margin-bottom: 40px;
-    display: none;
+    @media screen and  (max-width: 1250px) {
+      display: none;
+    }
   }
 &__slider{
   background-color: #e8e8e8;
