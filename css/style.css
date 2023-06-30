@@ -2462,7 +2462,6 @@ h3,
 
 .filters {
   margin-bottom: 40px;
-  display: none;
 }
 
 .filter__slider {
@@ -7367,6 +7366,10 @@ swiper-container .swiper-notification {
   .main-right .products-inner-p {
     padding: 0;
     border-left: 0;
+  }
+
+  .filters {
+    display: none;
   }
 
   .products-list__grid-4 .products-item {
