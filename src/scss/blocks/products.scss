@@ -712,9 +712,9 @@
         top: 41px;
         background: #fff;
         left: 0;
-        height: 170px;
+        height: 140px;
         width: 100%;
-        padding: 15px;
+        padding: 5px 15px;
         z-index: 999;
         border: 1px solid #E5E5E5;
         text-align: center;
@@ -722,7 +722,6 @@
         opacity: 0;
         visibility: hidden;
         transition: var(--transition);
-        cursor: pointer;
         .filter-sort__list{
           flex-direction: column;
         }

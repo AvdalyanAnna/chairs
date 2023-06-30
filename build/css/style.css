@@ -6309,9 +6309,9 @@ swiper-container .swiper-notification {
   top: 41px;
   background: #fff;
   left: 0;
-  height: 170px;
+  height: 140px;
   width: 100%;
-  padding: 15px;
+  padding: 5px 15px;
   z-index: 999;
   border: 1px solid #E5E5E5;
   text-align: center;
@@ -6321,7 +6321,6 @@ swiper-container .swiper-notification {
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
-  cursor: pointer;
 }
 
 .catalog-block-btn__body .filter-sort__list {
