@@ -24,4 +24,22 @@ $(document).ready(function () {
         e.preventDefault()
         $('.filters').removeClass('active')
     })
+    $('.product-tab__item').on('click',function (e){
+        $('.product-tab__item').removeClass('product-tab__item--active')
+        $(this).addClass('product-tab__item--active')
+        const tab = $(this).data('tab')
+        $(`.product-tab`).hide()
+        $(`.product-tab[data-tab="${tab}"]`).show()
+    })
+    $('.product-delivery__title-button').on('click',function (e){
+        const parent = $(this).parents('.product-delivery__item')
+        const el = parent.find('.product-delivery__info')
+        parent.toggleClass('product-delivery__item--closed')
+        parent.toggleClass('product-delivery__item--opened')
+        el.toggle(300)
+    })
+    $('.feedback-btn__more').on('click',function (e){
+        $(this).parents('.feedback-item').find('.feedback-item-inner').show(300)
+        $(this).hide()
+    })
 })
