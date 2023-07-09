@@ -77,6 +77,9 @@
     &--active {
       color: #FC6519;
     }
+    &--active {
+    text-decoration: underline;
+    }
   }
 
   &__video {
@@ -450,42 +453,6 @@
         border-bottom: 1px solid #E5E5E5;
 
       }
-      .feedbackSwiper{
-        position: relative;
-        padding-bottom: 17px;
-        .swiper-slide{
-          max-width: 94px;
-        }
-        .swiper-scrollbar-drag{
-          background-color: #FC7A3A;
-        }
-         .swiper-buttons{
-           position: absolute;
-           left: 0;
-           top: 0;
-           background: #fff;
-           width: 70px;
-           height: calc(100% - 17px);
-           z-index: 99;
-           &.swiper-buttons__last{
-             right: 0;
-             left: auto;
-           }
-         }
-        .swiper-button{
-          //position: relative;
-          border: 1px solid #EFEFEF;
-          width: 41px;
-          height: 41px;
-          svg {
-            width: 20px;
-            height: 20px;
-            path{
-              stroke: #FC6519;
-            }
-          }
-        }
-      }
     }
 
     &__right {
@@ -741,6 +708,64 @@
         height: 100%;
         top: 0;
         left: 0;
+      }
+    }
+  }
+}
+
+.feedbackSwiper{
+  position: relative;
+  padding-bottom: 17px;
+  .swiper-slide{
+    max-width: 94px;
+    width: 100%;
+    cursor: pointer;
+    &.disabled{
+      border: 1px solid #FC7A3A;
+      border-radius: 6px;
+      overflow: auto;
+      position: relative;
+      opacity: 0.5;
+      cursor: no-drop;
+      &::before{
+        content: '';
+        position: absolute;
+        left: -72%;
+        bottom: 26%;
+        width: 200%;
+        transform: rotate(-45deg);
+        height: 1px;
+        background: #FC7A3A;
+      }
+    }
+
+  }
+  .swiper-scrollbar-drag{
+    background-color: #FC7A3A;
+  }
+  .swiper-buttons{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    width: 70px;
+    height: calc(100% - 17px);
+    z-index: 99;
+    &.swiper-buttons__last{
+      right: 0;
+      left: auto;
+    }
+  }
+  .swiper-button{
+    //position: relative;
+    border: 1px solid #EFEFEF;
+    width: 41px;
+    height: 41px;
+    svg {
+      width: 20px;
+      height: 20px;
+      path{
+        stroke: #FC6519;
       }
     }
   }

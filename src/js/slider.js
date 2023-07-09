@@ -71,7 +71,15 @@ $(document).ready(function () {
         productMin[parentIndex].slideTo(data)
     })
 
-    let feedbackSwiper = new Swiper(".feedbackSwiper", {
+    let feedbackSwiper = new Swiper(".feedbackSwiper_el", {
+        slidesPerView: 'auto',
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: true,
+        }
+    });
+
+    let feedbackSwiper1 = new Swiper(".feedbackSwiper_el1", {
         slidesPerView: 'auto',
         scrollbar: {
             el: ".swiper-scrollbar",
@@ -83,10 +91,16 @@ $(document).ready(function () {
         data = data.split('/')[0]
         productBigSwiper1.slideTo(+data)
     })
-    $('.feedbackSwiper .swiper-button-next').on('click', function () {
+    $('.feedbackSwiper_el .swiper-button-next').on('click', function () {
         feedbackSwiper.slideNext()
     })
-    $('.feedbackSwiper .swiper-button-prev').on('click', function () {
+    $('.feedbackSwiper_el .swiper-button-prev').on('click', function () {
         feedbackSwiper.slidePrev()
+    })
+    $('.feedbackSwiper_el1 .swiper-button-next').on('click', function () {
+        feedbackSwiper1.slideNext()
+    })
+    $('.feedbackSwiper_el1 .swiper-button-prev').on('click', function () {
+        feedbackSwiper1.slidePrev()
     })
 })

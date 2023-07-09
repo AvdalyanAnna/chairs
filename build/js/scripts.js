@@ -60,11 +60,16 @@ $(document).ready(function () {
         $('.filters').removeClass('active')
     })
     $('.product-tab__item').on('click',function (e){
-        $('.product-tab__item').removeClass('product-tab__item--active')
-        $(this).addClass('product-tab__item--active')
-        const tab = $(this).data('tab')
-        $(`.product-tab`).hide()
-        $(`.product-tab[data-tab="${tab}"]`).show()
+        e.preventDefault()
+        const $this = $(this)
+        const parentClass = $this.parents('.product-tabs').data('parent')
+        const parent = $this.parents(`.${parentClass}`)
+        const tab = $this.data('tab')
+
+        parent.find('.product-tab__item').removeClass('product-tab__item--active')
+        $this.addClass('product-tab__item--active')
+        parent.find(`.product-tab`).hide()
+        parent.find(`.product-tab[data-tab="${tab}"]`).show()
     })
     $('.product-delivery__title-button').on('click',function (e){
         const parent = $(this).parents('.product-delivery__item')
@@ -151,7 +156,15 @@ $(document).ready(function () {
         productMin[parentIndex].slideTo(data)
     })
 
-    let feedbackSwiper = new Swiper(".feedbackSwiper", {
+    let feedbackSwiper = new Swiper(".feedbackSwiper_el", {
+        slidesPerView: 'auto',
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: true,
+        }
+    });
+
+    let feedbackSwiper1 = new Swiper(".feedbackSwiper_el1", {
         slidesPerView: 'auto',
         scrollbar: {
             el: ".swiper-scrollbar",
@@ -163,14 +176,47 @@ $(document).ready(function () {
         data = data.split('/')[0]
         productBigSwiper1.slideTo(+data)
     })
-    $('.feedbackSwiper .swiper-button-next').on('click', function () {
+    $('.feedbackSwiper_el .swiper-button-next').on('click', function () {
         feedbackSwiper.slideNext()
     })
-    $('.feedbackSwiper .swiper-button-prev').on('click', function () {
+    $('.feedbackSwiper_el .swiper-button-prev').on('click', function () {
         feedbackSwiper.slidePrev()
+    })
+    $('.feedbackSwiper_el1 .swiper-button-next').on('click', function () {
+        feedbackSwiper1.slideNext()
+    })
+    $('.feedbackSwiper_el1 .swiper-button-prev').on('click', function () {
+        feedbackSwiper1.slidePrev()
     })
 })
 
+$(function (){
+    $('.product-count__item').on('click',function (e){
+        e.preventDefault()
+        const count = $(this).parents('.product-count').data('count')
+        const el = $(this).parents('.product-count').find('.product-count__text')
+        const price = $('.product-count__price').data('price')
+        const elCount = el.text()
+        let newCount = 0
+        if($(this).hasClass('product-count__minus'))  newCount = +elCount - +count
+        if($(this).hasClass('product-count__plus'))  newCount = +elCount + +count
+        if(newCount <= 0) newCount = 1
+        $('.product-count__price').text(+price * newCount)
+        el.text(newCount)
+    })
+})
+$(function () {
+    $('.modal-review-step__form-item-btn').on('click', function (e) {
+        e.preventDefault()
+        const next = $(this).data('next')
+        if(!next){
+            $('.modal').hide()
+            return false
+        }
+        $('.modal-review-step').hide()
+        $(`.${next}`).show()
+    })
+})
 jQuery(document).ready(function ($) {
     $(function () {
         const el = $("#slider-range")

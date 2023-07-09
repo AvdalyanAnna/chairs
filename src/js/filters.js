@@ -25,11 +25,16 @@ $(document).ready(function () {
         $('.filters').removeClass('active')
     })
     $('.product-tab__item').on('click',function (e){
-        $('.product-tab__item').removeClass('product-tab__item--active')
-        $(this).addClass('product-tab__item--active')
-        const tab = $(this).data('tab')
-        $(`.product-tab`).hide()
-        $(`.product-tab[data-tab="${tab}"]`).show()
+        e.preventDefault()
+        const $this = $(this)
+        const parentClass = $this.parents('.product-tabs').data('parent')
+        const parent = $this.parents(`.${parentClass}`)
+        const tab = $this.data('tab')
+
+        parent.find('.product-tab__item').removeClass('product-tab__item--active')
+        $this.addClass('product-tab__item--active')
+        parent.find(`.product-tab`).hide()
+        parent.find(`.product-tab[data-tab="${tab}"]`).show()
     })
     $('.product-delivery__title-button').on('click',function (e){
         const parent = $(this).parents('.product-delivery__item')

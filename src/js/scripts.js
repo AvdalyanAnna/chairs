@@ -6,6 +6,8 @@
 @@include('./libs/jquery.formstyler.min.js')
 @@include('./filters.js')
 @@include('./slider.js')
+@@include('./calc.js')
+@@include('./review.js')
 @@include('./jquery-range-slide.js')
 
 const citiesList = [
