@@ -56,6 +56,10 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
+    @media screen and (max-width: 900px) {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -68,7 +72,7 @@
     font-weight: 400;
     transition: var(--transition);
     cursor: pointer;
-
+    white-space: nowrap;
     &:nth-child(1) {
       padding-left: 0;
     }
@@ -89,6 +93,9 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
+      @media screen and (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
 
     iframe {
@@ -126,6 +133,9 @@
   &__col {
     width: 50%;
     display: inline-block;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
   }
 
   &__list {
