@@ -759,7 +759,7 @@
                         <div class="product-single__header-stars-text">
                             3,5
                         </div>
-                        <a class="product-tab__item product-single__header-reviews" data-tab="product-tabs-6">
+                        <a class="go-to-tab  product-tab__item product-single__header-reviews" data-tab="product-tabs-3">
                             Отзывы (11)
                         </a>
                     </div>
@@ -937,20 +937,20 @@
                             </div>
                         </div>
                         <div class="swiper-buttons">
-                            <div class="swiper-button swiper-button-prev">
+                            <button class="swiper-button swiper-button-prev">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M16 4L8 12L16 20" stroke="white" stroke-width="2"
                                           stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                            </div>
-                            <div class="swiper-button swiper-button-next">
+                            </button>
+                            <button class="swiper-button swiper-button-next">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8 4L16 12L8 20" stroke="white" stroke-width="2"
                                           stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -961,7 +961,7 @@
                                     class="old-price">4 999₽</span></div>
                             <div>
                                 <div class="product-single__body-right__price-tag">
-                                    <div class="product-single__body-right__price-tag__inner">330₽</div>
+                                    <div class="product-single__body-right__price-tag__inner"><span>320</span>₽</div>
                                     <span>х 12 мес.</span>
                                     <div class="product-single__body-right__price-tag__info">
                                         <svg width="14" height="12" viewBox="0 0 14 12" fill="none"
@@ -978,15 +978,15 @@
                         </div>
                         <div class="product-single__body-right__price-two">
                             <div class="product-single__body-right__price-two__count">
-                                <div class="product-count" data-count="1">
+                                <div class="product-count" data-count="1" data-max="23">
                                     <div class="product-count__item product-count__minus">-</div>
                                     <div class="product-count__text">1</div>
                                     <div class="product-count__item product-count__plus">+</div>
                                 </div>
-                                <div class="product-single__body-right__price-two__count--text">Достапно 23 шт.</div>
+                                <div class="product-single__body-right__price-two__count--text">Доступно 23 шт.</div>
                             </div>
                             <div class="btn">В КОРЗИНУ</div>
-                            <div class="btn btn-solid">Купить в 1 клик</div>
+                            <div class="btn btn-solid open__modal" data-modal="#modal-user">Купить в 1 клик</div>
                         </div>
                     </div>
                     <div class="product-single__body-right-item">
@@ -1017,7 +1017,7 @@
                     </div>
                     <div class="product-single__body-right-item">
                         <div class="product-single__body-right-item__info">
-                            <div class="product-single__body-right-item__info-title">Все характеристики</div>
+                            <div  data-tab="product-tabs-1" class="go-to-tab product-single__body-right-item__info-title">Все характеристики</div>
                             <div class="product-single__body-right-item__info-list">
                                 <div class="product-single__body-right-item__info-item">
                                     <div class="product-single__body-right-item__info-item__text">Высота сиденья, см
@@ -1048,13 +1048,13 @@
                                           fill="black" fill-opacity="0.54"/>
                                 </svg>
                                 Доставка
-                                <span>Москва</span>
+                                <span class="open__modal" data-modal="#modal-city">Москва</span>
                             </div>
-                            <div class="product-single__body-right-item__footer-text">Доставка по Москве ( пределах
+                            <div class="product-single__body-right-item__footer-text">Доставка по Москве (пределах
                                 МКАД): <span>590 руб.</span></div>
                             <div class="product-single__body-right-item__footer-text">Срок доставки: <span>15 рабочикх дней</span>
                             </div>
-                            <div class="product-single__body-right-item__footer-text">Сборка: <span>270 руб. </span>
+                            <div class="product-single__body-right-item__footer-text">Сборка: <span><span class="product-assembly" data-assembly="270">270</span> руб. </span>
                             </div>
                         </div>
                     </div>
@@ -1076,7 +1076,7 @@
                 </nav>
             </div>
             <div class="wrapper">
-                <div class="product-tab" style="display: none;" data-tab="product-tabs-1">
+                <div class="product-tab" id="product-tabs-1" style="display: block;" data-tab="product-tabs-1">
                     <div class="product-info__table">
                         <div class="product-info__att">
                             <div class="product-info__att-top">Материал и цвет</div>
@@ -1224,21 +1224,20 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="product-tab product-tab__full" style="display: block;" data-tab="product-tabs-3">
+                <div class="product-tab product-tab__full" style="display: none;" data-tab="product-tabs-3">
                     <div class="feedback-block">
                         <div class="feedback-block__content">
                             <div class="feedback-block__content-slider">
                                 <div class="swiper-title">Фотографии покупателей</div>
                                 <div class="swiper feedbackSwiper feedbackSwiper_el">
                                     <div class="swiper-buttons">
-                                        <div class="swiper-button swiper-button-prev">
+                                        <button class="swiper-button swiper-button-prev">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M16 4L8 12L16 20" stroke="white" stroke-width="2"
                                                       stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
-                                        </div>
+                                        </button>
                                     </div>
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
@@ -1293,13 +1292,13 @@
                                     <div class="swiper-scrollbar"></div>
 
                                     <div class="swiper-buttons swiper-buttons__last">
-                                        <div class="swiper-button swiper-button-next">
+                                        <button class="swiper-button swiper-button-next">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M8 4L16 12L8 20" stroke="white" stroke-width="2"
                                                       stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
-                                        </div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -2439,20 +2438,20 @@
                                         </div>
                                     </div>
                                     <div class="swiper-buttons">
-                                        <div class="swiper-button swiper-button-prev">
+                                        <button class="swiper-button swiper-button-prev">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M16 4L8 12L16 20" stroke="white" stroke-width="2"
                                                       stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
-                                        </div>
-                                        <div class="swiper-button swiper-button-next">
+                                        </button>
+                                        <button class="swiper-button swiper-button-next">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M8 4L16 12L8 20" stroke="white" stroke-width="2"
                                                       stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
-                                        </div>
+                                        </button>
                                     </div>
                                 </div>
 
@@ -2592,20 +2591,20 @@
                                         </div>
                                     </div>
                                     <div class="swiper-buttons">
-                                        <div class="swiper-button swiper-button-prev">
+                                        <button class="swiper-button swiper-button-prev">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M16 4L8 12L16 20" stroke="white" stroke-width="2"
                                                       stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
-                                        </div>
-                                        <div class="swiper-button swiper-button-next">
+                                        </button>
+                                        <button class="swiper-button swiper-button-next">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M8 4L16 12L8 20" stroke="white" stroke-width="2"
                                                       stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
-                                        </div>
+                                        </button>
                                     </div>
                                 </div>
 
@@ -2744,20 +2743,20 @@
                                         </div>
                                     </div>
                                     <div class="swiper-buttons">
-                                        <div class="swiper-button swiper-button-prev">
+                                        <button class="swiper-button swiper-button-prev">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M16 4L8 12L16 20" stroke="white" stroke-width="2"
                                                       stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
-                                        </div>
-                                        <div class="swiper-button swiper-button-next">
+                                        </button>
+                                        <button class="swiper-button swiper-button-next">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M8 4L16 12L8 20" stroke="white" stroke-width="2"
                                                       stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
-                                        </div>
+                                        </button>
                                     </div>
                                 </div>
 
@@ -2897,20 +2896,20 @@
                                         </div>
                                     </div>
                                     <div class="swiper-buttons">
-                                        <div class="swiper-button swiper-button-prev">
+                                        <button class="swiper-button swiper-button-prev">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M16 4L8 12L16 20" stroke="white" stroke-width="2"
                                                       stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
-                                        </div>
-                                        <div class="swiper-button swiper-button-next">
+                                        </button>
+                                        <button class="swiper-button swiper-button-next">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M8 4L16 12L8 20" stroke="white" stroke-width="2"
                                                       stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
-                                        </div>
+                                        </button>
                                     </div>
                                 </div>
 
@@ -3271,7 +3270,7 @@
         </div>
     </div>
 
-    <div class="modal modal-review" id="modal-review" style="display:block;">
+    <div class="modal modal-review" id="modal-review" style="display:none;">
         <div class="modal__container modal-review__container">
             <div class="close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5752,6 +5751,26 @@
                     <span class="prmn-cmngr-cities__city-name" data-id="86">Санкт-Петербург</span>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<div class="modal modal-city modal-city__user" id="modal-user">
+    <div class="modal__container modal-city__container">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+                <span>×</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form action="#" class="data-callback">
+                <h3 class="text-center">БЫСТРЫЙ ЗАКАЗ <br>
+                    СТУЛ EAMES DSW WHITE
+                </h3>
+                <input type="text" placeholder="* Имя" name="name">
+                <input type="text" placeholder="* Телефон" name="name">
+                <input type="text" placeholder="E-Mail" name="name">
+                <button type="button" class="btn contact-send">Отправить заказ</button>
+            </form>
         </div>
     </div>
 </div>

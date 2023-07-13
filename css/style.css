@@ -2353,7 +2353,7 @@ h3,
 .breadcrumb__item::before {
   content: "";
   position: absolute;
-  background-image: url("/img/arrow.svg");
+  background-image: url("img/arrow.svg");
   width: 10px;
   height: 10px;
   right: 20px;
@@ -3160,6 +3160,7 @@ select:focus {
 }
 
 .btn {
+  cursor: pointer;
   text-align: center;
   vertical-align: top;
   font-weight: 500;
@@ -3179,6 +3180,34 @@ select:focus {
   display: inline-block;
   vertical-align: top;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.btn.btn-notification {
+  color: #FC6519 !important;
+  background: #F2F2F2 !important;
+  border: 1px solid #FC7A3A !important;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: inherit;
+  padding: 9px 7px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 136px;
+  width: 100%;
+  letter-spacing: 0;
+}
+
+.btn.btn-notification svg {
+  min-width: 20px;
+  height: 20px;
 }
 
 .section-title {
@@ -7242,7 +7271,7 @@ swiper-container .swiper-notification {
 .feedbackSwiper .swiper-slide.disabled {
   border: 1px solid #FC7A3A;
   border-radius: 6px;
-  overflow: auto;
+  overflow: hidden;
   position: relative;
   opacity: 0.5;
   cursor: no-drop;
@@ -7269,7 +7298,6 @@ swiper-container .swiper-notification {
   position: absolute;
   left: 0;
   top: 0;
-  background: #fff;
   width: 70px;
   height: calc(100% - 17px);
   z-index: 99;
@@ -7284,6 +7312,11 @@ swiper-container .swiper-notification {
   border: 1px solid #EFEFEF;
   width: 41px;
   height: 41px;
+  background: #fff;
+}
+
+.feedbackSwiper .swiper-button.swiper-button-disabled {
+  display: none;
 }
 
 .feedbackSwiper .swiper-button svg {
@@ -7497,6 +7530,7 @@ swiper-container .swiper-notification {
   font-weight: 400;
   line-height: 24px;
   position: relative;
+  margin-left: 20px;
 }
 
 .product-single__body-right__price-first .old-price::before {
@@ -7722,6 +7756,20 @@ swiper-container .swiper-notification {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 4px;
+  position: relative;
+}
+
+.product-single__body-right-item__info-title-count {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  color: #606060;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .product-single__body-right-item__info-item {
@@ -8497,6 +8545,42 @@ swiper-container .swiper-notification {
   min-height: 260px;
 }
 
+.modal-city__user .modal-header {
+  padding: 0;
+  border-bottom: 0;
+}
+
+.modal-city__user .data-callback {
+  max-width: 430px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-city__user .data-callback h3 {
+  padding: 0 0 15px 0;
+  font-size: 20px;
+  line-height: 24px;
+  color: #a38c76;
+  font-weight: 400;
+}
+
+.modal-city__user .data-callback input {
+  margin: 0 0 19px;
+}
+
 .modal-bag .header-call__button-content {
   display: block !important;
   padding-top: 0;
@@ -9196,6 +9280,10 @@ swiper-container .swiper-notification {
 .editor p {
   padding: 0 0 23px;
   margin: 0;
+}
+
+.open__modal {
+  cursor: pointer;
 }
 
 @media screen and (min-width: 1024px) {
