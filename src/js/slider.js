@@ -5,7 +5,7 @@ $(document).ready(function () {
             slidesPerView: params.slidesPerView || 4,
             spaceBetween: params.spaceBetween || 0,
             centeredSlides: params.centeredSlides || false,
-            navigation: {
+            navigation: params.navigation || {
                 nextEl: `${elClass} .swiper-button-next`,
                 prevEl: `${elClass} .swiper-button-prev`,
             },
@@ -63,7 +63,6 @@ $(document).ready(function () {
             }
         },
     })
-    console.log(categoriesList)
     $(' .products-min__slider-inner .swiper-slide').on('click', function () {
         const data = $(this).data('swiper-slide-index')
         const parentIndex = $(this).parents('.products-item').data('index') || 0
@@ -76,7 +75,11 @@ $(document).ready(function () {
         scrollbar: {
             el: ".swiper-scrollbar",
             hide: true,
-        }
+        },
+        navigation: {
+            nextEl: `.feedbackSwiper_el .swiper-button-next`,
+            prevEl: `.feedbackSwiper_el .swiper-button-prev`,
+        },
     });
 
     let feedbackSwiper1 = new Swiper(".feedbackSwiper_el1", {
@@ -84,7 +87,11 @@ $(document).ready(function () {
         scrollbar: {
             el: ".swiper-scrollbar",
             hide: true,
-        }
+        },
+        navigation: {
+            nextEl: `.feedbackSwiper_el1 .swiper-button-next`,
+            prevEl: `.feedbackSwiper_el1 .swiper-button-prev`,
+        },
     });
     $('.productMinSwiper .swiper-slide').on('click', function () {
         let data = $(this).attr('aria-label')

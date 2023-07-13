@@ -106,6 +106,7 @@ input, textarea, select {
 }
 
 .btn {
+  cursor: pointer;
   text-align: center;
   vertical-align: top;
   font-weight: 500;
@@ -124,6 +125,29 @@ input, textarea, select {
   display: inline-block;
   vertical-align: top;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  &.btn-notification{
+    color: #FC6519 !important;
+    background: #F2F2F2 !important;
+    border: 1px solid #FC7A3A !important;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: inherit;
+    padding: 9px 7px !important;
+    display: flex;
+    align-items: center;
+    max-width: 136px;
+    width: 100%;
+    letter-spacing: 0;
+    svg{
+      min-width: 20px;
+      height: 20px;
+
+    }
+  }
 }
 
 .section {
@@ -511,6 +535,31 @@ input, textarea, select {
   &-city {
     &__container {
       min-height: 260px;
+    }
+    &__user{
+      .modal-header{
+        padding: 0;
+        border-bottom: 0;
+      }
+      .data-callback{
+        max-width: 430px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h3{
+          padding: 0 0 15px 0;
+          font-size: 20px;
+          line-height: 24px;
+          color: #a38c76;
+            font-weight: 400;
+        }
+        input{
+          margin: 0 0 19px ;
+        }
+      }
     }
   }
 
@@ -1198,5 +1247,6 @@ input, textarea, select {
     margin: 0;
   }
 }
-
-
+.open__modal{
+  cursor: pointer;
+}

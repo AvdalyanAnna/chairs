@@ -723,7 +723,7 @@
     &.disabled{
       border: 1px solid #FC7A3A;
       border-radius: 6px;
-      overflow: auto;
+      overflow: hidden;
       position: relative;
       opacity: 0.5;
       cursor: no-drop;
@@ -747,7 +747,6 @@
     position: absolute;
     left: 0;
     top: 0;
-    background: #fff;
     width: 70px;
     height: calc(100% - 17px);
     z-index: 99;
@@ -761,6 +760,10 @@
     border: 1px solid #EFEFEF;
     width: 41px;
     height: 41px;
+    background: #fff;
+    &.swiper-button-disabled{
+      display: none;
+    }
     svg {
       width: 20px;
       height: 20px;
