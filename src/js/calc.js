@@ -1,10 +1,11 @@
-$(function () {
+$(document).ready(function () {
+
     $('.product-count__item').on('click', function (e) {
         e.preventDefault()
         const $this = $(this)
         const count = $this.parents('.product-count').data('count')
         const max = $this.parents('.product-count').data('max')
-        if(+max === 0) return false
+        if (+max === 0) return false
         const el = $this.parents('.product-count').find('.product-count__text')
         const price = $('.product-count__price').data('price')
         const assembly = $('.product-assembly').data('assembly')
@@ -36,5 +37,48 @@ $(function () {
         $('html, body').animate({
             scrollTop: top
         }, 500)
+    })
+    $('.product-single__body-right__price-two-send').on('click', function () {
+        const el = $('.product-single__body-right-item__color-inner')
+        el.each(index => {
+            let data = el.eq(index).data('color')
+            if (!data) {
+                el.eq(index).parent().addClass('error-block')
+                el.eq(index).parent().append('<div class="is-error">Не выбрано</div>')
+            }
+        })
+        // const res = $('.product-single__body-right-item__color-inner').data('')
+    })
+    $('.modal-product__color').on('click', function (e) {
+        e.preventDefault()
+        const $this = $(this)
+        const el = $this.data('el'),
+            name = $this.data('name'),
+            color = $this.data('color')
+        $(el).removeClass('error-block')
+        $(`.modal-product__color[data-el="${el}"]`).removeClass('active')
+        $(this).addClass('active')
+        $(el).find('.is-error').remove()
+        $(el).find('.product-single__body-right-item__color-inner').attr('title', name)
+        $(el).find('.product-single__body-right-item__color-inner').css('background-image', `url(${color})`)
+        $(el).find('.product-single__body-right-item__color-inner').data('color', color)
+        $(el).find('.product-single__body-right-item__color-sub-title').remove()
+        $(el).append(`<div class="product-single__body-right-item__color-sub-title">${name}</div>`)
+
+        const elements = $('.product-single__body-right-item__color-inner')
+        let flag = false
+        elements.each(index => {
+            let data = elements.eq(index).data('color')
+            if (!data) flag = true
+        })
+        if (!flag) {
+            $('.product-single__body-right__price-two-send').text('ПЕРЕЙТИ В КОРЗИНУ')
+        }
+    })
+
+    $('.product-single__body-right-item__content .product-single__body-right-item__color-inner').on('click', function () {
+        $('.modal-product').show()
+        $('.modal-product .product-tab__item').removeClass('product-tab__item--active')
+        $(`.modal-product .product-tab__item[data-tab="${$(this).data('tab')}"]`).addClass('product-tab__item--active')
     })
 })

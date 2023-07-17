@@ -827,6 +827,14 @@ $(document).ready(function () {
     }
     getCities()
 
+    $('.prmn-cmngr-cities__search-list').on('click', '.prmn-cmngr-cities__city-name', function(е) {
+        е.preventDefault()
+        let cityName = $(this).text();
+        $('.product-single__body-right-item__footer-title .open__modal').text(cityName)
+        $('.modal').hide()
+    });
+
+
     $('.prmn-cmngr-cities__search.form-control').on('input',function(){
         const search = $(this).val()
         let cities =  citiesList
