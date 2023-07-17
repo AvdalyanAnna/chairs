@@ -20,10 +20,10 @@
     &-left {
       display: flex;
       align-items: center;
-    @media screen and (max-width: 950px) {
-      width: 100%;
-      justify-content: space-between;
-    }
+      @media screen and (max-width: 950px) {
+        width: 100%;
+        justify-content: space-between;
+      }
       @media screen and (max-width: 550px) {
         flex-wrap: wrap;
       }
@@ -32,11 +32,11 @@
     &-right {
       display: flex;
       align-items: center;
-    @media screen and (max-width: 950px) {
-      width: 100%;
-      justify-content: space-between;
-      margin-top: 10px;
-    }
+      @media screen and (max-width: 950px) {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
       @media screen and (max-width: 550px) {
         flex-wrap: wrap;
       }
@@ -61,6 +61,7 @@
         width: 100%;
         margin: 4px 0;
       }
+
       &-text {
         color: #A38C76;
         font-size: 14px;
@@ -90,7 +91,7 @@
     display: flex;
     justify-content: space-between;
     @media screen and (max-width: 950px) {
-    flex-direction: column;
+      flex-direction: column;
     }
 
     &-left {
@@ -112,7 +113,7 @@
         }
       }
       @media screen and (max-width: 950px) {
-      max-width: 100%;
+        max-width: 100%;
         height: auto;
       }
 
@@ -125,6 +126,7 @@
         @media screen and (max-width: 550px) {
           display: none;
         }
+
         .swiper-slide {
           max-width: 163px;
           width: 100%;
@@ -141,8 +143,9 @@
         max-width: 540px;
         width: 100%;
         @media screen and (max-width: 550px) {
-        max-height: 380px;
+          max-height: 380px;
         }
+
         .swiper-slide {
           max-width: 540px;
           width: 100%;
@@ -172,6 +175,7 @@
       @media screen and (max-width: 950px) {
         margin-top: 20px;
       }
+
       &__price {
         border-radius: 6px;
         background: #FFF;
@@ -183,6 +187,12 @@
           display: flex;
           justify-content: space-between;
           margin-bottom: 25px;
+          @media screen and (max-width: 480px) {
+            flex-direction: column;
+            .product-single__body-right__price-tag{
+              justify-content: space-between;
+            }
+          }
 
           .price {
             color: #000;
@@ -218,6 +228,20 @@
           align-items: flex-start;
           justify-content: space-between;
           gap: 15px;
+          @media screen and (max-width: 500px) {
+            flex-direction: column;
+            gap: 0;
+            .btn {
+              flex: 1;
+              margin: 5px 0;
+              max-width: 100% !important;
+              width: 100%;
+            }
+            .product-single__body-right__price-two__count {
+              flex: 1;
+              max-width: 100%;
+            }
+          }
 
           &__count {
             max-width: 122px;
@@ -278,7 +302,7 @@
           }
 
           .btn {
-            max-width: 180px;
+            max-width: 160px;
             padding: 12px 30px;
             letter-spacing: 0;
             flex: 1;
@@ -308,9 +332,54 @@
           margin-right: 4px;
           display: flex;
           align-items: center;
-
+&-1{
+  display: flex;
+  align-items: center;
+}
           &__info {
-            margin-right: 16px;
+            margin: 0 16px 0 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            &:hover{
+              .product-single__body-right__price-tag__info-inner{
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+            svg {
+              cursor: pointer;
+            }
+            &-inner{
+              position: absolute;
+              opacity: 0;
+              visibility: hidden;
+              top: -285px;
+              min-width: 300px;
+              width: 100%;
+              z-index: 99;
+              &-bg{
+                box-shadow: 0 4px 4px 0 rgba(0,0,0,.12);
+                padding:  15px 17px;
+                border-radius: 6px;
+                background: #fff;
+                display: block;
+                max-height: 290px;
+                position: relative;
+              }
+              ul{
+                padding: 0 0 0 20px;
+                margin: 8px 0;
+              }
+              a {
+                color: #FC6519;
+              }
+              b{
+                font-weight: 400;
+                color: #a38c76;
+              }
+            }
           }
 
           &__inner {
@@ -358,9 +427,14 @@
           &s {
             display: flex;
             gap: 25px;
+            @media screen and (max-width: 500px) {
+              flex-wrap: wrap;
+              gap: 10px 25px;
+            }
           }
 
           flex: 1;
+          min-width: 140px;
 
           &-title {
             margin-bottom: 4px;
