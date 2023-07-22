@@ -270,15 +270,47 @@ $(document).ready(function () {
             let data = elements.eq(index).data('color')
             if (!data) flag = true
         })
-        if (!flag) {
-            $('.product-single__body-right__price-two-send').text('ПЕРЕЙТИ В КОРЗИНУ')
-        }
     })
 
     $('.product-single__body-right-item__content .product-single__body-right-item__color-inner').on('click', function () {
         $('.modal-product').show()
         $('.modal-product .product-tab__item').removeClass('product-tab__item--active')
         $(`.modal-product .product-tab__item[data-tab="${$(this).data('tab')}"]`).addClass('product-tab__item--active')
+    })
+    $('.product-single__body-right__price-two-send').on('click', function (){
+        let flag = false
+        elements.each(index => {
+            let data = elements.eq(index).data('color')
+            if (!data) flag = true
+        })
+        if (!flag) {
+            $('.product-single__body-right__price-two-send').text('ПЕРЕЙТИ В КОРЗИНУ')
+        }
+    })
+    $('.modal-product__colors-menu-item').on('click', function (){
+        $('.modal-product__colors-menu-item').removeClass('active')
+        $(this).addClass('active')
+        const tab = $(this).data('tab')
+        if(tab === 'all'){
+            $(this).parents('.product-tab').find('.modal-product__color').show()
+        }else{
+            $(this).parents('.product-tab').find('.modal-product__color').hide()
+            $(this).parents(`.product-tab`).find(`.modal-product__color[data-tab="${tab}"]`).show()
+        }
+    })
+
+    $('.change-star').on('click', function (e){
+        e.preventDefault()
+       const star =  $(this).data('star')
+        const els = $(this).parent().find('.change-star')
+        els.each(i=>{
+            let img = '/img/icon/star-active.svg'
+            if(+star  >= i + 1)  img = '/img/icon/star-active.svg'
+            else img = '/img/icon/star.svg'
+            els.eq(i).html(
+                `<img src="${img}" alt="star" />`
+            )
+        })
     })
 })
 $(function () {
@@ -353,684 +385,684 @@ jQuery(document).ready(function ($) {
 
 const citiesList = [
     {
-        "city":"Москва",
-        "domain":"https:\/\/arideya.ru\/"
+        "city": "Москва",
+        "domain": "https:\/\/arideya.ru\/"
     },
     {
-        "city":"Санкт-Петербург",
-        "domain":"https:\/\/spb.arideya.ru\/"
+        "city": "Санкт-Петербург",
+        "domain": "https:\/\/spb.arideya.ru\/"
     },
     {
-        "city":"Новосибирск",
-        "domain":"https:\/\/novosibirsk.arideya.ru\/"
+        "city": "Новосибирск",
+        "domain": "https:\/\/novosibirsk.arideya.ru\/"
     },
     {
-        "city":"Екатеринбург",
-        "domain":"https:\/\/ekaterinburg.arideya.ru\/"
+        "city": "Екатеринбург",
+        "domain": "https:\/\/ekaterinburg.arideya.ru\/"
     },
     {
-        "city":"Нижний Новгород",
-        "domain":"https:\/\/nizhny-novgorod.arideya.ru\/"
+        "city": "Нижний Новгород",
+        "domain": "https:\/\/nizhny-novgorod.arideya.ru\/"
     },
     {
-        "city":"Казань",
-        "domain":"https:\/\/kazan.arideya.ru\/"
+        "city": "Казань",
+        "domain": "https:\/\/kazan.arideya.ru\/"
     },
     {
-        "city":"Челябинск",
-        "domain":"https:\/\/chelyabinsk.arideya.ru\/"
+        "city": "Челябинск",
+        "domain": "https:\/\/chelyabinsk.arideya.ru\/"
     },
     {
-        "city":"Омск",
-        "domain":"https:\/\/omsk.arideya.ru\/"
+        "city": "Омск",
+        "domain": "https:\/\/omsk.arideya.ru\/"
     },
     {
-        "city":"Самара",
-        "domain":"https:\/\/samara.arideya.ru\/"
+        "city": "Самара",
+        "domain": "https:\/\/samara.arideya.ru\/"
     },
     {
-        "city":"Ростов-на-Дону",
-        "domain":"https:\/\/rostov-na-donu.arideya.ru\/"
+        "city": "Ростов-на-Дону",
+        "domain": "https:\/\/rostov-na-donu.arideya.ru\/"
     },
     {
-        "city":"Уфа",
-        "domain":"https:\/\/ufa.arideya.ru\/"
+        "city": "Уфа",
+        "domain": "https:\/\/ufa.arideya.ru\/"
     },
     {
-        "city":"Красноярск",
-        "domain":"https:\/\/krasnoyarsk.arideya.ru\/"
+        "city": "Красноярск",
+        "domain": "https:\/\/krasnoyarsk.arideya.ru\/"
     },
     {
-        "city":"Пермь",
-        "domain":"https:\/\/perm.arideya.ru\/"
+        "city": "Пермь",
+        "domain": "https:\/\/perm.arideya.ru\/"
     },
     {
-        "city":"Воронеж",
-        "domain":"https:\/\/voronezh.arideya.ru\/"
+        "city": "Воронеж",
+        "domain": "https:\/\/voronezh.arideya.ru\/"
     },
     {
-        "city":"Волгоград",
-        "domain":"https:\/\/volgograd.arideya.ru\/"
+        "city": "Волгоград",
+        "domain": "https:\/\/volgograd.arideya.ru\/"
     },
     {
-        "city":"Краснодар",
-        "domain":"https:\/\/krasnodar.arideya.ru\/"
+        "city": "Краснодар",
+        "domain": "https:\/\/krasnodar.arideya.ru\/"
     },
     {
-        "city":"Саратов",
-        "domain":"https:\/\/saratov.arideya.ru\/"
+        "city": "Саратов",
+        "domain": "https:\/\/saratov.arideya.ru\/"
     },
     {
-        "city":"Тюмень",
-        "domain":"https:\/\/tyumen.arideya.ru\/"
+        "city": "Тюмень",
+        "domain": "https:\/\/tyumen.arideya.ru\/"
     },
     {
-        "city":"Тольятти",
-        "domain":"https:\/\/toliatti.arideya.ru\/"
+        "city": "Тольятти",
+        "domain": "https:\/\/toliatti.arideya.ru\/"
     },
     {
-        "city":"Ижевск",
-        "domain":"https:\/\/izhevsk.arideya.ru\/"
+        "city": "Ижевск",
+        "domain": "https:\/\/izhevsk.arideya.ru\/"
     },
     {
-        "city":"Барнаул",
-        "domain":"https:\/\/barnaul.arideya.ru\/"
+        "city": "Барнаул",
+        "domain": "https:\/\/barnaul.arideya.ru\/"
     },
     {
-        "city":"Иркутск",
-        "domain":"https:\/\/irkutsk.arideya.ru\/"
+        "city": "Иркутск",
+        "domain": "https:\/\/irkutsk.arideya.ru\/"
     },
     {
-        "city":"Ульяновск",
-        "domain":"https:\/\/ulianovsk.arideya.ru\/"
+        "city": "Ульяновск",
+        "domain": "https:\/\/ulianovsk.arideya.ru\/"
     },
     {
-        "city":"Хабаровск",
-        "domain":"https:\/\/habarovsk.arideya.ru\/"
+        "city": "Хабаровск",
+        "domain": "https:\/\/habarovsk.arideya.ru\/"
     },
     {
-        "city":"Ярославль",
-        "domain":"https:\/\/yaroslavl.arideya.ru\/"
+        "city": "Ярославль",
+        "domain": "https:\/\/yaroslavl.arideya.ru\/"
     },
     {
-        "city":"Владивосток",
-        "domain":"https:\/\/vladivostok.arideya.ru\/"
+        "city": "Владивосток",
+        "domain": "https:\/\/vladivostok.arideya.ru\/"
     },
     {
-        "city":"Махачкала",
-        "domain":"https:\/\/mahachkala.arideya.ru\/"
+        "city": "Махачкала",
+        "domain": "https:\/\/mahachkala.arideya.ru\/"
     },
     {
-        "city":"Томск",
-        "domain":"https:\/\/tomsk.arideya.ru\/"
+        "city": "Томск",
+        "domain": "https:\/\/tomsk.arideya.ru\/"
     },
     {
-        "city":"Оренбург",
-        "domain":"https:\/\/orenburg.arideya.ru\/"
+        "city": "Оренбург",
+        "domain": "https:\/\/orenburg.arideya.ru\/"
     },
     {
-        "city":"Кемерово",
-        "domain":"https:\/\/kemerovo.arideya.ru\/"
+        "city": "Кемерово",
+        "domain": "https:\/\/kemerovo.arideya.ru\/"
     },
     {
-        "city":"Новокузнецк",
-        "domain":"https:\/\/novokuznetsk.arideya.ru\/"
+        "city": "Новокузнецк",
+        "domain": "https:\/\/novokuznetsk.arideya.ru\/"
     },
     {
-        "city":"Рязань",
-        "domain":"https:\/\/ryazan.arideya.ru\/"
+        "city": "Рязань",
+        "domain": "https:\/\/ryazan.arideya.ru\/"
     },
     {
-        "city":"Астрахань",
-        "domain":"https:\/\/astrahan.arideya.ru\/"
+        "city": "Астрахань",
+        "domain": "https:\/\/astrahan.arideya.ru\/"
     },
     {
-        "city":"Набережные Челны",
-        "domain":"https:\/\/naberezhnye-chelny.arideya.ru\/"
+        "city": "Набережные Челны",
+        "domain": "https:\/\/naberezhnye-chelny.arideya.ru\/"
     },
     {
-        "city":"Пенза",
-        "domain":"https:\/\/penza.arideya.ru\/"
+        "city": "Пенза",
+        "domain": "https:\/\/penza.arideya.ru\/"
     },
     {
-        "city":"Липецк",
-        "domain":"https:\/\/lipetsk.arideya.ru\/"
+        "city": "Липецк",
+        "domain": "https:\/\/lipetsk.arideya.ru\/"
     },
     {
-        "city":"Киров",
-        "domain":"https:\/\/kirov.arideya.ru\/"
+        "city": "Киров",
+        "domain": "https:\/\/kirov.arideya.ru\/"
     },
     {
-        "city":"Чебоксары",
-        "domain":"https:\/\/cheboksary.arideya.ru\/"
+        "city": "Чебоксары",
+        "domain": "https:\/\/cheboksary.arideya.ru\/"
     },
     {
-        "city":"Тула",
-        "domain":"https:\/\/tula.arideya.ru\/"
+        "city": "Тула",
+        "domain": "https:\/\/tula.arideya.ru\/"
     },
     {
-        "city":"Калининград",
-        "domain":"https:\/\/kaliningrad.arideya.ru\/"
+        "city": "Калининград",
+        "domain": "https:\/\/kaliningrad.arideya.ru\/"
     },
     {
-        "city":"Курск",
-        "domain":"https:\/\/kursk.arideya.ru\/"
+        "city": "Курск",
+        "domain": "https:\/\/kursk.arideya.ru\/"
     },
     {
-        "city":"Улан-Удэ",
-        "domain":"https:\/\/ulan-ude.arideya.ru\/"
+        "city": "Улан-Удэ",
+        "domain": "https:\/\/ulan-ude.arideya.ru\/"
     },
     {
-        "city":"Ставрополь",
-        "domain":"https:\/\/stavropol.arideya.ru\/"
+        "city": "Ставрополь",
+        "domain": "https:\/\/stavropol.arideya.ru\/"
     },
     {
-        "city":"Севастополь",
-        "domain":"https:\/\/sevastopol.arideya.ru\/"
+        "city": "Севастополь",
+        "domain": "https:\/\/sevastopol.arideya.ru\/"
     },
     {
-        "city":"Балашиха",
-        "domain":"https:\/\/balashiha.arideya.ru\/"
+        "city": "Балашиха",
+        "domain": "https:\/\/balashiha.arideya.ru\/"
     },
     {
-        "city":"Тверь",
-        "domain":"https:\/\/tver.arideya.ru\/"
+        "city": "Тверь",
+        "domain": "https:\/\/tver.arideya.ru\/"
     },
     {
-        "city":"Магнитогорск",
-        "domain":"https:\/\/magnitogorsk.arideya.ru\/"
+        "city": "Магнитогорск",
+        "domain": "https:\/\/magnitogorsk.arideya.ru\/"
     },
     {
-        "city":"Иваново",
-        "domain":"https:\/\/ivanovo.arideya.ru\/"
+        "city": "Иваново",
+        "domain": "https:\/\/ivanovo.arideya.ru\/"
     },
     {
-        "city":"Брянск",
-        "domain":"https:\/\/bryansk.arideya.ru\/"
+        "city": "Брянск",
+        "domain": "https:\/\/bryansk.arideya.ru\/"
     },
     {
-        "city":"Сочи",
-        "domain":"https:\/\/sochi.arideya.ru\/"
+        "city": "Сочи",
+        "domain": "https:\/\/sochi.arideya.ru\/"
     },
     {
-        "city":"Белгород",
-        "domain":"https:\/\/belgorod.arideya.ru\/"
+        "city": "Белгород",
+        "domain": "https:\/\/belgorod.arideya.ru\/"
     },
     {
-        "city":"Нижний Тагил",
-        "domain":"https:\/\/nizhny-tagil.arideya.ru\/"
+        "city": "Нижний Тагил",
+        "domain": "https:\/\/nizhny-tagil.arideya.ru\/"
     },
     {
-        "city":"Владимир",
-        "domain":"https:\/\/vladimir.arideya.ru\/"
+        "city": "Владимир",
+        "domain": "https:\/\/vladimir.arideya.ru\/"
     },
     {
-        "city":"Архангельск",
-        "domain":"https:\/\/arhangelsk.arideya.ru\/"
+        "city": "Архангельск",
+        "domain": "https:\/\/arhangelsk.arideya.ru\/"
     },
     {
-        "city":"Сургут",
-        "domain":"https:\/\/surgut.arideya.ru\/"
+        "city": "Сургут",
+        "domain": "https:\/\/surgut.arideya.ru\/"
     },
     {
-        "city":"Чита",
-        "domain":"https:\/\/chita.arideya.ru\/"
+        "city": "Чита",
+        "domain": "https:\/\/chita.arideya.ru\/"
     },
     {
-        "city":"Калуга",
-        "domain":"https:\/\/kaluga.arideya.ru\/"
+        "city": "Калуга",
+        "domain": "https:\/\/kaluga.arideya.ru\/"
     },
     {
-        "city":"Симферополь",
-        "domain":"https:\/\/simferopol.arideya.ru\/"
+        "city": "Симферополь",
+        "domain": "https:\/\/simferopol.arideya.ru\/"
     },
     {
-        "city":"Смоленск",
-        "domain":"https:\/\/smolensk.arideya.ru\/"
+        "city": "Смоленск",
+        "domain": "https:\/\/smolensk.arideya.ru\/"
     },
     {
-        "city":"Волжский",
-        "domain":"https:\/\/volzhsky.arideya.ru\/"
+        "city": "Волжский",
+        "domain": "https:\/\/volzhsky.arideya.ru\/"
     },
     {
-        "city":"Курган",
-        "domain":"https:\/\/kurgan.arideya.ru\/"
+        "city": "Курган",
+        "domain": "https:\/\/kurgan.arideya.ru\/"
     },
     {
-        "city":"Орел",
-        "domain":"https:\/\/orel.arideya.ru\/"
+        "city": "Орел",
+        "domain": "https:\/\/orel.arideya.ru\/"
     },
     {
-        "city":"Череповец",
-        "domain":"https:\/\/cherepovec.arideya.ru\/"
+        "city": "Череповец",
+        "domain": "https:\/\/cherepovec.arideya.ru\/"
     },
     {
-        "city":"Вологда",
-        "domain":"https:\/\/vologda.arideya.ru\/"
+        "city": "Вологда",
+        "domain": "https:\/\/vologda.arideya.ru\/"
     },
     {
-        "city":"Саранск",
-        "domain":"https:\/\/saransk.arideya.ru\/"
+        "city": "Саранск",
+        "domain": "https:\/\/saransk.arideya.ru\/"
     },
     {
-        "city":"Владикавказ",
-        "domain":"https:\/\/vladikavkaz.arideya.ru\/"
+        "city": "Владикавказ",
+        "domain": "https:\/\/vladikavkaz.arideya.ru\/"
     },
     {
-        "city":"Якутск",
-        "domain":"https:\/\/yakutsk.arideya.ru\/"
+        "city": "Якутск",
+        "domain": "https:\/\/yakutsk.arideya.ru\/"
     },
     {
-        "city":"Мурманск",
-        "domain":"https:\/\/murmansk.arideya.ru\/"
+        "city": "Мурманск",
+        "domain": "https:\/\/murmansk.arideya.ru\/"
     },
     {
-        "city":"Подольск",
-        "domain":"https:\/\/podolsk.arideya.ru\/"
+        "city": "Подольск",
+        "domain": "https:\/\/podolsk.arideya.ru\/"
     },
     {
-        "city":"Тамбов",
-        "domain":"https:\/\/tambov.arideya.ru\/"
+        "city": "Тамбов",
+        "domain": "https:\/\/tambov.arideya.ru\/"
     },
     {
-        "city":"Грозный",
-        "domain":"https:\/\/grozny.arideya.ru\/"
+        "city": "Грозный",
+        "domain": "https:\/\/grozny.arideya.ru\/"
     },
     {
-        "city":"Стерлитамак",
-        "domain":"https:\/\/sterlitamak.arideya.ru\/"
+        "city": "Стерлитамак",
+        "domain": "https:\/\/sterlitamak.arideya.ru\/"
     },
     {
-        "city":"Петрозаводск",
-        "domain":"https:\/\/petrozavodsk.arideya.ru\/"
+        "city": "Петрозаводск",
+        "domain": "https:\/\/petrozavodsk.arideya.ru\/"
     },
     {
-        "city":"Кострома",
-        "domain":"https:\/\/kostroma.arideya.ru\/"
+        "city": "Кострома",
+        "domain": "https:\/\/kostroma.arideya.ru\/"
     },
     {
-        "city":"Нижневартовск",
-        "domain":"https:\/\/nizhnevartovsk.arideya.ru\/"
+        "city": "Нижневартовск",
+        "domain": "https:\/\/nizhnevartovsk.arideya.ru\/"
     },
     {
-        "city":"Новороссийск",
-        "domain":"https:\/\/novorossisk.arideya.ru\/"
+        "city": "Новороссийск",
+        "domain": "https:\/\/novorossisk.arideya.ru\/"
     },
     {
-        "city":"Йошкар-Ола",
-        "domain":"https:\/\/yoshkar-ola.arideya.ru\/"
+        "city": "Йошкар-Ола",
+        "domain": "https:\/\/yoshkar-ola.arideya.ru\/"
     },
     {
-        "city":"Комсомольск-на-Амуре",
-        "domain":"https:\/\/komsomolsk-na-amure.arideya.ru\/"
+        "city": "Комсомольск-на-Амуре",
+        "domain": "https:\/\/komsomolsk-na-amure.arideya.ru\/"
     },
     {
-        "city":"Таганрог",
-        "domain":"https:\/\/taganrog.arideya.ru\/"
+        "city": "Таганрог",
+        "domain": "https:\/\/taganrog.arideya.ru\/"
     },
     {
-        "city":"Сыктывкар",
-        "domain":"https:\/\/syktyvkar.arideya.ru\/"
+        "city": "Сыктывкар",
+        "domain": "https:\/\/syktyvkar.arideya.ru\/"
     },
     {
-        "city":"Химки",
-        "domain":"https:\/\/himki.arideya.ru\/"
+        "city": "Химки",
+        "domain": "https:\/\/himki.arideya.ru\/"
     },
     {
-        "city":"Нальчик",
-        "domain":"https:\/\/nalchik.arideya.ru\/"
+        "city": "Нальчик",
+        "domain": "https:\/\/nalchik.arideya.ru\/"
     },
     {
-        "city":"Шахты",
-        "domain":"https:\/\/shahty.arideya.ru\/"
+        "city": "Шахты",
+        "domain": "https:\/\/shahty.arideya.ru\/"
     },
     {
-        "city":"Нижнекамск",
-        "domain":"https:\/\/nizhnekamsk.arideya.ru\/"
+        "city": "Нижнекамск",
+        "domain": "https:\/\/nizhnekamsk.arideya.ru\/"
     },
     {
-        "city":"Братск",
-        "domain":"https:\/\/bratsk.arideya.ru\/"
+        "city": "Братск",
+        "domain": "https:\/\/bratsk.arideya.ru\/"
     },
     {
-        "city":"Дзержинск",
-        "domain":"https:\/\/dzerzhinsk.arideya.ru\/"
+        "city": "Дзержинск",
+        "domain": "https:\/\/dzerzhinsk.arideya.ru\/"
     },
     {
-        "city":"Орск",
-        "domain":"https:\/\/orsk.arideya.ru\/"
+        "city": "Орск",
+        "domain": "https:\/\/orsk.arideya.ru\/"
     },
     {
-        "city":"Ангарск",
-        "domain":"https:\/\/angarsk.arideya.ru\/"
+        "city": "Ангарск",
+        "domain": "https:\/\/angarsk.arideya.ru\/"
     },
     {
-        "city":"Благовещенск",
-        "domain":"https:\/\/blagoveschensk.arideya.ru\/"
+        "city": "Благовещенск",
+        "domain": "https:\/\/blagoveschensk.arideya.ru\/"
     },
     {
-        "city":"Энгельс",
-        "domain":"https:\/\/engels.arideya.ru\/"
+        "city": "Энгельс",
+        "domain": "https:\/\/engels.arideya.ru\/"
     },
     {
-        "city":"Старый Оскол",
-        "domain":"https:\/\/stary-oskol.arideya.ru\/"
+        "city": "Старый Оскол",
+        "domain": "https:\/\/stary-oskol.arideya.ru\/"
     },
     {
-        "city":"Великий Новгород",
-        "domain":"https:\/\/veliky-novgorod.arideya.ru\/"
+        "city": "Великий Новгород",
+        "domain": "https:\/\/veliky-novgorod.arideya.ru\/"
     },
     {
-        "city":"Королев",
-        "domain":"https:\/\/korolev.arideya.ru\/"
+        "city": "Королев",
+        "domain": "https:\/\/korolev.arideya.ru\/"
     },
     {
-        "city":"Псков",
-        "domain":"https:\/\/pskov.arideya.ru\/"
+        "city": "Псков",
+        "domain": "https:\/\/pskov.arideya.ru\/"
     },
     {
-        "city":"Бийск",
-        "domain":"https:\/\/biysk.arideya.ru\/"
+        "city": "Бийск",
+        "domain": "https:\/\/biysk.arideya.ru\/"
     },
     {
-        "city":"Мытищи",
-        "domain":"https:\/\/mytischi.arideya.ru\/"
+        "city": "Мытищи",
+        "domain": "https:\/\/mytischi.arideya.ru\/"
     },
     {
-        "city":"Прокопьевск",
-        "domain":"https:\/\/prokopevsk.arideya.ru\/"
+        "city": "Прокопьевск",
+        "domain": "https:\/\/prokopevsk.arideya.ru\/"
     },
     {
-        "city":"Южно-Сахалинск",
-        "domain":"https:\/\/yuzhno-sahalinsk.arideya.ru\/"
+        "city": "Южно-Сахалинск",
+        "domain": "https:\/\/yuzhno-sahalinsk.arideya.ru\/"
     },
     {
-        "city":"Балаково",
-        "domain":"https:\/\/balakovo.arideya.ru\/"
+        "city": "Балаково",
+        "domain": "https:\/\/balakovo.arideya.ru\/"
     },
     {
-        "city":"Рыбинск",
-        "domain":"https:\/\/rybinsk.arideya.ru\/"
+        "city": "Рыбинск",
+        "domain": "https:\/\/rybinsk.arideya.ru\/"
     },
     {
-        "city":"Армавир",
-        "domain":"https:\/\/armavir.arideya.ru\/"
+        "city": "Армавир",
+        "domain": "https:\/\/armavir.arideya.ru\/"
     },
     {
-        "city":"Люберцы",
-        "domain":"https:\/\/lubercy.arideya.ru\/"
+        "city": "Люберцы",
+        "domain": "https:\/\/lubercy.arideya.ru\/"
     },
     {
-        "city":"Северодвинск",
-        "domain":"https:\/\/severodvinsk.arideya.ru\/"
+        "city": "Северодвинск",
+        "domain": "https:\/\/severodvinsk.arideya.ru\/"
     },
     {
-        "city":"Петропавловск-Камчатский",
-        "domain":"https:\/\/petropavlovsk-kamchatsky.arideya.ru\/"
+        "city": "Петропавловск-Камчатский",
+        "domain": "https:\/\/petropavlovsk-kamchatsky.arideya.ru\/"
     },
     {
-        "city":"Абакан",
-        "domain":"https:\/\/abakan.arideya.ru\/"
+        "city": "Абакан",
+        "domain": "https:\/\/abakan.arideya.ru\/"
     },
     {
-        "city":"Норильск",
-        "domain":"https:\/\/norilsk.arideya.ru\/"
+        "city": "Норильск",
+        "domain": "https:\/\/norilsk.arideya.ru\/"
     },
     {
-        "city":"Сызрань",
-        "domain":"https:\/\/syzran.arideya.ru\/"
+        "city": "Сызрань",
+        "domain": "https:\/\/syzran.arideya.ru\/"
     },
     {
-        "city":"Волгодонск",
-        "domain":"https:\/\/volgodonsk.arideya.ru\/"
+        "city": "Волгодонск",
+        "domain": "https:\/\/volgodonsk.arideya.ru\/"
     },
     {
-        "city":"Новочеркасск",
-        "domain":"https:\/\/novocherkassk.arideya.ru\/"
+        "city": "Новочеркасск",
+        "domain": "https:\/\/novocherkassk.arideya.ru\/"
     },
     {
-        "city":"Каменск-Уральский",
-        "domain":"https:\/\/kamensk-uralsky.arideya.ru\/"
+        "city": "Каменск-Уральский",
+        "domain": "https:\/\/kamensk-uralsky.arideya.ru\/"
     },
     {
-        "city":"Златоуст",
-        "domain":"https:\/\/zlatoust.arideya.ru\/"
+        "city": "Златоуст",
+        "domain": "https:\/\/zlatoust.arideya.ru\/"
     },
     {
-        "city":"Уссурийск",
-        "domain":"https:\/\/ussuriysk.arideya.ru\/"
+        "city": "Уссурийск",
+        "domain": "https:\/\/ussuriysk.arideya.ru\/"
     },
     {
-        "city":"Электросталь",
-        "domain":"https:\/\/electrostal.arideya.ru\/"
+        "city": "Электросталь",
+        "domain": "https:\/\/electrostal.arideya.ru\/"
     },
     {
-        "city":"Салават",
-        "domain":"https:\/\/salavat.arideya.ru\/"
+        "city": "Салават",
+        "domain": "https:\/\/salavat.arideya.ru\/"
     },
     {
-        "city":"Находка",
-        "domain":"https:\/\/nahodka.arideya.ru\/"
+        "city": "Находка",
+        "domain": "https:\/\/nahodka.arideya.ru\/"
     },
     {
-        "city":"Альметьевск",
-        "domain":"https:\/\/almetevsk.arideya.ru\/"
+        "city": "Альметьевск",
+        "domain": "https:\/\/almetevsk.arideya.ru\/"
     },
     {
-        "city":"Миасс",
-        "domain":"https:\/\/miass.arideya.ru\/"
+        "city": "Миасс",
+        "domain": "https:\/\/miass.arideya.ru\/"
     },
     {
-        "city":"Керчь",
-        "domain":"https:\/\/kerch.arideya.ru\/"
+        "city": "Керчь",
+        "domain": "https:\/\/kerch.arideya.ru\/"
     },
     {
-        "city":"Березники",
-        "domain":"https:\/\/berezniki.arideya.ru\/"
+        "city": "Березники",
+        "domain": "https:\/\/berezniki.arideya.ru\/"
     },
     {
-        "city":"Рубцовск",
-        "domain":"https:\/\/rubtsovsk.arideya.ru\/"
+        "city": "Рубцовск",
+        "domain": "https:\/\/rubtsovsk.arideya.ru\/"
     },
     {
-        "city":"Копейск",
-        "domain":"https:\/\/kopeisk.arideya.ru\/"
+        "city": "Копейск",
+        "domain": "https:\/\/kopeisk.arideya.ru\/"
     },
     {
-        "city":"Пятигорск",
-        "domain":"https:\/\/pyatigorsk.arideya.ru\/"
+        "city": "Пятигорск",
+        "domain": "https:\/\/pyatigorsk.arideya.ru\/"
     },
     {
-        "city":"Красногорск",
-        "domain":"https:\/\/krasnogorsk.arideya.ru\/"
+        "city": "Красногорск",
+        "domain": "https:\/\/krasnogorsk.arideya.ru\/"
     },
     {
-        "city":"Майкоп",
-        "domain":"https:\/\/maikop.arideya.ru\/"
+        "city": "Майкоп",
+        "domain": "https:\/\/maikop.arideya.ru\/"
     },
     {
-        "city":"Коломна",
-        "domain":"https:\/\/kolomna.arideya.ru\/"
+        "city": "Коломна",
+        "domain": "https:\/\/kolomna.arideya.ru\/"
     },
     {
-        "city":"Одинцово",
-        "domain":"https:\/\/odincovo.arideya.ru\/"
+        "city": "Одинцово",
+        "domain": "https:\/\/odincovo.arideya.ru\/"
     },
     {
-        "city":"Ковров",
-        "domain":"https:\/\/kovrov.arideya.ru\/"
+        "city": "Ковров",
+        "domain": "https:\/\/kovrov.arideya.ru\/"
     },
     {
-        "city":"Хасавюрт",
-        "domain":"https:\/\/hasavurt.arideya.ru\/"
+        "city": "Хасавюрт",
+        "domain": "https:\/\/hasavurt.arideya.ru\/"
     },
     {
-        "city":"Кисловодск",
-        "domain":"https:\/\/kislovodsk.arideya.ru\/"
+        "city": "Кисловодск",
+        "domain": "https:\/\/kislovodsk.arideya.ru\/"
     },
     {
-        "city":"Серпухов",
-        "domain":"https:\/\/serpuhov.arideya.ru\/"
+        "city": "Серпухов",
+        "domain": "https:\/\/serpuhov.arideya.ru\/"
     },
     {
-        "city":"Новомосковск",
-        "domain":"https:\/\/novomoskovsk.arideya.ru\/"
+        "city": "Новомосковск",
+        "domain": "https:\/\/novomoskovsk.arideya.ru\/"
     },
     {
-        "city":"Нефтекамск",
-        "domain":"https:\/\/neftekamsk.arideya.ru\/"
+        "city": "Нефтекамск",
+        "domain": "https:\/\/neftekamsk.arideya.ru\/"
     },
     {
-        "city":"Новочебоксарск",
-        "domain":"https:\/\/novocheboksarsk.arideya.ru\/"
+        "city": "Новочебоксарск",
+        "domain": "https:\/\/novocheboksarsk.arideya.ru\/"
     },
     {
-        "city":"Нефтеюганск",
-        "domain":"https:\/\/nefteugansk.arideya.ru\/"
+        "city": "Нефтеюганск",
+        "domain": "https:\/\/nefteugansk.arideya.ru\/"
     },
     {
-        "city":"Первоуральск",
-        "domain":"https:\/\/pervouralsk.arideya.ru\/"
+        "city": "Первоуральск",
+        "domain": "https:\/\/pervouralsk.arideya.ru\/"
     },
     {
-        "city":"Щелково",
-        "domain":"https:\/\/schelkovo.arideya.ru\/"
+        "city": "Щелково",
+        "domain": "https:\/\/schelkovo.arideya.ru\/"
     },
     {
-        "city":"Дербент",
-        "domain":"https:\/\/derbent.arideya.ru\/"
+        "city": "Дербент",
+        "domain": "https:\/\/derbent.arideya.ru\/"
     },
     {
-        "city":"Черкесск",
-        "domain":"https:\/\/cherkessk.arideya.ru\/"
+        "city": "Черкесск",
+        "domain": "https:\/\/cherkessk.arideya.ru\/"
     },
     {
-        "city":"Батайск",
-        "domain":"https:\/\/bataisk.arideya.ru\/"
+        "city": "Батайск",
+        "domain": "https:\/\/bataisk.arideya.ru\/"
     },
     {
-        "city":"Орехово-Зуево",
-        "domain":"https:\/\/orehovo-zuevo.arideya.ru\/"
+        "city": "Орехово-Зуево",
+        "domain": "https:\/\/orehovo-zuevo.arideya.ru\/"
     },
     {
-        "city":"Невинномысск",
-        "domain":"https:\/\/nevinnomyssk.arideya.ru\/"
+        "city": "Невинномысск",
+        "domain": "https:\/\/nevinnomyssk.arideya.ru\/"
     },
     {
-        "city":"Домодедово",
-        "domain":"https:\/\/domodedovo.arideya.ru\/"
+        "city": "Домодедово",
+        "domain": "https:\/\/domodedovo.arideya.ru\/"
     },
     {
-        "city":"Димитровград",
-        "domain":"https:\/\/dimitrovgrad.arideya.ru\/"
+        "city": "Димитровград",
+        "domain": "https:\/\/dimitrovgrad.arideya.ru\/"
     },
     {
-        "city":"Кызыл",
-        "domain":"https:\/\/kyzyl.arideya.ru\/"
+        "city": "Кызыл",
+        "domain": "https:\/\/kyzyl.arideya.ru\/"
     },
     {
-        "city":"Октябрьский",
-        "domain":"https:\/\/oktyabrsky.arideya.ru\/"
+        "city": "Октябрьский",
+        "domain": "https:\/\/oktyabrsky.arideya.ru\/"
     },
     {
-        "city":"Назрань",
-        "domain":"https:\/\/nazran.arideya.ru\/"
+        "city": "Назрань",
+        "domain": "https:\/\/nazran.arideya.ru\/"
     },
     {
-        "city":"Камышин",
-        "domain":"https:\/\/kamyshin.arideya.ru\/"
+        "city": "Камышин",
+        "domain": "https:\/\/kamyshin.arideya.ru\/"
     },
     {
-        "city":"Обнинск",
-        "domain":"https:\/\/obninsk.arideya.ru\/"
+        "city": "Обнинск",
+        "domain": "https:\/\/obninsk.arideya.ru\/"
     },
     {
-        "city":"Новый Уренгой",
-        "domain":"https:\/\/novy-urengoy.arideya.ru\/"
+        "city": "Новый Уренгой",
+        "domain": "https:\/\/novy-urengoy.arideya.ru\/"
     },
     {
-        "city":"Каспийск",
-        "domain":"https:\/\/kaspiysk.arideya.ru\/"
+        "city": "Каспийск",
+        "domain": "https:\/\/kaspiysk.arideya.ru\/"
     },
     {
-        "city":"Муром",
-        "domain":"https:\/\/murom.arideya.ru\/"
+        "city": "Муром",
+        "domain": "https:\/\/murom.arideya.ru\/"
     },
     {
-        "city":"Раменское",
-        "domain":"https:\/\/ramenskoe.arideya.ru\/"
+        "city": "Раменское",
+        "domain": "https:\/\/ramenskoe.arideya.ru\/"
     },
     {
-        "city":"Новошахтинск",
-        "domain":"https:\/\/novoshahtinsk.arideya.ru\/"
+        "city": "Новошахтинск",
+        "domain": "https:\/\/novoshahtinsk.arideya.ru\/"
     },
     {
-        "city":"Жуковский",
-        "domain":"https:\/\/zhukovsky.arideya.ru\/"
+        "city": "Жуковский",
+        "domain": "https:\/\/zhukovsky.arideya.ru\/"
     },
     {
-        "city":"Северск",
-        "domain":"https:\/\/seversk.arideya.ru\/"
+        "city": "Северск",
+        "domain": "https:\/\/seversk.arideya.ru\/"
     },
     {
-        "city":"Пушкино",
-        "domain":"https:\/\/pushkino.arideya.ru\/"
+        "city": "Пушкино",
+        "domain": "https:\/\/pushkino.arideya.ru\/"
     },
     {
-        "city":"Ноябрьск",
-        "domain":"https:\/\/noyabrsk.arideya.ru\/"
+        "city": "Ноябрьск",
+        "domain": "https:\/\/noyabrsk.arideya.ru\/"
     },
     {
-        "city":"Евпатория",
-        "domain":"https:\/\/evpatoriya.arideya.ru\/"
+        "city": "Евпатория",
+        "domain": "https:\/\/evpatoriya.arideya.ru\/"
     },
     {
-        "city":"Ессентуки",
-        "domain":"https:\/\/essentuki.arideya.ru\/"
+        "city": "Ессентуки",
+        "domain": "https:\/\/essentuki.arideya.ru\/"
     },
     {
-        "city":"Елец",
-        "domain":"https:\/\/elec.arideya.ru\/"
+        "city": "Елец",
+        "domain": "https:\/\/elec.arideya.ru\/"
     },
     {
-        "city":"Ачинск",
-        "domain":"https:\/\/achinsk.arideya.ru\/"
+        "city": "Ачинск",
+        "domain": "https:\/\/achinsk.arideya.ru\/"
     },
     {
-        "city":"Артем",
-        "domain":"https:\/\/artem.arideya.ru\/"
+        "city": "Артем",
+        "domain": "https:\/\/artem.arideya.ru\/"
     },
     {
-        "city":"Сергиев Посад",
-        "domain":"https:\/\/sergiev-posad.arideya.ru\/"
+        "city": "Сергиев Посад",
+        "domain": "https:\/\/sergiev-posad.arideya.ru\/"
     },
     {
-        "city":"Арзамас",
-        "domain":"https:\/\/arzamas.arideya.ru\/"
+        "city": "Арзамас",
+        "domain": "https:\/\/arzamas.arideya.ru\/"
     },
     {
-        "city":"Элиста",
-        "domain":"https:\/\/elista.arideya.ru\/"
+        "city": "Элиста",
+        "domain": "https:\/\/elista.arideya.ru\/"
     },
     {
-        "city":"Новокуйбышевск",
-        "domain":"https:\/\/novokuybyshevsk.arideya.ru\/"
+        "city": "Новокуйбышевск",
+        "domain": "https:\/\/novokuybyshevsk.arideya.ru\/"
     },
     {
-        "city":"Бердск",
-        "domain":"https:\/\/berdsk.arideya.ru\/"
+        "city": "Бердск",
+        "domain": "https:\/\/berdsk.arideya.ru\/"
     },
     {
-        "city":"Ногинск",
-        "domain":"https:\/\/noginsk.arideya.ru\/"
+        "city": "Ногинск",
+        "domain": "https:\/\/noginsk.arideya.ru\/"
     },
     {
-        "city":"Долгопрудный",
-        "domain":"https:\/\/dolgoprudny.arideya.ru\/"
+        "city": "Долгопрудный",
+        "domain": "https:\/\/dolgoprudny.arideya.ru\/"
     },
     {
-        "city":"Реутов",
-        "domain":"https:\/\/reutov.arideya.ru\/"
+        "city": "Реутов",
+        "domain": "https:\/\/reutov.arideya.ru\/"
     }
 ]
 const homeSwiper = new Swiper(".home-slider__inner .homeSwiper", {
@@ -1144,7 +1176,7 @@ $(document).ready(function () {
         e.preventDefault();
         const $this = $(this);
         const modal = $this.attr('data-modal');
-        if(!$(this).hasClass('with-scroll')){
+        if (!$(this).hasClass('with-scroll')) {
             $("body").css("overflow", "hidden");
             $('header').css('visibility', 'hidden')
         }
@@ -1153,60 +1185,72 @@ $(document).ready(function () {
     $('.header-top__city-pop__btn').on('click', function () {
         $('.header-top__city-pop').hide()
     })
-    function getCities(){
-       let cities =  citiesList
+
+    function getCities() {
+        let cities = citiesList
         let html = ``
-        cities.forEach(item=>{
+        cities.forEach(item => {
             html += `<div class="prmn-cmngr-cities__search-item">
                                         <a href="#" class="prmn-cmngr-cities__city-name">${item.city}</a>
                 </div>`
         })
-        if(html === '') html = '<p class="footer-info"> пусто </p>'
+        if (html === '') html = '<p class="footer-info"> пусто </p>'
 
         $('.prmn-cmngr-cities__search-list').html(html)
 
     }
+
     getCities()
 
-    $('.prmn-cmngr-cities__search-list').on('click', '.prmn-cmngr-cities__city-name', function(е) {
+    $('.prmn-cmngr-cities__search-list').on('click', '.prmn-cmngr-cities__city-name', function (е) {
         е.preventDefault()
         let cityName = $(this).text();
         $('.product-single__body-right-item__footer-title .open__modal').text(cityName)
-        $('.modal').hide()
+        $('.header-top__city-title span').text(cityName)
+        $(".modal").fadeOut(function () {
+            $("body").css("overflow", "auto");
+            $('header').css('visibility', 'unset')
+        });
     });
+    $('.modal-product__color-button').on('click', function (e) {
+        e.preventDefault()
+        const el = $(this).parents('.modal-product__color').find('.modal-product__color-inner__zoom')
+        $('.modal-product__color-inner__zoom').removeClass('active')
+        el.addClass('active')
+    })
 
 
-    $('.prmn-cmngr-cities__search.form-control').on('input',function(){
+    $('.prmn-cmngr-cities__search.form-control').on('input', function () {
         const search = $(this).val()
-        let cities =  citiesList
+        let cities = citiesList
         let html = ``
-        cities.forEach(item=>{
+        cities.forEach(item => {
             let test = item.city.toUpperCase()
-                if(item.city.toUpperCase().search(`${search.toUpperCase()}`) !== -1){
-                    html += `<div class="prmn-cmngr-cities__search-item">
+            if (item.city.toUpperCase().search(`${search.toUpperCase()}`) !== -1) {
+                html += `<div class="prmn-cmngr-cities__search-item">
                     <a href="#" class="prmn-cmngr-cities__city-name">${item.city}</a>
                 </div>`
             }
 
         })
-        if(html === '') html = '<p class="footer-info"> пусто </p>'
+        if (html === '') html = '<p class="footer-info"> пусто </p>'
         $('.prmn-cmngr-cities__search-list').html(html)
 
     })
 
-    $('.footer-top__title').on('click',function (){
+    $('.footer-top__title').on('click', function () {
         const parent = $(this).parents('.footer-top__item')
         const el = parent.find('.footer-top__menu')
         el.toggle()
         $(this).toggleClass('active')
     })
-    $('.nav-submenu__title.js-submenu-link').on('click',function (e){
+    $('.nav-submenu__title.js-submenu-link').on('click', function (e) {
         e.preventDefault()
         const parent = $(this).parents('.nav-submenu__list-item.nav-submenu__item')
         const el = parent.find('.nav-submenu__list.nav-submenu__item')
         el.toggleClass('active')
     })
-    $('.nav-submenu__list-item.nav-submenu__list-item--title').on('click', function (e){
+    $('.nav-submenu__list-item.nav-submenu__list-item--title').on('click', function (e) {
         e.preventDefault()
         const parent = $(this).parents('.nav-submenu__list-item.nav-submenu__item')
         const el = parent.find('.nav-submenu__list.nav-submenu__item')
@@ -1220,17 +1264,17 @@ $(document).on('click', function (e) {
         $('.header-actions__item-inner').removeClass('active')
         $('.header-call__button-content').toggle()
         $('.header-call__button-content').toggleClass('active')
-    } else if (e.target.classList.contains('header-actions__item-inner-1') || e.target.classList.contains('header-actions__item-inner-svg-1') ) {
+    } else if (e.target.classList.contains('header-actions__item-inner-1') || e.target.classList.contains('header-actions__item-inner-svg-1')) {
         $('.header-actions__item-content.account-popup-shadow').hide()
-         $('.header-actions__item-inner').removeClass('active')
+        $('.header-actions__item-inner').removeClass('active')
         $('.header-call__button-content').hide()
         $('.header-actions__item-inner').removeClass('active')
         console.log($('.header-actions__item-content-1.account-popup-shadow'))
-        if( $('.header-actions__item-content-1.account-popup-shadow').hasClass('active')){
+        if ($('.header-actions__item-content-1.account-popup-shadow').hasClass('active')) {
             $('.header-actions__item-content-1.account-popup-shadow').hide()
             $('.header-actions__item-content-1.account-popup-shadow').removeClass('active')
             $('.header-actions__item-inner-1').removeClass('active')
-        }else{
+        } else {
             $('.header-actions__item-content-1.account-popup-shadow').show()
             $('.header-actions__item-content-1.account-popup-shadow').addClass('active')
             $('.header-actions__item-inner-1').addClass('active')
@@ -1241,16 +1285,16 @@ $(document).on('click', function (e) {
         // $('.header-actions__item-inner-1').toggleClass('active')
 
 
-    } else if (e.target.classList.contains('header-actions__item-inner-2') || e.target.classList.contains('header-actions__item-inner-svg-2') ) {
+    } else if (e.target.classList.contains('header-actions__item-inner-2') || e.target.classList.contains('header-actions__item-inner-svg-2')) {
         $('.header-actions__item-content.account-popup-shadow').hide()
-         $('.header-actions__item-inner').removeClass('active')
+        $('.header-actions__item-inner').removeClass('active')
         $('.header-call__button-content').hide()
         $('.header-actions__item-inner').removeClass('active')
-        if( $('.header-actions__item-content-2.account-popup-shadow').hasClass('active')){
+        if ($('.header-actions__item-content-2.account-popup-shadow').hasClass('active')) {
             $('.header-actions__item-content-2.account-popup-shadow').hide()
             $('.header-actions__item-content-2.account-popup-shadow').removeClass('active')
             $('.header-actions__item-inner-2').removeClass('active')
-        }else{
+        } else {
             $('.header-actions__item-content-2.account-popup-shadow').show()
             $('.header-actions__item-content-2.account-popup-shadow').addClass('active')
             $('.header-actions__item-inner-2').addClass('active')
@@ -1282,12 +1326,12 @@ $('.scroll-to-top').on('click', function () {
 $(document).ready(function () {
     const filterTags = $('.filter-tags-item')
     const filterTagsMore = 'filter-tags-item-more'
-    filterTags.map(i =>{
-        if(i > 7 && !filterTags.eq(i).hasClass(filterTagsMore))filterTags.eq(i).hide()
+    filterTags.map(i => {
+        if (i > 7 && !filterTags.eq(i).hasClass(filterTagsMore)) filterTags.eq(i).hide()
     })
-    $('.filter-tags-item-more').on('click',function (e){
+    $('.filter-tags-item-more').on('click', function (e) {
         e.preventDefault()
-        filterTags.map(i =>{
+        filterTags.map(i => {
             filterTags.eq(i).show()
         })
         $(this).hide()
