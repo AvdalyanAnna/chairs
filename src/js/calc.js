@@ -71,14 +71,46 @@ $(document).ready(function () {
             let data = elements.eq(index).data('color')
             if (!data) flag = true
         })
-        if (!flag) {
-            $('.product-single__body-right__price-two-send').text('ПЕРЕЙТИ В КОРЗИНУ')
-        }
     })
 
     $('.product-single__body-right-item__content .product-single__body-right-item__color-inner').on('click', function () {
         $('.modal-product').show()
         $('.modal-product .product-tab__item').removeClass('product-tab__item--active')
         $(`.modal-product .product-tab__item[data-tab="${$(this).data('tab')}"]`).addClass('product-tab__item--active')
+    })
+    $('.product-single__body-right__price-two-send').on('click', function (){
+        let flag = false
+        elements.each(index => {
+            let data = elements.eq(index).data('color')
+            if (!data) flag = true
+        })
+        if (!flag) {
+            $('.product-single__body-right__price-two-send').text('ПЕРЕЙТИ В КОРЗИНУ')
+        }
+    })
+    $('.modal-product__colors-menu-item').on('click', function (){
+        $('.modal-product__colors-menu-item').removeClass('active')
+        $(this).addClass('active')
+        const tab = $(this).data('tab')
+        if(tab === 'all'){
+            $(this).parents('.product-tab').find('.modal-product__color').show()
+        }else{
+            $(this).parents('.product-tab').find('.modal-product__color').hide()
+            $(this).parents(`.product-tab`).find(`.modal-product__color[data-tab="${tab}"]`).show()
+        }
+    })
+
+    $('.change-star').on('click', function (e){
+        e.preventDefault()
+       const star =  $(this).data('star')
+        const els = $(this).parent().find('.change-star')
+        els.each(i=>{
+            let img = '/img/icon/star-active.svg'
+            if(+star  >= i + 1)  img = '/img/icon/star-active.svg'
+            else img = '/img/icon/star.svg'
+            els.eq(i).html(
+                `<img src="${img}" alt="star" />`
+            )
+        })
     })
 })

@@ -142,6 +142,9 @@ input, textarea, select {
     max-width: 136px;
     width: 100%;
     letter-spacing: 0;
+    @media screen and (max-width: 500px) {
+      justify-content: center;
+    }
     svg{
       min-width: 20px;
       height: 20px;
@@ -737,6 +740,8 @@ input, textarea, select {
       margin: 6px;
       cursor: pointer;
       text-align: center;
+      position: relative;
+
       &-inner{
         position: relative;
         max-width: 100px;
@@ -745,6 +750,31 @@ input, textarea, select {
         border-radius: 50%;
         border: 4px solid transparent;
         overflow: hidden;
+        &__zoom{
+          position: absolute;
+          max-width: 280px;
+          min-width: 280px;
+          width: 100%;
+          z-index: 2;
+          height: 280px;
+          padding: 10px;
+          top: -220px;
+          left: 50%;
+          background: #fff;
+          box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.20);
+          opacity: 0;
+          visibility: hidden;
+          transition: var(--transition);
+          &.active{
+            opacity: 1;
+            visibility: visible;
+        }
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
       &.active{
         .modal-product__color-inner{
@@ -758,6 +788,31 @@ input, textarea, select {
       &s{
         display: flex;
         flex-wrap: wrap;
+        &-menu{
+          border: 1px solid #e5e5e5;
+          border-radius: 5px;
+          display: flex;
+          flex-wrap: wrap;
+          &-item{
+            display: inline-block;
+            padding: 10px;
+            text-transform: none;
+            font-size: 13px;
+            line-height: 13px;
+            letter-spacing: normal;
+            text-decoration: underline;
+            cursor: pointer;
+            transition: var(--transition);
+            &:hover,
+            &.active{
+              text-decoration: none;
+              color: #de4733;
+            }
+            &:nth-child(1){
+              margin-left: 0;
+            }
+          }
+        }
       }
       &:hover{
         .modal-product__color-button{
@@ -1252,7 +1307,22 @@ input, textarea, select {
     margin: 0;
   }
 }
+.change-star,
 .go-to-tab,
 .open__modal{
   cursor: pointer;
+}
+
+.modal-review-step__form-stars{
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  .feedback-star__header-stars{
+    margin-left: 20px;
+  }
 }
