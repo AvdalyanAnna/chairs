@@ -741,6 +741,12 @@ input, textarea, select {
       cursor: pointer;
       text-align: center;
       position: relative;
+      &:hover{
+        .modal-product__color-inner__zoom{
+          opacity: 1;
+          visibility: visible;
+        }
+      }
 
       &-inner{
         position: relative;
@@ -765,10 +771,10 @@ input, textarea, select {
           opacity: 0;
           visibility: hidden;
           transition: var(--transition);
-          &.active{
-            opacity: 1;
-            visibility: visible;
-        }
+        //  &.active{
+        //    opacity: 1;
+        //    visibility: visible;
+        //}
           img{
             width: 100%;
             height: 100%;
@@ -1390,7 +1396,10 @@ input, textarea, select {
   color: #e41f25;
   font-size: 12px;
 }
-
+.modal-product__container{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 @media screen and(max-width: 660px) {
   .modal-product__container{
     overflow-y: auto;

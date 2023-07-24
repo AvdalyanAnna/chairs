@@ -44,6 +44,7 @@ $(document).ready(function () {
             let data = el.eq(index).data('color')
             if (!data) {
                 el.eq(index).parent().addClass('error-block')
+                el.eq(index).parent().find('.is-error').remove()
                 el.eq(index).parent().append('<div class="is-error">Не выбрано</div>')
             }
         })
@@ -80,6 +81,7 @@ $(document).ready(function () {
     })
     $('.product-single__body-right__price-two-send').on('click', function () {
         let flag = false
+        const elements = $('.product-single__body-right-item__color-inner')
         elements.each(index => {
             let data = elements.eq(index).data('color')
             if (!data) flag = true
