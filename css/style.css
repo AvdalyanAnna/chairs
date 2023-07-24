@@ -8891,6 +8891,11 @@ swiper-container .swiper-notification {
   position: relative;
 }
 
+.modal-product__color:hover .modal-product__color-inner__zoom {
+  opacity: 1;
+  visibility: visible;
+}
+
 .modal-product__color-inner {
   position: relative;
   max-width: 100px;
@@ -8919,11 +8924,6 @@ swiper-container .swiper-notification {
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
-}
-
-.modal-product__color-inner__zoom.active {
-  opacity: 1;
-  visibility: visible;
 }
 
 .modal-product__color-inner__zoom img {
@@ -9549,6 +9549,11 @@ swiper-container .swiper-notification {
 .is-error {
   color: #e41f25;
   font-size: 12px;
+}
+
+.modal-product__container {
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 1024px) {
