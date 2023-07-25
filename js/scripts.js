@@ -287,6 +287,8 @@ $(document).ready(function () {
         })
         if (!flag) {
             $('.product-single__body-right__price-two-send').text('ПЕРЕЙТИ В КОРЗИНУ')
+            $('.product-single__body-right__price-two-send').addClass('btn-solid')
+
         }
     })
     $('.modal-product__colors-menu-item').on('click', function () {
