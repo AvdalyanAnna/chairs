@@ -840,6 +840,8 @@ input, textarea, select {
         align-items: center;
         justify-content: center;
         transition: 0.3s ease;
+        display: none;
+
         svg{
           width: 1em;
           height: 1em;

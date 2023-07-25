@@ -314,15 +314,7 @@
             }
           }
 
-          .btn-solid {
-            color: #A38C76;
-            text-align: center;
-            font-size: 14px;
-            font-weight: 400;
-            text-transform: inherit;
-            background: #fff;
-            border: 1px solid #A38C76;
-          }
+
         }
 
         &-tag {
@@ -577,4 +569,13 @@
       }
     }
   }
+}
+.btn-solid {
+  color: #A38C76;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: inherit;
+  background: #fff;
+  border: 1px solid #A38C76;
 }
