@@ -87,8 +87,10 @@ $(document).ready(function () {
             if (!data) flag = true
         })
         if (!flag) {
-            $('.product-single__body-right__price-two-send').text('ПЕРЕЙТИ В КОРЗИНУ')
-            $('.product-single__body-right__price-two-send').addClass('btn-solid')
+            $('.product-single__body-right__price-two-send').html(`
+                <a href="#">ПЕРЕЙТИ В КОРЗИНУ</a>
+            `)
+            $('.product-single__body-right__price-two-send').removeClass('btn')
 
         }
     })

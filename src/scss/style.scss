@@ -1424,3 +1424,21 @@ input, textarea, select {
   justify-content: space-around;
 }
 }
+
+.product-single__body-right__price-two-send {
+  max-width: 159px;
+  width: 100%;
+  a{
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #fc6519;
+    color: #fc6519;
+    border-radius: 8px;
+    padding: 0 4px;
+    font-size: 12px ;
+    letter-spacing: 0;
+  }
+}
