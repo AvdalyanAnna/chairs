@@ -310,9 +310,9 @@ $(document).ready(function () {
         const star = $(this).data('star')
         const els = $(this).parent().find('.change-star')
         els.each(i => {
-            let img = '/img/icon/star-active.svg'
-            if (+star >= i + 1) img = '/img/icon/star-active.svg'
-            else img = '/img/icon/star.svg'
+            let img = 'img/icon/star-active.svg'
+            if (+star >= i + 1) img = 'img/icon/star-active.svg'
+            else img = 'img/icon/star.svg'
             els.eq(i).html(
                 `<img src="${img}" alt="star" />`
             )
