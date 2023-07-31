@@ -107,6 +107,7 @@
 
 .product-info {
   &__table {
+    margin: 0 auto;
     border-bottom: 1px solid #ebebeb;
     border-right: 1px solid #ebebeb;
     overflow: hidden;
@@ -119,7 +120,6 @@
 
   &__att {
     width: 100%;
-
     &-top {
       border: 1px solid #ebebeb;
       border-bottom: 0;
@@ -812,4 +812,8 @@
       }
     }
   }
+}
+
+#product-tabs-1{
+  margin: 20px auto 0;
 }
