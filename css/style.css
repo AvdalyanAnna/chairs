@@ -6582,6 +6582,7 @@ swiper-container .swiper-notification {
 }
 
 .product-info__table {
+  margin: 0 auto;
   border-bottom: 1px solid #ebebeb;
   border-right: 1px solid #ebebeb;
   overflow: hidden;
@@ -7336,6 +7337,10 @@ swiper-container .swiper-notification {
 
 .feedbackSwiper .swiper-button svg path {
   stroke: #FC6519;
+}
+
+#product-tabs-1 {
+  margin: 20px auto 0;
 }
 
 .product-single__title {
