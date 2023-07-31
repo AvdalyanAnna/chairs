@@ -46,7 +46,7 @@
   .editor {
     font-size: 14px;
     line-height: 1.4;
-    max-width: 800px;
+    max-width: 100%;
   }
 
   &s {
@@ -56,6 +56,7 @@
 
   &__list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     @media screen and (max-width: 900px) {
       justify-content: center;
@@ -814,6 +815,6 @@
   }
 }
 
-#product-tabs-1{
+.product-tab{
   margin: 20px auto 0;
 }
