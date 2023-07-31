@@ -238,7 +238,10 @@ $(document).ready(function () {
         }, 500)
     })
     $('.product-single__body-right__price-two-send').on('click', function () {
+        $(this).data('send')
         const el = $('.product-single__body-right-item__color-inner')
+        if(el.length > 0)
+
         el.each(index => {
             let data = el.eq(index).data('color')
             if (!data) {
@@ -285,6 +288,8 @@ $(document).ready(function () {
             let data = elements.eq(index).data('color')
             if (!data) flag = true
         })
+        if(elements.length === 0) flag = false
+        // if(elements)
         if (!flag) {
             $('.product-single__body-right__price-two-send').html(`
                 <a href="#">ПЕРЕЙТИ В КОРЗИНУ</a>
