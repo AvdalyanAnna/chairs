@@ -747,7 +747,12 @@ input, textarea, select {
           visibility: visible;
         }
       }
-
+      @media screen and (max-width: 500px) {
+        &:nth-child(even) .modal-product__color-inner__zoom{
+        left: auto;
+        right: 50%;
+        }
+      }
       &-inner{
         position: relative;
         max-width: 100px;
@@ -771,6 +776,14 @@ input, textarea, select {
           opacity: 0;
           visibility: hidden;
           transition: var(--transition);
+          @media screen and (max-width: 760px) {
+            max-width: 160px;
+            min-width: 160px;
+            height: 160px;
+            padding: 5px;
+            top: -110px;
+          }
+
         //  &.active{
         //    opacity: 1;
         //    visibility: visible;
@@ -1441,4 +1454,23 @@ input, textarea, select {
     font-size: 12px ;
     letter-spacing: 0;
   }
+}
+.change-star{
+  width: 22px;
+  height: 18px;
+  background-image: url('../img/icon/star.svg');
+  background-position: center ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  &.active{
+    background-image: url('../img/icon/star-active.svg');
+
+  }
+  &.hover-active{
+    background-image: url('../img/icon/star-active.svg');
+  }
+  &.hover-noactive{
+    background-image: url('../img/icon/star.svg');
+  }
+
 }
