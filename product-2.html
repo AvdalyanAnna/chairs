@@ -1020,20 +1020,19 @@
                         </div>
                         <div class="product-single__body-right-item__content">
                             <div class="product-single__body-right-item__colors">
-                                <div class="product-single__body-right-item__color">
-                                    <div class="product-single__body-right-item__color-title">Цвет дерева</div>
-                                    <div class="product-single__body-right-item__color-inner"
-                                         style="background: #A38C76"></div>
+                                <div class="product-single__body-right-item__color wood-color">
+                                    <div class="product-single__body-right-item__color-title ">Цвет дерева</div>
+                                    <div class="product-single__body-right-item__color-inner" data-tab="product-tabs-11"></div>
                                 </div>
-                                <div class="product-single__body-right-item__color">
+                                <div class="product-single__body-right-item__color frame-color">
                                     <div class="product-single__body-right-item__color-title">Расцветка каркаса</div>
-                                    <div class="product-single__body-right-item__color-inner"
-                                         style="background: #C4C4C4"></div>
+                                    <div class="product-single__body-right-item__color-inner" data-tab="product-tabs-12"
+                                    ></div>
                                 </div>
-                                <div class="product-single__body-right-item__color">
+                                <div class="product-single__body-right-item__color upholstery-color">
                                     <div class="product-single__body-right-item__color-title">Расцветка обивки</div>
-                                    <div class="product-single__body-right-item__color-inner"
-                                         style="background: #9C27B0"></div>
+                                    <div class="product-single__body-right-item__color-inner" data-tab="product-tabs-13"
+                                    ></div>
                                 </div>
                             </div>
                         </div>
@@ -3018,7 +3017,6 @@
             </div>
         </div>
     </div>
-
     <div class="modal modal-product" id="modal-product" style="display:none;">
         <div class="modal__container modal-product__container">
             <div class="close">
@@ -3048,24 +3046,24 @@
                         <div class="modal-product__price">
                             <div class="price">3 850 ₽</div>
                         </div>
-                        <div class="modal-product__btn btn">В КОРЗИНУ</div>
+                        <div class="modal-product__btn btn product-single__body-right__price-two-send">В КОРЗИНУ</div>
                     </div>
                     <div class="product-single__body-right-item__colors">
-                        <div class="product-single__body-right-item__color">
+                        <div class="product-single__body-right-item__color wood-color">
                             <div class="product-single__body-right-item__color-title">Цвет дерева</div>
-                            <div class="product-single__body-right-item__color-inner" style="background: #A38C76"></div>
-                            <div class="product-single__body-right-item__color-sub-title">Орех</div>
+                            <div class="product-single__body-right-item__color-inner"></div>
+                            <!--                            <div class="product-single__body-right-item__color-sub-title">Орех</div>-->
 
                         </div>
-                        <div class="product-single__body-right-item__color">
+                        <div class="product-single__body-right-item__color frame-color">
                             <div class="product-single__body-right-item__color-title">Расцветка каркаса</div>
-                            <div class="product-single__body-right-item__color-inner" style="background: #C4C4C4"></div>
-                            <div class="product-single__body-right-item__color-sub-title">Металлик</div>
+                            <div class="product-single__body-right-item__color-inner"></div>
+                            <!--                            <div class="product-single__body-right-item__color-sub-title">Металлик</div>-->
                         </div>
-                        <div class="product-single__body-right-item__color">
+                        <div class="product-single__body-right-item__color  upholstery-color">
                             <div class="product-single__body-right-item__color-title">Расцветка обивки</div>
-                            <div class="product-single__body-right-item__color-inner" style="background: #9C27B0"></div>
-                            <div class="product-single__body-right-item__color-sub-title">Не выбрано</div>
+                            <div class="product-single__body-right-item__color-inner"></div>
+                            <!--                            <div class="product-single__body-right-item__color-sub-title">Не выбрано</div>-->
                         </div>
                     </div>
                 </div>
@@ -3083,215 +3081,362 @@
             </div>
             <div class="wrapper">
                 <div class="product-tab" style="display: block;" data-tab="product-tabs-11">
+                    <div class="modal-product__colors-menu">
+                        <div class="modal-product__colors-menu-item active" data-tab="all">Все</div>
+                        <div class="modal-product__colors-menu-item" data-tab="test">Искусственная кожа ЭКОТЕКС</div>
+                        <div class="modal-product__colors-menu-item" data-tab="test">Искусственная кожа БЕНГАЛ</div>
+                        <div class="modal-product__colors-menu-item" data-tab="test">Велюр Velluto</div>
+                        <div class="modal-product__colors-menu-item" data-tab="test">Велюр Мазерати</div>
+                        <div class="modal-product__colors-menu-item" data-tab="test">Велюр Тринити</div>
+                        <div class="modal-product__colors-menu-item" data-tab="test">Микровелюр ЛофтНубук</div>
+                    </div>
                     <div class="modal-product__colors">
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-tab="test" data-name="Орех" data-el=".wood-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
+
                             </div>
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех</div>
                         </div>
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-name="Орех1" data-el=".wood-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
                             </div>
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех1</div>
                         </div>
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-tab="test" data-name="Орех2" data-el=".wood-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
                             </div>
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех2</div>
                         </div>
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-name="Орех3" data-el=".wood-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
                             </div>
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех3</div>
                         </div>
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-name="Орех4" data-el=".wood-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
                             </div>
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех4</div>
+                        </div>
+                        <div class="modal-product__color" data-name="Орех5" data-el=".wood-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
+                            </div>
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех5</div>
                         </div>
                     </div>
                 </div>
                 <div class="product-tab" style="display: none;" data-tab="product-tabs-12">
                     <div class="modal-product__colors">
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-name="Орех" data-el=".frame-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
                             </div>
+
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех</div>
                         </div>
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-name="Орех1" data-el=".frame-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
                             </div>
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех1</div>
                         </div>
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-name="Орех2" data-el=".frame-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
                             </div>
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех2</div>
                         </div>
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-name="Орех3" data-el=".frame-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
                             </div>
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех3</div>
                         </div>
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-name="Орех4" data-el=".frame-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
                             </div>
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех4</div>
                         </div>
                     </div>
                 </div>
                 <div class="product-tab" style="display: none;" data-tab="product-tabs-13">
                     <div class="modal-product__colors">
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-name="Орех" data-el=".upholstery-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
                             </div>
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех</div>
                         </div>
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-name="Орех1" data-el=".upholstery-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
                             </div>
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех1</div>
                         </div>
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-name="Орех2" data-el=".upholstery-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
                             </div>
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                            </div>
+                            <div class="modal-product__color-name">Орех2</div>
                         </div>
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                        <div class="modal-product__color" data-name="Орех3" data-el=".upholstery-color"
+                             data-color="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png">
+                            <div class="modal-product__color-inner">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
+                                <div class="modal-product__color-button">
+                                    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
+                                         data-prefix="fa" data-icon="search" role="img"
+                                         xmlns="http://www.w3.org/2000/svg"
+                                         viewBox="0 0 512 512" data-fa-i2svg="">
+                                        <path fill="currentColor"
+                                              d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
+                                    </svg>
+                                    <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                </div>
                             </div>
-                        </div>
-                        <div class="modal-product__color">
-                            <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
-                                 alt="">
-                            <div class="modal-product__color-button">
-                                <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" focusable="false"
-                                     data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg"
-                                     viewBox="0 0 512 512" data-fa-i2svg="">
-                                    <path fill="currentColor"
-                                          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                </svg>
-                                <!-- <i class="fa fa-search" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                            <div class="modal-product__color-inner__zoom">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Colors/Modul/Obivka/1-fc2-400x400.png"
+                                     alt="">
                             </div>
+                            <div class="modal-product__color-name">Орех3</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 
     <!--  Subscribe start -->

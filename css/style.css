@@ -6522,7 +6522,7 @@ swiper-container .swiper-notification {
 .product-tab .editor {
   font-size: 14px;
   line-height: 1.4;
-  max-width: 800px;
+  max-width: 100%;
 }
 
 .product-tabs {
@@ -6534,6 +6534,9 @@ swiper-container .swiper-notification {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -7339,7 +7342,7 @@ swiper-container .swiper-notification {
   stroke: #FC6519;
 }
 
-#product-tabs-1 {
+.product-tab {
   margin: 20px auto 0;
 }
 
