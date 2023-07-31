@@ -948,8 +948,14 @@ input, textarea, select {
           margin-bottom: 24px;
           &_photo{
             margin-top: 40px;
+            .photos{
+              position: relative;
+            }
             input{
-              display: none;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
             }
             label{
               cursor: pointer;

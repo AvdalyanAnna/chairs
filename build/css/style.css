@@ -9117,8 +9117,15 @@ swiper-container .swiper-notification {
   margin-top: 40px;
 }
 
+.modal-review-step__form-item_photo .photos {
+  position: relative;
+}
+
 .modal-review-step__form-item_photo input {
-  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
 .modal-review-step__form-item_photo label {
