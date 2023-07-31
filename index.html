@@ -3836,19 +3836,19 @@
                 <div class="modal-review-step__form-stars">
                     Общая оценка
                     <div class="feedback-star__header-stars">
-                        <div data-star="1" class="feedback-star__header-star change-star active ">
+                        <div data-star="1" class="feedback-star__header-star change-star  ">
 <!--                            <img src="img/icon/star-active.svg" alt="star">-->
                         </div>
-                        <div data-star="2" class="feedback-star__header-star change-star active ">
+                        <div data-star="2" class="feedback-star__header-star change-star  ">
 <!--                            <img src="img/icon/star-active.svg" alt="star">-->
                         </div>
-                        <div data-star="3" class="feedback-star__header-star change-star active">
+                        <div data-star="3" class="feedback-star__header-star change-star ">
 <!--                            <img src="img/icon/star-active.svg" alt="star">-->
                         </div>
-                        <div data-star="4" class="feedback-star__header-star change-star active">
+                        <div data-star="4" class="feedback-star__header-star change-star ">
 <!--                            <img src="img/icon/star-active.svg" alt="star">-->
                         </div>
-                        <div data-star="5" class="feedback-star__header-star change-star active">
+                        <div data-star="5" class="feedback-star__header-star change-star ">
 <!--                            <img src="img/icon/star-active.svg" alt="star">-->
                         </div>
                     </div>
@@ -3873,6 +3873,8 @@
                     <label class="modal-review-step__form-item-label-1" for="files-1">
                         <span class="text">Добавьте фото</span>
                         <span class="photos">
+                        <input type="file" id="files-1" class="modal-review-step__form-item_photo-input" name="files[]" multiple accept="image/png, image/gif, image/jpeg">
+
                                 <span class="photos-svg">
                                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
                                          xmlns="http://www.w3.org/2000/svg">
@@ -3887,6 +3889,7 @@
                                 </span>
                                 <span class="photos-text"><span class="photos-text__line">Нажмите на ссылку,</span> чтобы выбрать фотографии или просто перетащите их сюда</span>
                             </span>
+
                     </label>
                     <div class="modal-review-step__form-item-label-2">
                         <div class="modal-review-step__form-item-label-2-list">
@@ -3910,7 +3913,6 @@
                         </div>
                     </div>
 
-                    <input type="file" id="files-1" class="modal-review-step__form-item_photo-input" name="files[]" multiple accept="image/png, image/gif, image/jpeg">
 
                 </div>
                 <button class="modal-review-step__form-item-btn btn" data-next="modal-review-step-2">Далее</button>
