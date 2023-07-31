@@ -309,18 +309,32 @@ $(document).ready(function () {
         e.preventDefault()
         const star = $(this).data('star')
         const els = $(this).parent().find('.change-star')
+        els.removeClass('active')
+
         els.each(i => {
-            let img = 'img/icon/star-active.svg'
-            if (+star >= i + 1) img = 'img/icon/star-active.svg'
-            else img = 'img/icon/star.svg'
-            els.eq(i).html(
-                `<img src="${img}" alt="star" />`
-            )
+            if (+star >= i + 1) els.eq(i).addClass('active')
         })
     })
+    $('.feedback-star__header-star.change-star')
+        .on('mouseenter', function () {
+            const star = $(this).data('star')
+            const els = $(this).parent().find('.change-star')
+
+            els.each(i => {
+                if (+star >= i + 1) els.eq(i).addClass('hover-active')
+                else els.eq(i).addClass('hover-noactive')
+            })
+            // console.log($(this))
+        })
+        .on('mouseleave', function () {
+            $('.change-star').removeClass('hover-active')
+            $('.change-star').removeClass('hover-noactive')
+            // console.log($(this))
+        })
+
     $('.modal-review-step__form-item_photo').on('change', function (e) {
         let files = e.target.files; // Get the selected file
-        for (let i = 0;i<files.length;i++){
+        for (let i = 0; i < files.length; i++) {
             if (files[i]) {
                 console.log(e.target.result)
                 let reader = new FileReader(); // Create a FileReader object
@@ -340,7 +354,7 @@ $(document).ready(function () {
 
     })
 
-    function showImagePreview(src,file) {
+    function showImagePreview(src, file) {
         $('.modal-review-step__form-item-label-1 .photos').hide();
         $('.modal-review-step__form-item-label-2').show();
         let previewId = Date.now();
@@ -356,7 +370,7 @@ $(document).ready(function () {
     `;
 
         $('.modal-review-step__form-item-label-2-list').prepend(html);
-        $('.modal-review-step__form-item-label-img-close').on('click',function (){
+        $('.modal-review-step__form-item-label-img-close').on('click', function () {
             let previewIdToDelete = $(this).data('preview-id');
             $(`#preview_${previewIdToDelete}`).remove();
             let remainingFiles = Array.from($('.modal-review-step__form-item_photo-input').files).filter((f) => f !== file);
