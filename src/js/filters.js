@@ -47,4 +47,16 @@ $(document).ready(function () {
         $(this).parents('.feedback-item').find('.feedback-item-inner').show(300)
         $(this).hide()
     })
+    $('.tabs__list-item').on('click', function (){
+        const $this = $(this)
+        const tab = $this.data('tab')
+        $('.tabs__list-item').removeClass('active')
+        $this.addClass('active')
+        $('.tabs-content').hide()
+
+        // parent.find('.product-tab__item').removeClass('product-tab__item--active')
+        // $this.addClass('product-tab__item--active')
+        // parent.find(`.product-tab`).hide()
+        $(`.tabs-content[data-tab="${tab}"]`).show()
+    })
 })

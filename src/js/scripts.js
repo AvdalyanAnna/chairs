@@ -8,6 +8,7 @@
 @@include('./slider.js')
 @@include('./calc.js')
 @@include('./review.js')
+@@include('./map.js')
 @@include('./jquery-range-slide.js')
 
 const citiesList = [
