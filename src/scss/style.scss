@@ -2016,3 +2016,141 @@ flex-wrap: wrap;
   }
 
 }
+
+
+.review-block{
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+  background: #FFF;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .feedback-star-lines{
+    margin-bottom: 0;
+  }
+  .btn{
+    max-width: 197px;
+    width: 100%;
+    padding: 13px;
+  }
+  .feedback-star-line__inner{
+    width: 133px;
+  }
+  .feedback-star-line{
+
+    margin-bottom: 7px;
+    .review-block__range-stars{
+      gap: 4px;
+    }
+
+  }
+  &__title{
+    color:  #343434;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 36px; max-width: 231px;
+    width: 100%;
+  }
+  &__range{
+    &-title{
+      color: #343434;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    &-inner{
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+      gap: 12px;
+
+    }
+    &-stars{
+      display: flex;
+      gap: 10px;
+    }
+    &-star{
+
+    }
+    &-number{
+      color: #343434;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 36px;
+    }
+    &-text{
+      color: #343434;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 16px;
+    }
+
+  }
+}
+
+.review-menu{
+  display: flex;
+  &__link{
+    margin-right: 12px;
+    padding: 6px 16px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    border-radius: 7px;
+    color: #828282;
+    border: 1px solid #828282;
+    transition: var(--transition);
+    &:hover,
+    &.active{
+      color: #FC6519;
+      border: 1px solid #FC6519;
+    }
+    &:nth-last-child(1){
+      margin-right: 0;
+    }
+  }
+}
+.review-filter{
+  border-radius: 7px;
+  background: #F6F6F6;
+  padding: 22px 26px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  &-inner{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: #343434;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+  &-item{
+    display: flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 7px;
+    border: 1px solid #828282;
+    color: #828282;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-left: 12px;
+    .arrows{
+      margin-left: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .arrow{
+      display: block;
+    }
+  }
+}

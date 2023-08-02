@@ -585,7 +585,16 @@
 
   &-list {
     margin-bottom: 60px;
-
+&__page{
+  margin-bottom: 0;
+  .feedback-item{
+    padding: 30px 0;
+    margin: 0;
+    &:nth-child(even){
+      background: #F6F6F6;
+    }
+  }
+}
     .feedback-btn {
       max-width: 350px;
       margin-top: 25px;
@@ -596,7 +605,13 @@
 
   &-item {
     margin-top: 48px;
-
+    &__line{
+      font-size: 14px;
+      margin-bottom: 14px;
+      &:nth-child(1){
+        margin-top: 14px;
+      }
+    }
     &-inner {
       margin-top: 42px;
 
@@ -691,7 +706,13 @@
 
     &__gallery {
       margin: 24px -2px 26px;
-
+&-1{
+  margin-top: 5px;
+  img{
+    border-radius: 7px;
+    border: 1px solid #828282;
+  }
+}
       img {
         margin: 2px;
         max-width: 85px;
