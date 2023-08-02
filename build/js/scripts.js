@@ -395,6 +395,65 @@ $(document).ready(function () {
         })
     }
 
+    $('#review-photo').on('change', function (e){
+        let isChecked = $("#review-photo").prop("checked")
+        // console.log(isChecked)
+        let html = ``
+        const el = '.feedback-item'
+        console.log(isChecked)
+        if(isChecked){
+            $(`${el}[data-photo="0"]`).addClass('d-none')
+        }else{
+            $(`${el}[data-photo="0"]`).removeClass('d-none')
+        }
+    })
+
+    $('.review-filter-item .arrow').on('click', function (){
+        const $this = $(this)
+        const type =  $this.data('type')
+        const el = $this.parents('.review-filter-item')
+        const elDate = el.data('el')
+        $('.review-filter-item ').removeClass('active active-asc active-desc')
+        el.removeClass('active-asc active-desc').addClass(`active active-${type}`)
+        if(elDate === 'time') sortTime(type)
+        if(elDate === 'stars') sortStars(type)
+        else sortHealthy(type)
+
+    })
+
+    function sortTime(type){
+        const elements = '.feedback-item'
+        let divElements = $(`${elements}[data-time]`);
+        divElements.sort(function(a, b) {
+            let dateA = new Date($(a).data("time"));
+            let dateB = new Date($(b).data("time"));
+            if(type === 'asc') return dateA - dateB;
+            else return  dateB - dateA;
+        });
+        divElements.appendTo(".feedback-list");
+    }
+    function sortStars(type){
+        const elements = '.feedback-item'
+        let divElements = $(`${elements}[data-stars]`);
+        divElements.sort(function(a, b) {
+            let orderA = parseInt($(a).data("stars"));
+            let orderB = parseInt($(b).data("stars"));
+            if(type === 'asc') return orderA - orderB;
+            else return  orderB - orderA;
+        });
+        divElements.appendTo(".feedback-list");
+    }
+    function sortHealthy(type){
+        const elements = '.feedback-item'
+        let divElements = $(`${elements}[data-healthy]`);
+        divElements.sort(function(a, b) {
+            let orderA = parseInt($(a).data("healthy"));
+            let orderB = parseInt($(b).data("healthy"));
+            if(type === 'asc') return orderA - orderB;
+            else return  orderB - orderA;
+        });
+        divElements.appendTo(".feedback-list");
+    }
 })
 $(function () {
     $('.modal-review-step__form-item-btn').on('click', function (e) {
