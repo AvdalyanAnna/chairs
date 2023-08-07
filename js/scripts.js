@@ -252,16 +252,16 @@ $(document).ready(function () {
     $('.product-single__body-right__price-two-send').on('click', function () {
         $(this).data('send')
         const el = $('.product-single__body-right-item__color-inner')
-        if(el.length > 0)
+        if (el.length > 0)
 
-        el.each(index => {
-            let data = el.eq(index).data('color')
-            if (!data) {
-                el.eq(index).parent().addClass('error-block')
-                el.eq(index).parent().find('.is-error').remove()
-                el.eq(index).parent().append('<div class="is-error">Не выбрано</div>')
-            }
-        })
+            el.each(index => {
+                let data = el.eq(index).data('color')
+                if (!data) {
+                    el.eq(index).parent().addClass('error-block')
+                    el.eq(index).parent().find('.is-error').remove()
+                    el.eq(index).parent().append('<div class="is-error">Не выбрано</div>')
+                }
+            })
         // const res = $('.product-single__body-right-item__color-inner').data('')
     })
     $('.modal-product__color').on('click', function (e) {
@@ -300,7 +300,7 @@ $(document).ready(function () {
             let data = elements.eq(index).data('color')
             if (!data) flag = true
         })
-        if(elements.length === 0) flag = false
+        if (elements.length === 0) flag = false
         // if(elements)
         if (!flag) {
             $('.product-single__body-right__price-two-send').html(`
@@ -395,75 +395,142 @@ $(document).ready(function () {
         })
     }
 
-    $('#review-photo').on('change', function (e){
+    $('#review-photo').on('change', function (e) {
         let isChecked = $("#review-photo").prop("checked")
         // console.log(isChecked)
         let html = ``
         const el = '.feedback-item'
         console.log(isChecked)
-        if(isChecked){
+        if (isChecked) {
             $(`${el}[data-photo="0"]`).addClass('d-none')
-        }else{
+        } else {
             $(`${el}[data-photo="0"]`).removeClass('d-none')
         }
     })
 
-    $('.review-filter-item .arrow').on('click', function (){
+    $('.review-filter-item .arrow').on('click', function () {
         const $this = $(this)
-        const type =  $this.data('type')
+        const type = $this.data('type')
         const el = $this.parents('.review-filter-item')
         const elDate = el.data('el')
         $('.review-filter-item ').removeClass('active active-asc active-desc')
         el.removeClass('active-asc active-desc').addClass(`active active-${type}`)
-        if(elDate === 'time') sortTime(type)
-        if(elDate === 'stars') sortStars(type)
+        if (elDate === 'time') sortTime(type)
+        if (elDate === 'stars') sortStars(type)
         else sortHealthy(type)
     })
 
-    $('.review-filter-item').on('click', function (){
+    $('.review-filter-item').on('click', function () {
         const $this = $(this)
-        const type =  $this.data('type')
+        const type = $this.data('type')
         const el = $this
         const elDate = el.data('el')
         $('.review-filter-item ').removeClass('active active-asc active-desc')
         el.removeClass('active-asc active-desc').addClass(`active active-${type}`)
-        if(elDate === 'time') sortTime(type)
-        if(elDate === 'stars') sortStars(type)
+        if (elDate === 'time') sortTime(type)
+        if (elDate === 'stars') sortStars(type)
         else sortHealthy(type)
     })
 
-    function sortTime(type){
+    function sortTime(type) {
         const elements = '.feedback-item'
         let divElements = $(`${elements}[data-time]`);
-        divElements.sort(function(a, b) {
+        divElements.sort(function (a, b) {
             let dateA = new Date($(a).data("time"));
             let dateB = new Date($(b).data("time"));
-            if(type === 'asc') return dateA - dateB;
-            else return  dateB - dateA;
+            if (type === 'asc') return dateA - dateB;
+            else return dateB - dateA;
         });
         divElements.appendTo(".feedback-list");
     }
-    function sortStars(type){
+
+    function sortStars(type) {
         const elements = '.feedback-item'
         let divElements = $(`${elements}[data-stars]`);
-        divElements.sort(function(a, b) {
+        divElements.sort(function (a, b) {
             let orderA = parseInt($(a).data("stars"));
             let orderB = parseInt($(b).data("stars"));
-            if(type === 'asc') return orderA - orderB;
-            else return  orderB - orderA;
+            if (type === 'asc') return orderA - orderB;
+            else return orderB - orderA;
         });
         divElements.appendTo(".feedback-list");
     }
-    function sortHealthy(type){
+
+    function sortHealthy(type) {
         const elements = '.feedback-item'
         let divElements = $(`${elements}[data-healthy]`);
-        divElements.sort(function(a, b) {
+        divElements.sort(function (a, b) {
             let orderA = parseInt($(a).data("healthy"));
             let orderB = parseInt($(b).data("healthy"));
-            if(type === 'asc') return orderA - orderB;
-            else return  orderB - orderA;
+            if (type === 'asc') return orderA - orderB;
+            else return orderB - orderA;
         });
         divElements.appendTo(".feedback-list");
+    }
+
+
+    $('.ui-spinner-up').on('click', function (e) {
+        e.preventDefault()
+        const $this = $(this)
+        const el = $this.parents('.catalogue__table-spinner').find('.spinner.ui-spinner-input')
+        const val = el.val()
+        let sum = +val + 1
+        el.val(sum)
+    })
+    $('.ui-spinner-down').on('click', function (e) {
+        e.preventDefault()
+        const $this = $(this)
+        const el = $this.parents('.catalogue__table-spinner').find('.spinner.ui-spinner-input')
+        const val = el.val()
+        let sum = +val - 1
+        if (sum <= 0) sum = 1
+        el.val(sum)
+    })
+    $('.delete-element').on('click', function (e) {
+        e.preventDefault()
+        $(this).parents('.catalogue__table-row').remove()
+    })
+
+    $('.wishlist-filters__menu-item').on('click', function (e) {
+        e.preventDefault()
+        const $this = $(this)
+        $('.wishlist-filters__menu-item').removeClass('active')
+        $this.addClass('active')
+        filterWishlist()
+    })
+
+    $('.wishlist-filters__radio input').on('change', function (e) {
+        e.preventDefault()
+        filterWishlist()
+    })
+    $('.wishlist-filters__sort select').on('change', function (e) {
+        filterWishlist()
+    })
+
+    function filterWishlist() {
+        const type = $('.wishlist-filters__menu-item.active').data('type')
+        const have = $('.wishlist-filters__radio input:checked').data('have')
+        const els = $('.catalogue__table-row')
+        els.removeClass('d-none')
+        els.each(i => {
+            if (type && type !== els.eq(i).data('type')) els.eq(i).addClass('d-none')
+            if (have && have !== els.eq(i).data('have')) els.eq(i).addClass('d-none')
+        })
+        const sort = $('.wishlist-filters__sort select').val()
+        let divElements = $(`.catalogue__table-row`);
+        divElements.sort(function (a, b) {
+            console.log(parseInt($(a).attr(sort)), parseInt($(b).attr(sort)))
+            let orderA, orderB;
+            if (sort === 'data-date') {
+                orderA = new Date($(a).attr(sort));
+                orderB = new Date($(b).attr(sort));
+            } else {
+                orderA = parseInt($(a).attr(sort));
+                orderB = parseInt($(b).attr(sort));
+            }
+            return orderA - orderB;
+        });
+        divElements.appendTo(".catalogue__table tbody");
     }
 })
 $(function () {
