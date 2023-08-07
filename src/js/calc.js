@@ -207,7 +207,18 @@ $(document).ready(function () {
         if(elDate === 'time') sortTime(type)
         if(elDate === 'stars') sortStars(type)
         else sortHealthy(type)
+    })
 
+    $('.review-filter-item').on('click', function (){
+        const $this = $(this)
+        const type =  $this.data('type')
+        const el = $this
+        const elDate = el.data('el')
+        $('.review-filter-item ').removeClass('active active-asc active-desc')
+        el.removeClass('active-asc active-desc').addClass(`active active-${type}`)
+        if(elDate === 'time') sortTime(type)
+        if(elDate === 'stars') sortStars(type)
+        else sortHealthy(type)
     })
 
     function sortTime(type){
