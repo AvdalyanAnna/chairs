@@ -2034,7 +2034,8 @@ flex-wrap: wrap;
   @media screen and (max-width: 600px) {
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     flex-direction: column;
     gap: 40px;
   }
