@@ -515,8 +515,24 @@
   .jq-selectbox {
     text-transform: unset;
     letter-spacing: 0;
+    border-color: #FC6519;
+    border-radius: 5px;
+    &::before{
+      width: 16px;
+      height: 16px;
+      opacity: 1;
+      right: 16px;
+      background: url(../img/arrow-orange.svg);
+    }
+    .jq-selectbox__select{
+      padding: 8px  16px;
+    }
     .jq-selectbox__dropdown{
-      margin-top: 10px;
+      margin-top: 8px;
+      border: none !important;
+      border-radius: 5px;
+      background: #FFF;
+      box-shadow: 10px 10px 40px 0 rgba(0, 0, 0, 0.10);
       ul li{
         padding: 16px;
       }
@@ -535,6 +551,11 @@
       bottom: 0;
       transform: translateX(-50%);
     }
+    &:nth-last-child(1){
+      &::before{
+        content: unset;
+      }
+    }
     &.sel {
       background: #fff;
       font-weight: 700;
@@ -547,7 +568,7 @@
         right: 20px;
         width: 16px;
         height: 16px;
-        background-image: url(/img/icon/icon-check.svg);
+        background-image: url(../img/icon/icon-check.svg);
       }
     }
   }
