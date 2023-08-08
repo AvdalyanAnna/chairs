@@ -517,6 +517,10 @@
     letter-spacing: 0;
     border-color: #FC6519;
     border-radius: 5px;
+    .jq-selectbox__select-text{
+     color: #FC6519;
+    }
+
     &::before{
       width: 16px;
       height: 16px;
