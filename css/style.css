@@ -3518,6 +3518,11 @@ h3,
   margin-bottom: 30px;
 }
 
+.wishlist .jq-selectbox {
+  text-transform: unset;
+  letter-spacing: 0;
+}
+
 .wishlist .jq-selectbox .jq-selectbox__dropdown {
   margin-top: 10px;
 }
