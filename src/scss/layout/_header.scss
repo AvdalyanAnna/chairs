@@ -197,6 +197,25 @@
       flex-direction: column;
       font-family: "Verdana", sans-serif;
     }
+    &__inner{
+
+    }
+    &__text{
+      color: #484848;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-bottom: 4px;
+      display: block;
+    }
+    &__time{
+      color: #484848;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
   }
 
   &-call {
