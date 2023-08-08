@@ -512,10 +512,14 @@
       }
     }
   }
-  .jq-selectbox .jq-selectbox__dropdown{
-    margin-top: 10px;
-    ul li{
-      padding: 16px;
+  .jq-selectbox {
+    text-transform: unset;
+    letter-spacing: 0;
+    .jq-selectbox__dropdown{
+      margin-top: 10px;
+      ul li{
+        padding: 16px;
+      }
     }
   }
   .jq-selectbox li{
