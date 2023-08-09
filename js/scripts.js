@@ -532,6 +532,13 @@ $(document).ready(function () {
         });
         divElements.appendTo(".catalogue__table tbody");
     }
+
+    $('.supplier__label--file input').on('change', function (e){
+        const parent = $(this).parents('.supplier__label--file');
+        const fileName = e.target.files[0].name;
+        parent.find('.supplier__label-content').html(fileName);
+    });
+
 })
 $(function () {
     $('.modal-review-step__form-item-btn').on('click', function (e) {
