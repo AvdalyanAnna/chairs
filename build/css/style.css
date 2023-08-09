@@ -3525,6 +3525,10 @@ h3,
   border-radius: 5px;
 }
 
+.wishlist .jq-selectbox .jq-selectbox__select-text {
+  color: #FC6519;
+}
+
 .wishlist .jq-selectbox::before {
   width: 16px;
   height: 16px;
