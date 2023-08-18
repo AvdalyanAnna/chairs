@@ -1,0 +1,35 @@
+@@include('./html/_head.html',{"title": "Index", "description": "description"})
+
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main>
+    <div class="wrapper">
+        <nav class="breadcrumb">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Главная</a></li>
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Личный Кабинет </a></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__text">Выход</span></li>
+            </ul>
+        </nav>
+        <h1 class="content__title">Выход</h1>
+
+
+        <div class="account-container">
+            <div class="account-container__left">
+                <p>Вы вышли из Личного Кабинета.</p>
+                <p>Ваша корзина покупок была сохранена. Она будет восстановлена при следующем входе в Ваш Личный Кабинет.</p>
+                <a href="https://vsestulya.ru/" class="btn">Продолжить</a>
+            </div>
+
+            @@include('./html/_account-sitebar.html')
+
+        </div>
+
+    </div>
+    @@include('./html/_subscribe.html')
+</main>
+@@include('./html/_footer.html')
+@@include('./html/_script.html')
+

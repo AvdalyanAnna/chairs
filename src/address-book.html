@@ -1,0 +1,58 @@
+@@include('./html/_head.html',{"title": "Index", "description": "description"})
+
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main>
+    <div class="wrapper">
+        <nav class="breadcrumb">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Главная</a></li>
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Личный Кабинет </a></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__text">Мои Адреса</span></li>
+            </ul>
+        </nav>
+        <h1 class="content__title">Мои Адреса</h1>
+        <div class="acc-addresses-list">
+            <div class="acc-addresses">
+                <a href="https://vsestulya.ru/delete-address?address_id=33301" class="acc-addresses__delete"
+                   title="Удалить">
+                    <svg class="icon-cross" height="1em" viewBox="0 0 512 512">
+                        <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/>
+                    </svg>
+                </a>
+                <p>test Тест</p>
+                <a href="https://vsestulya.ru/edit-address?address_id=33301" class="btn btn--sm">Редактировать</a>
+            </div>
+            <div class="acc-addresses">
+                <a href="https://vsestulya.ru/delete-address?address_id=33303" class="acc-addresses__delete"
+                   title="Удалить">
+                    <svg class="icon-cross" height="1em" viewBox="0 0 512 512">
+                        <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --></svg>
+                </a>
+                <p>asasa asasa<br>Российская Федерация</p>
+                <a href="https://vsestulya.ru/edit-address?address_id=33303" class="btn btn--sm">Редактировать</a>
+            </div>
+        </div>
+
+        <div class="account-container">
+            <div class="account-container__left">
+                <div class="checkout__button-box">
+                    <a href="https://vsestulya.ru/address-book" class="btn btn--empty">Назад</a>
+                    <a href="https://vsestulya.ru/my-account" class="btn btn--transparent">Новый адрес</a>
+                </div>
+            </div>
+
+            @@include('./html/_account-sitebar.html')
+
+        </div>
+
+    </div>
+    @@include('./html/_subscribe.html')
+</main>
+@@include('./html/_footer.html')
+@@include('./html/_script.html')
+

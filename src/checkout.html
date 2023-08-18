@@ -1,0 +1,24 @@
+@@include('./html/_head.html',{"title": "Index", "description": "description"})
+
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main class="main">
+    <div class="wrapper">
+        <div class="checkout-success">
+            <img src="https://vsestulya.ru/catalog/view/theme/theme_lightshop/img/checkout-success.png" alt="checkout-success">
+            <h1 class="checkout-success__title">Ваш заказ принят!</h1>
+            <div class="checkout-success__message">
+                <p>Ваш заказ <a href="/index.php?route=account/order/info&amp;order_id=0"><b>№0</b></a> принят.</p><p>Наш менеджер свяжется с Вами по указанному Вами номеру <b></b>, чтобы подтвердить заказ. После подтверждения заказа Вы сможете его оплатить.</p><p>Для Вас был создан <a href="/my-account/">Личный кабинет</a>. Посмотреть заказ можно в разделе <a href="/order-history/">История заказов</a>.</p><p>Если у Вас возникли вопросы, пожалуйста <a href="/contact/">свяжитесь с нами</a>.</p><p>Благодарим Вас за покупки в нашем интернет-магазине!</p>															</div>
+        </div>
+    </div>
+
+    @@include('./html/_subscribe.html')
+
+
+</main>
+
+@@include('./html/_footer.html')
+@@include('./html/_script.html')
+

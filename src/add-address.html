@@ -1,0 +1,142 @@
+@@include('./html/_head.html',{"title": "Index", "description": "description"})
+
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main>
+    <div class="wrapper">
+        <nav class="breadcrumb">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Главная</a></li>
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Личный Кабинет </a></li>
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Мои Адреса </a></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__text">Редактировать адрес</span></li>
+            </ul>
+        </nav>
+        <h1 class="content__title">Мои Адреса</h1>
+
+
+        <div class="account-container">
+            <div class="account-container__left">
+                <form action="https://vsestulya.ru/add-address" method="post" enctype="multipart/form-data">
+
+                    <div class="form-box">
+                        <div class="checkout">
+                            <div class="checkout__input-row">
+                                <div class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title required">Фамилия</span>
+
+                                    <input type="text" name="lastname" value="" placeholder="Фамилия" id="input-lastname">
+                                </div>
+                                <div style="display:none" class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title ">Страна</span>
+                                    <div class="select">
+                                        <select name="country_id" id="input-country" class="select--squer select select-checkout" data-placeholder="Страна">
+                                            <option value=""> --- Выберите --- </option>
+                                            <option value="109">Казахстан</option>
+                                            <option value="176" selected="selected">Российская Федерация</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title required">Имя, Отчество</span>
+
+                                    <input type="text" name="firstname" value="" placeholder="Имя, Отчество" id="input-firstname">
+                                </div>
+                                <div style="display:none" class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title ">Регион / Область</span>
+
+                                    <div class="select">
+                                        <select name="zone_id" id="input-zone" class="select--squer select select-checkout" data-placeholder="Регион / Область"><option value=""> --- Выберите --- </option><option value="50">Алтайский край</option><option value="53">Амурская область</option><option value="48">Архангельская область</option><option value="49">Астраханская область</option><option value="169">Байконур - город республ-го значения</option><option value="51">Белгородская область</option><option value="54">Брянская область</option><option value="118">Владимирская область</option><option value="120">Волгоградская область</option><option value="121">Вологодская область</option><option value="122">Воронежская область</option><option value="52">Еврейская АО</option><option value="58">Забайкальский край</option><option value="65">Ивановская область</option><option value="64">Иркутская область</option><option value="67">Калининградская область</option><option value="68">Калужская область</option><option value="96">Камчатский край</option><option value="57">Карачаево-Черкесия</option><option value="70">Кемеровская область</option><option value="123">Кировская область</option><option value="73">Костромская область</option><option value="74">Краснодарский край</option><option value="75">Красноярский край</option><option value="76">Курганская область</option><option value="77">Курская область</option><option value="59">Ленинградская область</option><option value="79">Липецкая область</option><option value="80">Магаданская область</option><option value="83">Москва</option><option value="46">Московская область</option><option value="84">Мурманская область</option><option value="86">Ненецкий АО</option><option value="88">Нижегородская область</option><option value="89">Новгородская область</option><option value="90">Новосибирская область</option><option value="91">Омская область</option><option value="93">Оренбургская область</option><option value="92">Орловская область</option><option value="94">Пензенская область</option><option value="95">Пермский край</option><option value="119">Приморский край</option><option value="98">Псковская область</option><option value="82">Республика Адыгея</option><option value="62">Республика Алтай</option><option value="114">Республика Башкортостан</option><option value="116">Республика Бурятия</option><option value="81">Республика Дагестан</option><option value="87">Республика Ингушетия</option><option value="85">Республика Кабардино-Балкария</option><option value="60">Республика Калмыкия</option><option value="97">Республика Карелия</option><option value="108">Республика Коми</option><option value="128">Республика Крым</option><option value="127">Республика Марий Эл</option><option value="103">Республика Мордовия</option><option value="124">Республика Саха</option><option value="117">Республика Северная Осетия</option><option value="69">Республика Татарстан</option><option value="78">Республика Тыва</option><option value="45">Республика Хакасия</option><option value="99">Ростовская область</option><option value="100">Рязанская область</option><option value="102">Самарская область</option><option value="106">Санкт-Петербург</option><option value="104">Саратовская область</option><option value="61">Сахалинская область</option><option value="126">Свердловская область</option><option value="146">Севастополь</option><option value="105">Смоленская область</option><option value="107">Ставропольский край</option><option value="109">Тамбовская область</option><option value="112">Тверская область</option><option value="110">Томская область</option><option value="111">Тульская область</option><option value="113">Тюменская область</option><option value="66">Удмуртская Республика</option><option value="115">Ульяновская область</option><option value="71">Хабаровский край</option><option value="72">Ханты-Мансийский АО - Югра</option><option value="56">Челябинская область</option><option value="63">Чеченская Республика</option><option value="55">Чувашская Республика</option><option value="47">Чукотский АО</option><option value="101">Ямало-Ненецкий АО</option><option value="125">Ярославская область</option></select>
+                                    </div>
+                                </div>
+                                <div style="display:none" class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title ">Город</span>
+
+                                    <input type="text" name="city" value="" placeholder="Город" id="input-city">
+                                </div>
+                                <div style="display:none" class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title ">entry_fax</span>
+
+                                    <input type="text" name="fax" value="" placeholder="entry_fax" id="input-fax">
+                                </div>
+                                <div style="display:none" class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title ">Компания</span>
+
+                                    <input type="text" name="company" value="" placeholder="Компания" id="input-company">
+                                </div>
+                                <div style="display:none" class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title ">Почтовый индекс</span>
+
+                                    <input type="text" name="postcode" value="" placeholder="Почтовый индекс" id="input-postcode">
+                                </div>
+                                <div style="display:none" class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title ">Адрес 1</span>
+
+                                    <input type="text" name="address_1" value="" placeholder="Адрес 1" id="input-address-1">
+                                </div>
+                                <div style="display:none" class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title ">Адрес 2</span>
+
+                                    <input type="text" name="address_2" value="" placeholder="Адрес 2" id="input-address-2">
+                                </div>
+                                <div style="display:none" class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title ">entry_email</span>
+
+                                    <input type="text" name="email" value="" placeholder="entry_email" id="input-email">
+                                </div>
+                                <div style="display:none" class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title required">entry_telephone</span>
+
+                                    <input type="text" name="telephone" value="" placeholder="entry_telephone" id="input-telephone">
+                                </div>
+
+
+
+                                <div class="checkout__radio-box form-group">
+                                    <span class="checkout__input-box-title">Основной адрес</span>
+                                    <div class="modal-review-step__form-item__radio">
+                                        <input type="radio" name="modal-review-step-2-radio" id="ok">
+                                        <label for="ok">
+                                            <span class="radio"></span>
+                                            <span class="text-radio">Да</span>
+                                        </label>
+                                    </div>
+                                    <div class="modal-review-step__form-item__radio">
+                                        <input type="radio" name="modal-review-step-2-radio" id="no">
+                                        <label for="no">
+                                            <span class="radio"></span>
+                                            <span class="text-radio">Нет</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="checkout__button-box">
+                                <a href="https://vsestulya.ru/address-book" class="btn btn--empty">Назад</a>
+                                <a href="https://vsestulya.ru/my-account" class="btn btn--transparent">Продолжить
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-long-right" height="1em"
+                                         viewBox="0 0 448 512">
+                                        <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="fix_text_select" value=" --- Выберите --- ">
+                    <input type="hidden" name="fix_zone_id" value="">
+                    <input type="hidden" name="fix_text_none" value=" --- Не выбрано --- ">
+                </form>
+            </div>
+
+            @@include('./html/_account-sitebar.html')
+
+        </div>
+
+    </div>
+    @@include('./html/_subscribe.html')
+</main>
+@@include('./html/_footer.html')
+@@include('./html/_script.html')
+

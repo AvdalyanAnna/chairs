@@ -1,0 +1,77 @@
+@@include('./html/_head.html',{"title": "Index", "description": "description"})
+
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main>
+    <div class="wrapper">
+        <nav class="breadcrumb">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Главная</a></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__text">Корзина покупок</span></li>
+            </ul>
+        </nav>
+        <h1 class="content__title">Оформление заказа</h1>
+        <div class="cart__meta">
+            <div class="product-info cart--tabs js-product-info js-cart-tabs">
+                <div class="js-tabs-box js-tabs-box-product">
+                    <div class="tabs">
+                        <ul class="tabs__list js-cart-tabs-list"><li class="tabs__list-item js-tab active">
+                            <a href="#" class="tabs__link">
+                                Купон<svg class="icon-chevron-top"><use xlink:href="#chevron-small-left"></use></svg>
+                            </a>
+                        </li></ul>
+                    </div>
+                    <div class="product-info__tabs-container js-cart-tabs-container"><div class="tabs-content js-tab-content js-tab-descr active" style="display: block;">
+                        <div class="tabs-content__title js-tab-title">
+                            <a href="#" class="tabs-content__title-link">
+                                Купон<svg class="icon-chevron-top"><use xlink:href="#chevron-small-left"></use></svg>
+                            </a>
+                        </div>
+                        <div class="tabs-content__inner  js-tab-inner">
+                            <div class="cart__coupon">
+				<span class="fake-input fake-input--coupon">
+					<input type="text" name="coupon" value="" placeholder="Введите код купона" class="cart__coupon-input">
+					 <a href="https://vsestulya.ru/my-account" class="btn btn--transparent">Продолжить
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-long-right" height="1em"
+                                         viewBox="0 0 448 512">
+                                        <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+                                    </svg>
+                                </a>
+					</button>
+				</span>
+                            </div>
+                        </div>
+                    </div></div>
+                </div>
+            </div>
+
+            <div class="cart__sum">
+                <div class="cart__sum-text">Общий вес:<span class="cart__sum-price">0 кг</span></div>
+                <div class="cart__sum-text" style="display: none;">Сборка:<span class="cart__sum-price"><span id="assembly-cost"></span> руб.</span></div>
+                <span class="cart__sum-text">
+										Итого:
+										<input type="hidden" value="62 Br">
+										<span class="cart__sum-price" id="total-cost">NaN руб.</span>
+									</span><br>
+            </div>
+        </div>
+        <div class="cart__buttons">
+            <div class="cart__buttons-left">
+                <a href="https://vsestulya.ru/" class="btn btn--transparent">
+                    Продолжить покупки                            </a>
+            </div>
+            <div class="cart__buttons-right cart__buttons-right--modified">
+							<span class="cart__buttons-right-btn">
+								<div onclick="ym(860601,'reachGoal','execute_request'); gtag('event', 'cart', { 'event_category': 'shag3'}); window.location.href = 'https://vsestulya.ru/checkout';" class="btn" style="cursor:pointer;">Оформление заказа</div>
+							</span>
+                <button type="button" href="#popup-buy-click" data-typefrom="cart-popup" data-for="" class="btn btn--transparent btn--link js-fancy-popup-cart" style="min-width: inherit;">Быстрый заказ</button>
+            </div>
+        </div>
+    </div>
+    @@include('./html/_subscribe.html')
+</main>
+@@include('./html/_footer.html')
+@@include('./html/_script.html')
+

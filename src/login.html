@@ -1,0 +1,69 @@
+@@include('./html/_head.html',{"title": "Index", "description": "description"})
+
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main>
+    <div class="wrapper">
+        <nav class="breadcrumb">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Главная</a></li>
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Личный Кабинет </a></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__text">Авторизация</span></li>
+            </ul>
+        </nav>
+        <h1 class="content__title">Авторизация</h1>
+
+
+        <div class="account-container">
+            <div class="account-container__left">
+                <div id="sidebar-mob-btn" class="open__modal" data-modal="#account-menu">
+                    <a href="#sidebar-navigation" class="js-popup-call sidebar-mobile-btn">Меню</a>
+                </div>
+                <div class="account-form">
+                    <div class="account-form__col account-form__col--register">
+                        <span class="account__title">Регистрация</span>
+                        <p>Создание учетной записи поможет покупать быстрее. Вы сможете контролировать состояние заказа,
+                            а также просматривать заказы сделанные ранее. Вы сможете накапливать призовые баллы и
+                            получать скидочные купоны. <br>А постоянным покупателям мы предлагаем гибкую систему скидок
+                            и персональное обслуживание.<br></p>
+                        <a href="https://vsestulya.ru/create-account" class="btn">Продолжить</a>
+                    </div>
+                    <div class="account-form__col">
+                        <span class="account__title">Войти в Личный Кабинет</span>
+                        <form action="https://vsestulya.ru/login" method="post" enctype="multipart/form-data">
+                            <div class="account__input-box">
+                                <input type="text" name="telephone" value="" placeholder="Телефон" id="input-telephone"
+                                       required="">
+                            </div>
+                            <div class="account__input-box account__input-box--pass">
+                                <input type="password" name="password" value="" placeholder="Пароль" id="input-password"
+                                       required="">
+                                <a href="#" class="password-control"></a>
+                            </div>
+                            <div class="account__input-box account__input-box--forgotten">
+                                <a href="https://vsestulya.ru/forgot-password">Забыли пароль?</a>
+                            </div>
+                            <div class="account__check-box">
+                                <input type="checkbox" id="checkbox1">
+                                <label for="checkbox1">Запомнить</label>
+                            </div>
+                            <button class="btn" type="submit">Войти</button>
+                            <input type="hidden" name="redirect" value="https://vsestulya.ru/newsletter">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            @@include('./html/_account-sitebar.html')
+
+        </div>
+
+    </div>
+    @@include('./html/_subscribe.html')
+</main>
+@@include('./html/_footer.html')
+@@include('./html/_script.html')
+
