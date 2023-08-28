@@ -538,7 +538,10 @@ $(document).ready(function () {
         const fileName = e.target.files[0].name;
         parent.find('.supplier__label-content').html(fileName);
     });
-
+$('.order-story__show-button').on('click', function (){
+    $(this).toggleClass('active')
+    $(this).parents('.order-story__item').find('.order-story__body-group').slideToggle(300)
+})
 })
 $(function () {
     $('.modal-review-step__form-item-btn').on('click', function (e) {
@@ -1654,4 +1657,3 @@ $(document).ready(function () {
         $(this).hide()
     })
 })
-
