@@ -1,0 +1,178 @@
+@@include('./html/_head.html',{"title": "Index", "description": "description"})
+
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main>
+    <div class="wrapper">
+        <nav class="breadcrumb">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Главная</a></li>
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Личный Кабинет </a></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__text">Возврат товара</span></li>
+            </ul>
+        </nav>
+        <h1 class="content__title">Возврат товара</h1>
+
+
+        <div class="account-container">
+            <div class="account-container__left row-p">
+                <div id="sidebar-mob-btn" class="open__modal" data-modal="#account-menu">
+                    <a href="#sidebar-navigation" class="js-popup-call sidebar-mobile-btn">Меню</a>
+                </div>
+                <p></p>
+                <p>Пожалуйста, заполните форму запроса на возврат товара.</p>
+                <p></p>
+                <form action="https://vsestulya.ru/return-add" method="post" enctype="multipart/form-data">
+                    <div class="form-box">
+                        <div class="checkout">
+                            <h3 class="checkout__h3">Информация о заказе</h3>
+                            <div class="checkout__input-row">
+                                <div class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title required">Фамилия</span>
+                                    <input type="text" name="lastname" value="Фдлттмуодь" placeholder="Фамилия" id="input-lastname" class="" readonly="">
+                                </div>
+                                <div class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title required">№ Заказа</span>
+                                    <input type="text" name="order_id" value="183055" placeholder="№ Заказа" id="input-order_id" class=" " readonly="">
+                                    <div class="checkout__input-box-error"></div>
+                                </div>
+                                <div class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title required">Имя</span>
+                                    <input type="text" name="firstname" value="Инокентий" placeholder="Имя" id="input-firstname" class="" readonly="">
+                                </div>
+                                <div class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title">Дата заказа</span>
+                                    <input type="text" name="date_ordered" data-date-format="YYYY-MM-DD" value="2023-08-01" placeholder="Дата заказа" id="input-date_ordered" class="date" readonly="">
+                                </div>
+                                <div class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title required">Телефон</span>
+                                    <input type="tel" name="telephone" value="+7-(952)-352-56-03" placeholder="Телефон" id="input-telephone" class=" " readonly="">
+                                    <div class="checkout__input-box-error"></div>
+                                </div>
+                                <div class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title required">Дата получения заказа</span>
+                                    <input type="text" name="date_ordered_send" data-date-format="YYYY-MM-DD" value="" placeholder="Дата получения заказа" id="input-date_ordered_send" class="date ">
+                                </div>
+                                <div class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title">E-Mail</span>
+                                    <input type="email" name="email" value="" placeholder="E-Mail" id="input-email" class="checkout__input-box-title " readonly="">
+                                </div>
+                            </div>
+                            <h3 class="checkout__h3">Информация о товаре</h3>
+                            <div class="checkout__input-row">
+                                <div class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title required">Наименование товара</span>
+                                    <input type="text" name="product" value="Стул Eames DSW White" placeholder="Наименование товара" id="input-product" class="" readonly="">
+                                </div>
+                                <div class="checkout__input-box form-group" style="display:none;">
+                                    <span class="checkout__input-box-title required">Модель</span>
+                                    <input type="text" name="model" value="" placeholder="Модель" id="input-model" class="">
+                                </div>
+                                <div class="checkout__input-box form-group">
+                                    <span class="checkout__input-box-title">Количество</span>
+                                    <input type="text" name="quantity" value="1" placeholder="Количество" id="input-quantity" class="">
+                                </div>
+                                <div class="checkout__radio-box form-group" style="width: 49%;">
+                                    <span class="checkout__input-box-title">Товар распакован</span>
+                                    <div class="modal-review-step__form-item__radio">
+                                        <input name="opened" id="opened-0" type="radio" value="0" checked="checked">
+                                        <label for="opened-0">
+                                            <span class="radio"></span>
+                                            <span class="text-radio">Нет</span>
+                                        </label>
+                                    </div>
+                                    <div class="modal-review-step__form-item__radio">
+                                        <input name="opened" id="opened-1" type="radio" value="1">
+                                        <label for="opened-1">
+                                            <span class="radio"></span>
+                                            <span class="text-radio">Да</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="checkout__radio-box form-group" style="width: 49%;">
+                                    <span class="checkout__input-box-title">Сборка производилась</span>
+                                    <div class="modal-review-step__form-item__radio">
+                                        <input name="assembly" id="assembly-0" type="radio" value="0" checked="checked">
+                                        <label for="assembly-0">
+                                            <span class="radio"></span>
+                                            <span class="text-radio">Нет</span>
+                                        </label>
+                                    </div>
+                                    <div class="modal-review-step__form-item__radio">
+                                        <input name="assembly" id="assembly-1" type="radio" value="1">
+                                        <label for="assembly-1">
+                                            <span class="radio"></span>
+                                            <span class="text-radio">Да</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="checkout__radio">
+                                <div class="checkout__radio-box-row form-group" style="">
+                                    <span class="checkout__input-box-title required">Причина возврата</span>
+
+                                    <div class="modal-review-step__form-item__radio checkout__radio-item">
+                                        <input name="return_reason_id" id="return_reason-5-0" type="radio" value="5">
+                                        <label for="return_reason-5-0">
+                                            <span class="radio"></span>
+                                            <span class="text-radio">Другое (другая причина), пожалуйста укажите/приложите подробности</span>
+                                        </label>
+                                    </div>
+                                    <div class="modal-review-step__form-item__radio checkout__radio-item">
+                                        <input name="return_reason_id" id="return_reason-5-1" type="radio" value="4">
+                                        <label for="return_reason-5-1">
+                                            <span class="radio"></span>
+                                            <span class="text-radio">Ошибка, пожалуйста укажите/приложите подробности</span>
+                                        </label>
+                                    </div>
+                                    <div class="modal-review-step__form-item__radio checkout__radio-item">
+                                        <input name="return_reason_id" id="return_reason-5-2" type="radio" value="2">
+                                        <label for="return_reason-5-2">
+                                            <span class="radio"></span>
+                                            <span class="text-radio">Получен не тот (ошибочный) товар</span>
+                                        </label>
+                                    </div>
+                                    <div class="modal-review-step__form-item__radio checkout__radio-item">
+                                        <input name="return_reason_id" id="return_reason-5-3" type="radio" value="1">
+                                        <label for="return_reason-5-3">
+                                            <span class="radio"></span>
+                                            <span class="text-radio">Получен/доставлен неисправным (сломан)</span>
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="checkout__textarea">
+                                <span class="checkout__input-box-title">Описание дефектов</span>
+                                <textarea name="comment" class="textarea-bg" placeholder="Описание дефектов"></textarea>
+                            </div>
+
+
+
+                            <div class="checkout__button-box">
+                                <a href="https://vsestulya.ru/my-account" class="btn btn--empty">Назад</a>
+                                <button type="submit" class="btn btn--transparent">Отправить запрос</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+
+
+
+            @@include('./html/_account-sitebar.html')
+
+        </div>
+
+    </div>
+    @@include('./html/_subscribe.html')
+</main>
+@@include('./html/_footer.html')
+@@include('./html/_script.html')
+

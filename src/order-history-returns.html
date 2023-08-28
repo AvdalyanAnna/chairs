@@ -1,0 +1,133 @@
+@@include('./html/_head.html',{"title": "Index", "description": "description"})
+
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main>
+    <div class="wrapper">
+        <nav class="breadcrumb">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Главная</a></li>
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Личный Кабинет </a></li>
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Возврат товара  </a></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__text">Информация о возврате</span></li>
+            </ul>
+        </nav>
+        <h1 class="content__title">Возврат товара</h1>
+
+
+        <div class="account-container">
+            <div class="account-container__left ">
+                <div id="sidebar-mob-btn" class="open__modal" data-modal="#account-menu">
+                    <a href="#sidebar-navigation" class="js-popup-call sidebar-mobile-btn">Меню</a>
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr class="table__row">
+                        <td class="table__col" colspan="2">Детали возврата</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="table__row table__row--hover">
+                        <td class="table__col" style="width: 50%;"><b>№ Запроса на возврат</b> 62<br>
+                            <b>Добавлено</b> 01.07.2022</td>
+                        <td class="table__col" style="width: 50%;"><b>№ Заказа</b> 158130<br>
+                            <b>Дата заказа</b> 28.02.2022</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3 class="content__title-small">Информация о товаре</h3>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr class="table__row">
+                            <td class="table__col" style="width: 33.3%;">Название товара</td>
+                            <td class="table__col" style="width: 33.3%;">Модель</td>
+                            <td class="table__col " style="width: 33.3%;">Количество</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="table__row table__row--hover">
+                            <td class="table__col">Стул барный LMZ-6929 MORGAN зеленый/коричневое дерево/черный</td>
+                            <td class="table__col">D0000000000000004709</td>
+                            <td class="table__col ">1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="content__title-small">Информация о причине возврата</h3>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr class="table__row">
+                            <td class="table__col" style="width: 33.3%;">Причина</td>
+                            <td class="table__col" style="width: 33.3%;">Открыто</td>
+                            <td class="table__col" style="width: 33.3%;">Действие</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="table__row table__row--hover">
+                            <td class="table__col">Другое (другая причина), пожалуйста укажите/приложите подробности</td>
+                            <td class="table__col">Нет</td>
+                            <td class="table__col"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr class="table__row">
+                            <td class="table__col">Комментарий по возврату</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="table__row table__row--hover">
+                            <td class="table__col">Тестовое оформление возврата</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3 class="content__title-small">История возвратов</h3>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr class="table__row">
+                            <td class="table__col" style="width: 33.3%;">Добавлено</td>
+                            <td class="table__col" style="width: 33.3%;">Статус</td>
+                            <td class="table__col" style="width: 33.3%;">Комментарий</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="table__row table__row--hover">
+                            <td class="table__col">07.07.2022</td>
+                            <td class="table__col">Рассматриваемый</td>
+                            <td class="table__col"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>&nbsp;</p>
+                <div class="checkout__button-box">
+                    <a href="https://vsestulya.ru/my-account" class="btn btn--transparent">Продолжить
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-long-right" height="1em" viewBox="0 0 448 512">
+                            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path>
+                        </svg>
+
+                    </a>
+                </div>
+            </div>
+
+
+
+            @@include('./html/_account-sitebar.html')
+
+        </div>
+
+    </div>
+    @@include('./html/_subscribe.html')
+</main>
+@@include('./html/_footer.html')
+@@include('./html/_script.html')
+

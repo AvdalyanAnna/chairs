@@ -5,7 +5,7 @@
 
 <!-- Main Page -->
 <main>
-    <div class="wrapper">
+    <div class="wrapper wishlist wishlist-1 ">
         <nav class="breadcrumb">
             <ul class="breadcrumb__list">
                 <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Главная</a></li>
@@ -13,60 +13,107 @@
             </ul>
         </nav>
         <h1 class="content__title">Оформление заказа</h1>
+        <form action="https://vsestulya.ru/index.php?route=checkout/cart/edit" method="post" enctype="multipart/form-data" id="cartcontent">
+            <div class="cart__products">
+                <table class="cart__table">
+                    <tbody><tr class="cart__table-row">
+                        <td class="cart__table-photo">
+                            <a href="https://vsestulya.ru/c/skladnye-stulya/raskladnoj-stul-dzhingo" class="cart__photo">
+                                <img src="https://vsestulya.ru/image/cache/catalog/Stulya/SKLADNYE-Stulya/DZHINGO-(KOMFORT)/djingo-komfort-01-150x150.jpg" alt="Раскладной стул ДЖИНГО" title="Раскладной стул ДЖИНГО">
+                            </a>
+                        </td>
+                        <td class="cart__table-name">
+                            <a href="https://vsestulya.ru/c/skladnye-stulya/raskladnoj-stul-dzhingo" class="cart__product-name">
+                                Раскладной стул ДЖИНГО                                            </a>
+                        </td>
+                        <td class="cart__table-discount">
+									<span class="cart__discount">
+										                                                                                            Цвет обивки: Бежевый<br>
+                                                                                            Цвет каркаса: Черный<br>
+
+
+                                        									</span>
+                        </td>
+                        <td class="cart__table-price">
+									<span class="cart__table-price-400 catalogue__price catalogue__price--md catalogue__price--think" title="Цена">
+										 1850 руб.									</span>
+                        </td>
+                        <td class="cart__table-spinner">
+                        <td class="catalogue__table-spinner">
+                            <div class="spinner-wrap">
+                                <span class="ui-spinner ui-corner-all ui-widget ui-widget-content">
+                                    <input type="text" class="spinner ui-spinner-input" value="1" placeholder="1" autocomplete="off">
+                                    <a tabindex="-1" aria-hidden="true" class="ui-spinner-button ui-spinner-up ui-corner-tr"></a><a tabindex="-1" aria-hidden="true" class="ui-spinner-button ui-spinner-down ui-corner-br"></a></span>
+                            </div>
+                        </td>
+                        </td>
+
+                        <td class="cart__table-price-total">
+									<span class="cart__table-price-400 catalogue__price catalogue__price--md catalogue__price--total" title="Итого">
+										 1850 руб.									</span>
+                        </td>
+                        <td class="cart__table-delete">
+                            <a onclick="cart.remove('255071');" class="cart__delete" title="Удалить">
+                                <svg class="icon-cross" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"/></svg>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody></table>
+            </div>
+        </form>
         <div class="cart__meta">
             <div class="product-info cart--tabs js-product-info js-cart-tabs">
                 <div class="js-tabs-box js-tabs-box-product">
                     <div class="tabs">
-                        <ul class="tabs__list js-cart-tabs-list"><li class="tabs__list-item js-tab active">
-                            <a href="#" class="tabs__link">
-                                Купон<svg class="icon-chevron-top"><use xlink:href="#chevron-small-left"></use></svg>
-                            </a>
-                        </li></ul>
+                        <ul class="tabs__list js-cart-tabs-list">
+                            <li class="tabs__list-item js-tab active">
+                                <a href="#" class="tabs__link"> Купон </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="product-info__tabs-container js-cart-tabs-container"><div class="tabs-content js-tab-content js-tab-descr active" style="display: block;">
-                        <div class="tabs-content__title js-tab-title">
-                            <a href="#" class="tabs-content__title-link">
-                                Купон<svg class="icon-chevron-top"><use xlink:href="#chevron-small-left"></use></svg>
-                            </a>
-                        </div>
-                        <div class="tabs-content__inner  js-tab-inner">
-                            <div class="cart__coupon">
+                    <div class="product-info__tabs-container js-cart-tabs-container">
+                        <div class="tabs-content js-tab-content js-tab-descr active" style="display: block;">
+                            <div class="tabs-content__inner  js-tab-inner">
+                                <div class="cart__coupon">
 				<span class="fake-input fake-input--coupon">
 					<input type="text" name="coupon" value="" placeholder="Введите код купона" class="cart__coupon-input">
-					 <a href="https://vsestulya.ru/my-account" class="btn btn--transparent">Продолжить
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-long-right" height="1em"
-                                         viewBox="0 0 448 512">
-                                        <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+					<button type="button" value="Применение купона" class="coupon-btn js-add-coupon">
+					<svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-long-right" height="1em" viewBox="0 0 448 512">
+                                        <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path>
                                     </svg>
-                                </a>
 					</button>
 				</span>
+                                </div>
                             </div>
                         </div>
-                    </div></div>
+                    </div>
                 </div>
             </div>
 
             <div class="cart__sum">
                 <div class="cart__sum-text">Общий вес:<span class="cart__sum-price">0 кг</span></div>
-                <div class="cart__sum-text" style="display: none;">Сборка:<span class="cart__sum-price"><span id="assembly-cost"></span> руб.</span></div>
-                <span class="cart__sum-text">
+
+                <div class="cart__sum-text">
 										Итого:
 										<input type="hidden" value="62 Br">
-										<span class="cart__sum-price" id="total-cost">NaN руб.</span>
-									</span><br>
+										<span class="cart__sum-price" id="total-cost">1850 руб</span>
+									</div><br>
             </div>
         </div>
         <div class="cart__buttons">
             <div class="cart__buttons-left">
                 <a href="https://vsestulya.ru/" class="btn btn--transparent">
-                    Продолжить покупки                            </a>
+                    Продолжить покупки </a>
             </div>
             <div class="cart__buttons-right cart__buttons-right--modified">
 							<span class="cart__buttons-right-btn">
-								<div onclick="ym(860601,'reachGoal','execute_request'); gtag('event', 'cart', { 'event_category': 'shag3'}); window.location.href = 'https://vsestulya.ru/checkout';" class="btn" style="cursor:pointer;">Оформление заказа</div>
+								<div onclick="ym(860601,'reachGoal','execute_request'); gtag('event', 'cart', { 'event_category': 'shag3'}); window.location.href = 'https://vsestulya.ru/checkout';"
+                                     class="btn" style="cursor:pointer;">Оформление заказа</div>
 							</span>
-                <button type="button" href="#popup-buy-click" data-typefrom="cart-popup" data-for="" class="btn btn--transparent btn--link js-fancy-popup-cart" style="min-width: inherit;">Быстрый заказ</button>
+                <button type="button" href="#popup-buy-click" data-typefrom="cart-popup" data-for=""
+                        class="btn btn--transparent btn--link js-fancy-popup-cart" style="min-width: inherit;">Быстрый
+                    заказ
+                </button>
             </div>
         </div>
     </div>

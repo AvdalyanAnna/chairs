@@ -1,0 +1,228 @@
+@@include('./html/_head.html',{"title": "Index", "description": "description"})
+
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main>
+    <div class="wrapper">
+        <nav class="breadcrumb">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Главная</a></li>
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Личный Кабинет </a></li>
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">История заказов</a></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__text">Заказ</span></li>
+            </ul>
+        </nav>
+        <h1 class="content__title">Заказ</h1>
+
+
+        <div class="account-container">
+            <div class="account-container__left">
+                <div id="sidebar-mob-btn" class="open__modal" data-modal="#account-menu">
+                    <a href="#sidebar-navigation" class="js-popup-call sidebar-mobile-btn">Меню</a>
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr class="table__row">
+                        <td class="table__col" style="font-size: 14px;"><b>Детали заказа</b></td>
+                        <td class="table__col" style="font-size: 14px;"><b>Способ оплаты</b></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="table__row">
+                        <td class="table__col" style="width: 50%;">							<b>№ Заказа</b> #183055<br>
+                            <b>Добавлено</b> 01.08.2023</td>
+                        <td class="table__col" style="width: 50%;"><b>
+                            Оплата наличными при получении</b></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead>
+                    <tr class="table__row">
+                        <td class="table__col" style="width: 50%; vertical-align: top; font-size: 14px;"><b>Контактное лицо</b></td>
+                        <td class="table__col" style="width: 50%; vertical-align: top; font-size: 14px;"><b>Доставка</b></td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="table__row">
+                        <td class="table__col">
+                            <b>Фдлттмуодь Инокентий</b>						</td>
+                        <td class="table__col">
+                            <b>
+                                Способ доставки:
+                                Доставка по Санкт-Петербургу (в пределах КАД) - 490 руб.																<br>
+                                Адрес доставки: г Санкт-Петербург, ул Никольская, д 18, кв 34																							</b>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class="table-responsive--order-list">
+                        <tr class="table__row">
+                            <td class="table__col" style="font-size: 14px; font-weight:bold;">Название товара</td>
+                            <td class="table__col" style="font-size: 14px; font-weight:bold;">Вес</td>
+                            <td class="table__col" style="font-size: 14px; font-weight:bold;">Количество</td>
+                            <td class="table__col" style="font-size: 14px; font-weight:bold;">Сборка</td>
+                            <td class="table__col" style="font-size: 14px; font-weight:bold;">Цена</td>
+                            <td class="table__col" style="font-size: 14px; font-weight:bold;">Цена со скидкой</td>
+                            <td class="table__col" style="font-size: 14px; font-weight:bold;">Всего</td>
+                            <td class="table__col" style="width: 20px; font-size: 14px; font-weight:bold;"></td>
+                        </tr>
+                        </thead>
+                        <tbody class="table-responsive--order-list">
+                        <tr class="table__row table__row--hover">
+                            <td class="table__col"><a href="https://vsestulya.ru/c/stulya-eames/stul-eames-dsw-white" target="_blank">Стул Eames DSW White</a>
+                            </td>
+                            <td class="table__col">3.50</td>
+                            <td class="table__col">1</td>
+                            <td class="table__col">Нет</td>
+                            <td class="table__col"> 2090 руб.</td>
+                            <td class="table__col"> 2090 руб.</td>
+                            <td class="table__col"> 2090 руб.</td>
+                            <td class="table__col">
+                                <a href="https://vsestulya.ru/index.php?route=account/return/add&amp;order_id=183055&amp;product_id=835911" data-toggle="tooltip" title="Оформить возврат" class="btn">Оформить возврат</a></td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr class="table__row table__row--hover">
+                            <td class="table__col table__col--right" colspan="7" style="padding-right: 10px;"><b>Общий вес</b></td>
+                            <td class="table__col">3.5 кг</td>
+                        </tr>
+                        <tr class="table__row table__row--hover">
+                            <td class="table__col table__col--right" colspan="7" style="padding-right: 10px;"><b>Сумма</b></td>
+                            <td class="table__col">
+                                2090 руб.							</td>
+                        </tr>
+                        <tr class="table__row table__row--hover">
+                            <td class="table__col table__col--right" colspan="7" style="padding-right: 10px;"><b>Доставка</b></td>
+                            <td class="table__col">
+                                490 руб.							</td>
+                        </tr>
+                        <tr class="table__row table__row--hover">
+                            <td class="table__col table__col--right" colspan="7" style="padding-right: 10px;"><b>Итого</b></td>
+                            <td class="table__col">
+                                2580 руб.							</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <div class="order-story">
+                    <div class="order-story__item">
+                        <div class="order-story__row order-story__row--head">
+                            <div class="order-story__cell">Товар</div>
+                            <div class="order-story__cell"><a href="https://vsestulya.ru/c/stulya-eames/stul-eames-dsw-white" target="_blank">Стул Eames DSW White</a></div>
+                            <div class="order-story__cell order-story__cell--button"><div class="order-story__show-button">&nbsp;</div></div>
+                        </div>
+                        <div class="order-story__body-group order-story__body-group--hidden">
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Детали</div>
+                                <div class="order-story__cell order-story__cell--options">
+                                </div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Количество</div>
+                                <div class="order-story__cell">1</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Цена</div>
+                                <div class="order-story__cell"> 2090 руб.</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Цена со скидкой</div>
+                                <div class="order-story__cell"> 2090 руб.</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Всего</div>
+                                <div class="order-story__cell"> 2090 руб.</div>
+                            </div>
+
+                        </div>
+                        <a href="https://vsestulya.ru/index.php?route=account/return/add&amp;order_id=183055&amp;product_id=835911" class="order-story__detail-button">Оформить возврат</a>
+                    </div>
+                </div>
+                <table class="table">
+                    <thead>
+                    <tr class="table__row">
+                        <td class="table__col" style="font-size: 14px; font-weight:bold;">Комментарий к заказу</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="table__row">
+                        <td class="table__col">Тестовый заказ</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h3 class="content__title-small">История заказов</h3>
+                <table class="table">
+                    <thead>
+                    <tr class="table__row">
+                        <td class="table__col" style="font-size: 14px; font-weight:bold;">Добавлено</td>
+                        <td class="table__col" style="font-size: 14px; font-weight:bold;">Статус</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="table__row table__row--hover">
+                        <td class="table__col">01.08.2023</td>
+                        <td class="table__col">Брошенный</td>
+                    </tr>
+                    <tr class="table__row table__row--hover">
+                        <td class="table__col">01.08.2023</td>
+                        <td class="table__col">Брошенный</td>
+                    </tr>
+                    <tr class="table__row table__row--hover">
+                        <td class="table__col">01.08.2023</td>
+                        <td class="table__col">Брошенный</td>
+                    </tr>
+                    <tr class="table__row table__row--hover">
+                        <td class="table__col">01.08.2023</td>
+                        <td class="table__col">Брошенный</td>
+                    </tr>
+                    <tr class="table__row table__row--hover">
+                        <td class="table__col">09.08.2023</td>
+                        <td class="table__col">Брошенный</td>
+                    </tr>
+                    <tr class="table__row table__row--hover">
+                        <td class="table__col">09.08.2023</td>
+                        <td class="table__col">Брошенный</td>
+                    </tr>
+                    <tr class="table__row table__row--hover">
+                        <td class="table__col">09.08.2023</td>
+                        <td class="table__col">Брошенный</td>
+                    </tr>
+                    <tr class="table__row table__row--hover">
+                        <td class="table__col">09.08.2023</td>
+                        <td class="table__col">Новый</td>
+                    </tr>
+                    <tr class="table__row table__row--hover">
+                        <td class="table__col">10.08.2023</td>
+                        <td class="table__col">Отмена (нет ответа)</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p>&nbsp;</p>
+                <div class="checkout__button-box">
+                    <a href="https://vsestulya.ru/my-account" class="btn btn--transparent">Продолжить
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-long-right" height="1em" viewBox="0 0 448 512">
+                            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path>
+                        </svg>
+
+                    </a>
+                </div>
+
+            </div>
+
+
+
+            @@include('./html/_account-sitebar.html')
+
+        </div>
+
+    </div>
+    @@include('./html/_subscribe.html')
+</main>
+@@include('./html/_footer.html')
+@@include('./html/_script.html')
+

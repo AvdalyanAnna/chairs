@@ -1,0 +1,507 @@
+@@include('./html/_head.html',{"title": "Index", "description": "description"})
+
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main>
+    <div class="wrapper">
+        <nav class="breadcrumb">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Главная</a></li>
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Личный Кабинет </a></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__text">История заказов</span></li>
+            </ul>
+        </nav>
+        <h1 class="content__title">История заказов</h1>
+
+
+        <div class="account-container">
+            <div class="account-container__left">
+                <div id="sidebar-mob-btn" class="open__modal" data-modal="#account-menu">
+                    <a href="#sidebar-navigation" class="js-popup-call sidebar-mobile-btn">Меню</a>
+                </div>
+                <div class="table-responsive table-responsive--order-list">
+                    <table class="table">
+                        <thead>
+                        <tr class="table__row">
+                            <td class="table__col">№ Заказа</td>
+                            <td class="table__col">Клиент</td>
+                            <td class="table__col">Количество</td>
+                            <td class="table__col">Статус</td>
+                            <td class="table__col"></td>
+                            <td class="table__col">Добавлено</td>
+                            <td class="table__col"></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr data-row="1" class="table__row table__row--hover">
+                            <td class="table__col">183055</td>
+                            <td class="table__col">Инокентий Фдлттмуодь</td>
+                            <td class="table__col">1</td>
+                            <td class="table__col">Отмена (нет ответа)</td>
+                            <td class="table__col"> 2090 руб.</td>
+                            <td class="table__col">01.08.2023</td>
+                            <td class="table__col">
+                                <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=183055" title="Просмотр" class="btn">Просмотр</a>
+                            </td>
+                        </tr>
+                        <tr data-row="1" class="table__row table__row--hover">
+                            <td class="table__col">182788</td>
+                            <td class="table__col">Тест Тест</td>
+                            <td class="table__col">1</td>
+                            <td class="table__col">Брошенный</td>
+                            <td class="table__col"> 2090 руб.</td>
+                            <td class="table__col">24.07.2023</td>
+                            <td class="table__col">
+                                <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=182788" title="Просмотр" class="btn">Просмотр</a>
+                            </td>
+                        </tr>
+                        <tr data-row="1" class="table__row table__row--hover">
+                            <td class="table__col">182154</td>
+                            <td class="table__col">Тест Тест</td>
+                            <td class="table__col">1</td>
+                            <td class="table__col">Служебный документ</td>
+                            <td class="table__col"> 6270 руб.</td>
+                            <td class="table__col">05.07.2023</td>
+                            <td class="table__col">
+                                <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=182154" title="Просмотр" class="btn">Просмотр</a>
+                            </td>
+                        </tr>
+                        <tr data-row="1" class="table__row table__row--hover">
+                            <td class="table__col">176223</td>
+                            <td class="table__col">Имя Фамилия</td>
+                            <td class="table__col">1</td>
+                            <td class="table__col">Служебный документ</td>
+                            <td class="table__col"> 6559 руб.</td>
+                            <td class="table__col">27.01.2023</td>
+                            <td class="table__col">
+                                <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=176223" title="Просмотр" class="btn">Просмотр</a>
+                            </td>
+                        </tr>
+                        <tr data-row="1" class="table__row table__row--hover">
+                            <td class="table__col">174287</td>
+                            <td class="table__col">Петр Адамчук</td>
+                            <td class="table__col">1</td>
+                            <td class="table__col">Отменен</td>
+                            <td class="table__col"> 21400 руб.</td>
+                            <td class="table__col">15.12.2022</td>
+                            <td class="table__col">
+                                <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=174287" title="Просмотр" class="btn">Просмотр</a>
+                            </td>
+                        </tr>
+                        <tr data-row="1" class="table__row table__row--hover">
+                            <td class="table__col">174077</td>
+                            <td class="table__col">Инокентий Фдлттмуодь</td>
+                            <td class="table__col">3</td>
+                            <td class="table__col">Отменен</td>
+                            <td class="table__col"> 41790 руб.</td>
+                            <td class="table__col">12.12.2022</td>
+                            <td class="table__col">
+                                <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=174077" title="Просмотр" class="btn">Просмотр</a>
+                            </td>
+                        </tr>
+                        <tr data-row="1" class="table__row table__row--hover">
+                            <td class="table__col">174076</td>
+                            <td class="table__col">Инокентий Фдлттмуодь</td>
+                            <td class="table__col">3</td>
+                            <td class="table__col">Отменен</td>
+                            <td class="table__col"> 28800 руб.</td>
+                            <td class="table__col">12.12.2022</td>
+                            <td class="table__col">
+                                <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=174076" title="Просмотр" class="btn">Просмотр</a>
+                            </td>
+                        </tr>
+                        <tr data-row="1" class="table__row table__row--hover">
+                            <td class="table__col">174065</td>
+                            <td class="table__col">Петр Адамчук</td>
+                            <td class="table__col">2</td>
+                            <td class="table__col">Отменен</td>
+                            <td class="table__col"> 9550 руб.</td>
+                            <td class="table__col">12.12.2022</td>
+                            <td class="table__col">
+                                <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=174065" title="Просмотр" class="btn">Просмотр</a>
+                            </td>
+                        </tr>
+                        <tr data-row="1" class="table__row table__row--hover">
+                            <td class="table__col">173911</td>
+                            <td class="table__col">Петр Адамчук</td>
+                            <td class="table__col">1</td>
+                            <td class="table__col">Дубль</td>
+                            <td class="table__col"> 21042 руб.</td>
+                            <td class="table__col">09.12.2022</td>
+                            <td class="table__col">
+                                <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=173911" title="Просмотр" class="btn">Просмотр</a>
+                            </td>
+                        </tr>
+                        <tr data-row="1" class="table__row table__row--hover">
+                            <td class="table__col">173058</td>
+                            <td class="table__col">Петр Адамчук</td>
+                            <td class="table__col">1</td>
+                            <td class="table__col">Отменен</td>
+                            <td class="table__col"> 5990 руб.</td>
+                            <td class="table__col">24.11.2022</td>
+                            <td class="table__col">
+                                <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=173058" title="Просмотр" class="btn">Просмотр</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="order-story">
+                    <div class="order-story__item">
+                        <div class="order-story__row order-story__row--head">
+                            <div class="order-story__cell">№ Заказа</div>
+                            <div class="order-story__cell">183055</div>
+                            <div class="order-story__cell order-story__cell--button">
+                                <div class="order-story__show-button active">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="order-story__body-group order-story__body-group--hidden" style="display:block;">
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Клиент</div>
+                                <div class="order-story__cell">Инокентий Фдлттмуодь</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Количество</div>
+                                <div class="order-story__cell">1</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Статус</div>
+                                <div class="order-story__cell">Отмена (нет ответа)</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Всего</div>
+                                <div class="order-story__cell"> 2090 руб.</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Добавлено</div>
+                                <div class="order-story__cell">01.08.2023</div>
+                            </div>
+
+                        </div>
+                        <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=183055" class="order-story__detail-button">Просмотр</a>
+                    </div>
+                    <div class="order-story__item">
+                        <div class="order-story__row order-story__row--head">
+                            <div class="order-story__cell">№ Заказа</div>
+                            <div class="order-story__cell">182788</div>
+                            <div class="order-story__cell order-story__cell--button"><div class="order-story__show-button">&nbsp;</div></div>
+                        </div>
+                        <div class="order-story__body-group order-story__body-group--hidden">
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Клиент</div>
+                                <div class="order-story__cell">Тест Тест</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Количество</div>
+                                <div class="order-story__cell">1</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Статус</div>
+                                <div class="order-story__cell">Брошенный</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Всего</div>
+                                <div class="order-story__cell"> 2090 руб.</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Добавлено</div>
+                                <div class="order-story__cell">24.07.2023</div>
+                            </div>
+
+                        </div>
+                        <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=182788" class="order-story__detail-button">Просмотр</a>
+                    </div>
+                    <div class="order-story__item">
+                        <div class="order-story__row order-story__row--head">
+                            <div class="order-story__cell">№ Заказа</div>
+                            <div class="order-story__cell">182154</div>
+                            <div class="order-story__cell order-story__cell--button"><div class="order-story__show-button">&nbsp;</div></div>
+                        </div>
+                        <div class="order-story__body-group order-story__body-group--hidden">
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Клиент</div>
+                                <div class="order-story__cell">Тест Тест</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Количество</div>
+                                <div class="order-story__cell">1</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Статус</div>
+                                <div class="order-story__cell">Служебный документ</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Всего</div>
+                                <div class="order-story__cell"> 6270 руб.</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Добавлено</div>
+                                <div class="order-story__cell">05.07.2023</div>
+                            </div>
+
+                        </div>
+                        <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=182154" class="order-story__detail-button">Просмотр</a>
+                    </div>
+                    <div class="order-story__item">
+                        <div class="order-story__row order-story__row--head">
+                            <div class="order-story__cell">№ Заказа</div>
+                            <div class="order-story__cell">176223</div>
+                            <div class="order-story__cell order-story__cell--button"><div class="order-story__show-button">&nbsp;</div></div>
+                        </div>
+                        <div class="order-story__body-group order-story__body-group--hidden">
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Клиент</div>
+                                <div class="order-story__cell">Имя Фамилия</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Количество</div>
+                                <div class="order-story__cell">1</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Статус</div>
+                                <div class="order-story__cell">Служебный документ</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Всего</div>
+                                <div class="order-story__cell"> 6559 руб.</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Добавлено</div>
+                                <div class="order-story__cell">27.01.2023</div>
+                            </div>
+
+                        </div>
+                        <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=176223" class="order-story__detail-button">Просмотр</a>
+                    </div>
+                    <div class="order-story__item">
+                        <div class="order-story__row order-story__row--head">
+                            <div class="order-story__cell">№ Заказа</div>
+                            <div class="order-story__cell">174287</div>
+                            <div class="order-story__cell order-story__cell--button"><div class="order-story__show-button">&nbsp;</div></div>
+                        </div>
+                        <div class="order-story__body-group order-story__body-group--hidden">
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Клиент</div>
+                                <div class="order-story__cell">Петр Адамчук</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Количество</div>
+                                <div class="order-story__cell">1</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Статус</div>
+                                <div class="order-story__cell">Отменен</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Всего</div>
+                                <div class="order-story__cell"> 21400 руб.</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Добавлено</div>
+                                <div class="order-story__cell">15.12.2022</div>
+                            </div>
+
+                        </div>
+                        <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=174287" class="order-story__detail-button">Просмотр</a>
+                    </div>
+                    <div class="order-story__item">
+                        <div class="order-story__row order-story__row--head">
+                            <div class="order-story__cell">№ Заказа</div>
+                            <div class="order-story__cell">174077</div>
+                            <div class="order-story__cell order-story__cell--button"><div class="order-story__show-button">&nbsp;</div></div>
+                        </div>
+                        <div class="order-story__body-group order-story__body-group--hidden">
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Клиент</div>
+                                <div class="order-story__cell">Инокентий Фдлттмуодь</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Количество</div>
+                                <div class="order-story__cell">3</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Статус</div>
+                                <div class="order-story__cell">Отменен</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Всего</div>
+                                <div class="order-story__cell"> 41790 руб.</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Добавлено</div>
+                                <div class="order-story__cell">12.12.2022</div>
+                            </div>
+
+                        </div>
+                        <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=174077" class="order-story__detail-button">Просмотр</a>
+                    </div>
+                    <div class="order-story__item">
+                        <div class="order-story__row order-story__row--head">
+                            <div class="order-story__cell">№ Заказа</div>
+                            <div class="order-story__cell">174076</div>
+                            <div class="order-story__cell order-story__cell--button"><div class="order-story__show-button">&nbsp;</div></div>
+                        </div>
+                        <div class="order-story__body-group order-story__body-group--hidden">
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Клиент</div>
+                                <div class="order-story__cell">Инокентий Фдлттмуодь</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Количество</div>
+                                <div class="order-story__cell">3</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Статус</div>
+                                <div class="order-story__cell">Отменен</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Всего</div>
+                                <div class="order-story__cell"> 28800 руб.</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Добавлено</div>
+                                <div class="order-story__cell">12.12.2022</div>
+                            </div>
+
+                        </div>
+                        <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=174076" class="order-story__detail-button">Просмотр</a>
+                    </div>
+                    <div class="order-story__item">
+                        <div class="order-story__row order-story__row--head">
+                            <div class="order-story__cell">№ Заказа</div>
+                            <div class="order-story__cell">174065</div>
+                            <div class="order-story__cell order-story__cell--button"><div class="order-story__show-button">&nbsp;</div></div>
+                        </div>
+                        <div class="order-story__body-group order-story__body-group--hidden">
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Клиент</div>
+                                <div class="order-story__cell">Петр Адамчук</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Количество</div>
+                                <div class="order-story__cell">2</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Статус</div>
+                                <div class="order-story__cell">Отменен</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Всего</div>
+                                <div class="order-story__cell"> 9550 руб.</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Добавлено</div>
+                                <div class="order-story__cell">12.12.2022</div>
+                            </div>
+
+                        </div>
+                        <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=174065" class="order-story__detail-button">Просмотр</a>
+                    </div>
+                    <div class="order-story__item">
+                        <div class="order-story__row order-story__row--head">
+                            <div class="order-story__cell">№ Заказа</div>
+                            <div class="order-story__cell">173911</div>
+                            <div class="order-story__cell order-story__cell--button"><div class="order-story__show-button">&nbsp;</div></div>
+                        </div>
+                        <div class="order-story__body-group order-story__body-group--hidden">
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Клиент</div>
+                                <div class="order-story__cell">Петр Адамчук</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Количество</div>
+                                <div class="order-story__cell">1</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Статус</div>
+                                <div class="order-story__cell">Дубль</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Всего</div>
+                                <div class="order-story__cell"> 21042 руб.</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Добавлено</div>
+                                <div class="order-story__cell">09.12.2022</div>
+                            </div>
+
+                        </div>
+                        <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=173911" class="order-story__detail-button">Просмотр</a>
+                    </div>
+                    <div class="order-story__item">
+                        <div class="order-story__row order-story__row--head">
+                            <div class="order-story__cell">№ Заказа</div>
+                            <div class="order-story__cell">173058</div>
+                            <div class="order-story__cell order-story__cell--button"><div class="order-story__show-button">&nbsp;</div></div>
+                        </div>
+                        <div class="order-story__body-group order-story__body-group--hidden">
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Клиент</div>
+                                <div class="order-story__cell">Петр Адамчук</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Количество</div>
+                                <div class="order-story__cell">1</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Статус</div>
+                                <div class="order-story__cell">Отменен</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Всего</div>
+                                <div class="order-story__cell"> 5990 руб.</div>
+                            </div>
+                            <div class="order-story__row">
+                                <div class="order-story__cell">Добавлено</div>
+                                <div class="order-story__cell">24.11.2022</div>
+                            </div>
+
+                        </div>
+                        <a href="https://vsestulya.ru/index.php?route=account/order/info&amp;order_id=173058" class="order-story__detail-button">Просмотр</a>
+                    </div>
+                </div>
+                <div class="catalogue__pagination">
+                    <ul class="pagination">
+                        <li class="active"><span>1</span></li>
+                        <li>
+                            <a href="https://vsestulya.ru/c/stulya?page=2">2</a>
+                        </li>
+                        <li>
+                            <a href="https://vsestulya.ru/c/stulya?page=3">3</a>
+                        </li>
+                        <li class="dots"><span>...</span></li>
+                        <li>
+                            <a href="https://vsestulya.ru/c/stulya?page=115">12</a>
+                        </li>
+                        <li>
+                            <a href="https://vsestulya.ru/c/stulya?page=2">&gt;</a>
+                        </li>
+                    </ul>
+                </div>
+                <p>&nbsp;</p>
+                <div class="checkout__button-box">
+                    <a href="https://vsestulya.ru/my-account" class="btn btn--transparent">Продолжить
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-long-right" height="1em" viewBox="0 0 448 512">
+                            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path>
+                        </svg>
+
+                    </a>
+                </div>
+
+            </div>
+
+
+
+            @@include('./html/_account-sitebar.html')
+
+        </div>
+
+    </div>
+    @@include('./html/_subscribe.html')
+</main>
+@@include('./html/_footer.html')
+@@include('./html/_script.html')
+

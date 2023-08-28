@@ -1,0 +1,86 @@
+@@include('./html/_head.html',{"title": "Index", "description": "description"})
+
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main>
+    <div class="wrapper">
+        <nav class="breadcrumb">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Главная</a></li>
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Личный Кабинет </a></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__text">История заказов</span></li>
+            </ul>
+        </nav>
+        <h1 class="content__title">Возврат товара</h1>
+
+
+        <div class="account-container">
+            <div class="account-container__left">
+                <div id="sidebar-mob-btn" class="open__modal" data-modal="#account-menu">
+                    <a href="#sidebar-navigation" class="js-popup-call sidebar-mobile-btn">Меню</a>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr class="table__row table__row--hover">
+                            <td class="table__col ">№ Запроса на возврат</td>
+                            <td class="table__col">Статус</td>
+                            <td class="table__col">Добавлено</td>
+                            <td class="table__col ">№ Заказа</td>
+                            <td class="table__col">Клиент</td>
+                            <td class="table__col"></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="table__row table__row--hover">
+                            <td class="table__col ">62</td>
+                            <td class="table__col">Заказ в ожидании</td>
+                            <td class="table__col">01.07.2022</td>
+                            <td class="table__col ">158130</td>
+                            <td class="table__col">Петр Адамчук</td>
+                            <td class="table__col "><a href="https://vsestulya.ru/index.php?route=account/return/info&amp;return_id=62" title="Просмотр" class="btn">Просмотр</a></td>
+                        </tr>
+                        <tr class="table__row table__row--hover">
+                            <td class="table__col ">7</td>
+                            <td class="table__col">Заказ в ожидании</td>
+                            <td class="table__col">30.11.-0001</td>
+                            <td class="table__col ">131020</td>
+                            <td class="table__col">Инокентий Фдлттмуодь</td>
+                            <td class="table__col "><a href="https://vsestulya.ru/index.php?route=account/return/info&amp;return_id=7" title="Просмотр" class="btn">Просмотр</a></td>
+                        </tr>
+                        <tr class="table__row table__row--hover">
+                            <td class="table__col ">6</td>
+                            <td class="table__col">Рассматриваемый</td>
+                            <td class="table__col">30.11.2020</td>
+                            <td class="table__col ">530</td>
+                            <td class="table__col">Инокентий Фдлттмуодь</td>
+                            <td class="table__col "><a href="https://vsestulya.ru/index.php?route=account/return/info&amp;return_id=6" title="Просмотр" class="btn">Просмотр</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="checkout__button-box">
+                    <a href="https://vsestulya.ru/my-account" class="btn btn--transparent">Продолжить
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-long-right" height="1em" viewBox="0 0 448 512">
+                            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path>
+                        </svg>
+
+                    </a>
+                </div>
+
+            </div>
+
+
+
+            @@include('./html/_account-sitebar.html')
+
+        </div>
+
+    </div>
+    @@include('./html/_subscribe.html')
+</main>
+@@include('./html/_footer.html')
+@@include('./html/_script.html')
+

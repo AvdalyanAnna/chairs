@@ -1,0 +1,75 @@
+@@include('./html/_head.html',{"title": "Index", "description": "description"})
+
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main>
+    <div class="wrapper">
+        <nav class="breadcrumb">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Главная</a></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__text">Личный Кабинет</span></li>
+            </ul>
+        </nav>
+        <h1 class="content__title">Личный Кабинет</h1>
+
+
+        <div class="account-container">
+            <div class="account-container__left ">
+                <div id="sidebar-mob-btn" class="open__modal" data-modal="#account-menu">
+                    <a href="#sidebar-navigation" class="js-popup-call sidebar-mobile-btn">Меню</a>
+                </div>
+                <div class="account-form">
+                    <div class="account-form__col">
+                        <div class="account-logged">
+                            <div class="account-logged__box">
+                                <span class="account__title">Моя учетная запись</span>
+                                <ul class="account-logged__list">
+                                    <li class="account-logged__list-item"><a href="https://vsestulya.ru/edit-account">Изменить контактную информацию</a></li>
+                                    <li class="account-logged__list-item"><a href="https://vsestulya.ru/change-password">Изменить свой пароль</a></li>
+                                    <li class="account-logged__list-item"><a href="https://vsestulya.ru/address-book">Изменить мои адреса</a></li>
+                                    <li class="account-logged__list-item"><a href="https://vsestulya.ru/wishlist">Посмотреть закладки</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-form__col">
+                        <div class="account-logged">
+                            <div class="account-logged__box">
+                                <span class="account__title">Мои заказы</span>
+                                <ul class="account-logged__list">
+                                    <li class="account-logged__list-item"><a href="https://vsestulya.ru/order-history">История заказов</a></li>
+                                    <li class="account-logged__list-item"><a href="https://vsestulya.ru/downloads">Файлы для скачивания</a></li>
+                                    <li class="account-logged__list-item"><a href="https://vsestulya.ru/returns">Запросы на возврат</a></li>
+                                    <li class="account-logged__list-item"><a href="https://vsestulya.ru/transactions">История транзакций</a></li>
+                                    <li class="account-logged__list-item"><a href="https://vsestulya.ru/recurring">Периодические платежи</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-form__col">
+                        <div class="account-logged">
+                            <div class="account-logged__box">
+                                <span class="account__title">Подписка</span>
+                                <ul class="account-logged__list">
+                                    <li class="account-logged__list-item"><a href="https://vsestulya.ru/newsletter">Подписаться или отказаться от рассылки новостей</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            @@include('./html/_account-sitebar.html')
+
+        </div>
+
+    </div>
+    @@include('./html/_subscribe.html')
+</main>
+@@include('./html/_footer.html')
+@@include('./html/_script.html')
+
