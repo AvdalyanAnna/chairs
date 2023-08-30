@@ -1,0 +1,287 @@
+@@include('./html/_head.html',{"title": "Index", "description": "description"})
+
+<!-- Header -->
+@@include('./html/_header.html')
+
+<!-- Main Page -->
+<main class="main">
+    <div class="wrapper">
+        <nav class="breadcrumb">
+            <ul class="breadcrumb__list">
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Главная</a></li>
+                <li class="breadcrumb__item"><a href="#" class="breadcrumb__link">Корзина покупок</a></li>
+                <li class="breadcrumb__item"><span class="breadcrumb__text">Оформление заказа</span></li>
+            </ul>
+        </nav>
+        <h1 class="content__title">Оформление заказа</h1>
+        <div class="checkout-inner">
+            <div class="checkout-left">
+
+                <div class="checkout pass" id="step-1" style="/* display:none; */">
+                    <div class="checkout__title">
+                        <svg class="icon-location-pin" xmlns="http://www.w3.org/2000/svg" height="1em"
+                             viewBox="0 0 448 512">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                        </svg>
+                        <h3>Способ оформления заказа</h3>
+                    </div>
+                    <diviv class="checkout__inner" id="collapse-checkout-option" style="display: block;">
+                        <div class="account-form">
+                            <div class="account-form__col account-form__col--register">
+                                <span class="account__title">Новый покупатель</span>
+                                <div class="account-form__checkout js-custom-scroll custom-scroll_container custom-scroll_hidden-y">
+                                    <div class="custom-scroll_inner" >
+                                        <p>Варианты Оформления заказа</p>
+                                        <div class="modal-review-step__form-item__radio">
+                                            <input  type="radio" name="account" id="account-register" value="register" type="radio" value="0" checked="checked">
+                                            <label for="account-register">
+                                                <span class="radio"></span>
+                                                <span class="text-radio">Регистрация</span>
+                                            </label>
+                                        </div>
+                                        <div class="modal-review-step__form-item__radio">
+                                            <input type="radio" name="account" id="account-guest" value="guest" value="0" checked="checked">
+                                            <label for="account-guest">
+                                                <span class="radio"></span>
+                                                <span class="text-radio">Оформить заказ без регистрации</span>
+                                            </label>
+                                        </div>
+                                        <p>Создание учётной записи поможет делать покупки быстрее и удобнее, а так же
+                                            получать скидки как постоянный покупатель.</p>
+                                    </div>
+                                    <div class="custom-scroll_bar-y" style="height: 160px;"></div>
+                                </div>
+
+                                <div class="checkout__button-box">
+                                    <button type="button" class="btn btn--transparent" id="button-account">Продолжить
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon-arrow-long-right" height="1em" viewBox="0 0 448 512">
+                                            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="account-form__col">
+                                <span class="account__title">Зарегистрированный пользователь</span>
+                                <div class="account__input-box">
+                                    <input type="text" name="email" value="" placeholder="E-Mail" id="input-email"
+                                           required="">
+                                </div>
+                                <div class="account__input-box account__input-box--pass">
+                                    <input type="password" name="password" value="" placeholder="Пароль"
+                                           id="input-password" required="">
+                                    <a href="https://vsestulya.ru/forgot-password">Забыли пароль?</a>
+                                </div>
+                                <div class="account__check-box">
+                                    <input type="checkbox" id="checkbox1">
+                                    <label for="checkbox1">Запомнить</label>
+                                </div>
+                                <button type="button" value="Войти" id="button-login" class="btn">Войти</button>
+                            </div>
+                        </div>
+                    </diviv>
+                </div>
+                <div class="checkout pass" id="step-2" style="display:block;">
+                    <div class="checkout__title">
+                        <svg class="icon-v-card" version="1.1" id="V-card" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<path d="M19,3H1C0.447,3,0,3.447,0,4v12c0,0.552,0.447,1,1,1h18c0.553,0,1-0.448,1-1V4C20,3.448,19.553,3,19,3z
+	 M13,7h4v1h-4V7z M11,14.803c-0.129-0.102-0.293-0.201-0.529-0.303c-1.18-0.508-2.961-1.26-2.961-2.176
+	c0-0.551,0.359-0.371,0.518-1.379c0.066-0.418,0.385-0.007,0.445-0.961c0-0.38-0.174-0.475-0.174-0.475s0.088-0.562,0.123-0.996
+	c0.036-0.453-0.221-1.8-1.277-2.097C6.959,6.228,6.834,6.305,7.403,6.004C6.159,5.945,5.869,6.596,5.207,7.075
+	C4.643,7.495,4.49,8.16,4.518,8.514C4.555,8.947,4.643,9.51,4.643,9.51S4.468,9.604,4.468,9.984c0.061,0.954,0.38,0.543,0.445,0.961
+	c0.158,1.008,0.519,0.828,0.519,1.379c0,0.916-1.781,1.668-2.961,2.176C2.268,14.588,2.122,14.673,2,14.76V5h9V14.803z M18,11h-5v-1
+	h5V11z"></path>
+</svg>
+                        <h3>Покупатель</h3>
+                    </div>
+                    <div class="checkout__inner" id="collapse-payment-address" style="display: block;">
+                        <div id="account">
+                        <div class="checkout__input-row">
+                            <div class="checkout__radio-box form-group" style="display: block;">
+                                <span class="checkout__input-box-title required">Тип бизнеса</span>
+
+                                <div class="modal-review-step__form-item__radio">
+                                    <input  name="customer_group_id" id="customer_group-1-0" type="radio" value="1" checked="checked">
+                                    <label for="customer_group-1-0">
+                                        <span class="radio"></span>
+                                        <span class="text-radio">Физическое лицо</span>
+                                    </label>
+                                </div>
+                                <div class="modal-review-step__form-item__radio">
+                                    <input  name="customer_group_id" id="customer_group-2-1" type="radio" value="2">
+                                    <label for="customer_group-2-1">
+                                        <span class="radio"></span>
+                                        <span class="text-radio">Юридическое лицо</span>
+                                    </label>
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <div class="display-block checkout__input-box form-group">
+                                <span class="checkout__input-box-title required">Фамилия</span>
+                                <input type="text" name="lastname" value="" placeholder="Фамилия" id="input-payment-lastname">
+                            </div>
+                            <div style="display:none" class="display-block checkout__input-box form-group">
+                                <span class="checkout__input-box-title ">Страна</span>
+                                <div class="select">
+                                    <select name="country_id" id="input-payment-country" class="select--squer select select-checkout" data-placeholder="Страна" style="width: 100%;">
+                                        <option value=""> --- Выберите --- </option>
+                                        <option value="109">Казахстан</option>
+                                        <option value="176">Российская Федерация</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="display-block checkout__input-box form-group">
+                                <span class="checkout__input-box-title required">Имя</span>
+                                <input type="text" name="firstname" value="" placeholder="Имя" id="input-payment-firstname">
+                            </div>
+                            <div style="display:none" class="display-block checkout__input-box form-group">
+                                <span class="checkout__input-box-title ">Регион / Область</span>
+                                <div class="select">
+                                    <select name="zone_id" id="input-payment-zone" class="select--squer select select-checkout" data-placeholder="Регион / Область" style="width: 100%;"><option value=""> --- Выберите --- </option><option value="0" selected="selected"> --- Не выбрано --- </option></select>
+                                </div>
+                            </div>
+                            <div id="payment-custom-field1" class="display-block checkout__input-box form-group custom-field" data-sort="5" style="display: none;">
+                                <span class="checkout__input-box-title">Организация</span>
+                                <input type="text" name="custom_field[account][1]" value="" placeholder="Организация" id="input-payment-custom-field1">
+                            </div><div style="display:none" class="display-block checkout__input-box form-group">
+                            <span class="checkout__input-box-title ">Город</span>
+                            <input type="text" name="city" value="" placeholder="Город" id="input-payment-city">
+                        </div>
+                            <div id="payment-custom-field2" class="display-block checkout__input-box form-group custom-field" data-sort="7" style="display: none;">
+                                <span class="checkout__input-box-title">ИНН</span>
+                                <input type="text" name="custom_field[account][2]" value="" placeholder="ИНН" id="input-payment-custom-field2">
+                            </div><div style="display:none" class="display-block checkout__input-box form-group">
+                            <span class="checkout__input-box-title ">Факс</span>
+                            <input type="text" name="fax" value="" placeholder="Факс" id="input-payment-fax">
+                        </div>
+                            <div style="display:none" class="display-block checkout__input-box form-group">
+                                <span class="checkout__input-box-title ">Компания</span>
+                                <input type="text" name="company" value="" placeholder="Компания" id="input-payment-company">
+                            </div>
+                            <div style="display:none" class="display-block checkout__input-box form-group">
+                                <span class="checkout__input-box-title ">Индекс</span>
+                                <input type="text" name="postcode" value="" placeholder="Индекс" id="input-payment-postcode">
+                            </div>
+                            <div id="payment-custom-field3" class="display-block checkout__input-box form-group custom-field" data-sort="11" style="display: none;">
+                                <span class="checkout__input-box-title">БИК</span>
+                                <input type="text" name="custom_field[account][3]" value="" placeholder="БИК" id="input-payment-custom-field3">
+                            </div><div style="display:none" class="display-block checkout__input-box form-group">
+                            <span class="checkout__input-box-title ">Адрес</span>
+                            <input type="text" name="address_1" value="" placeholder="Адрес" id="input-payment-address-1">
+                        </div>
+                            <div id="payment-custom-field4" class="display-block checkout__input-box form-group custom-field" data-sort="13" style="display: none;">
+                                <span class="checkout__input-box-title">Расчётный счёт</span>
+                                <input type="text" name="custom_field[account][4]" value="" placeholder="Расчётный счёт" id="input-payment-custom-field4">
+                            </div><div style="display:none" class="display-block checkout__input-box form-group">
+                            <span class="checkout__input-box-title ">Адрес 2</span>
+                            <input type="text" name="address_2" value="" placeholder="Адрес 2" id="input-payment-address-2">
+                        </div>
+                            <div class="display-block checkout__input-box form-group">
+                                <span class="checkout__input-box-title ">E-Mail</span>
+                                <input type="text" name="email" value="" placeholder="E-Mail" id="input-payment-email">
+                            </div>
+                            <div class="display-block checkout__input-box form-group">
+                                <span class="checkout__input-box-title required">Телефон</span>
+                                <input type="text" name="telephone" value="" placeholder="Телефон" id="input-payment-telephone">
+                            </div>
+                        </div>
+                    </div>
+
+                        <div id="address">
+                            <div class="checkout__input-row">
+
+
+                            </div>
+                        </div>
+                        <div class="checkout__checkbox" style="display: none;">
+                            <div class="checkout__checkbox-box-row">
+                                <div class="checkout__checkbox-item">
+                                    <input name="shipping_address" id="shipping_address" type="checkbox" value="1" checked="checked">
+                                    <label for="shipping_address">Мой адрес доставки совпадает с платежным.</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="checkout__button-box">
+                            <a href="#" class="btn btn--empty" id="button-guest-b">Назад</a>
+                            <button type="button" class="btn btn--transparent" id="button-guest">Продолжить<svg class="icon-arrow-long-right"><use xlink:href="#arrow-long-right"></use></svg></button>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="checkout pass" id="step-4">
+                    <div id="overlay" class=""></div>
+                    <div class="checkout__title">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M384 192c0 87.4-117 243-168.3 307.2c-12.3 15.3-35.1 15.3-47.4 0C117 435 0 279.4 0 192C0 86 86 0 192 0S384 86 384 192z"/></svg>
+                        <h3>Доставка и оплата</h3>
+                    </div>
+                    <div class="checkout__inner" id="collapse-shipping-method" style="display: block;"><style>
+                        .suggestions-wrapper {
+                            width: 98%;
+                        }
+                    </style>
+                        <div id="visible_address">
+                            <!--<span class="checkout__input-box-title required">Адрес доставки</span>-->
+                            <h3 class="checkout__h3">Населенный пункт</h3>
+                            <div class="checkout__input-row">
+                                <input type="hidden" id="address_delivery" name="address_delivery" value=", , , кв ">
+                                <input type="hidden" id="region_kladr_id" name="region_kladr_id" value="">
+                                <input type="hidden" id="city_kladr_id" name="city_kladr_id" value="">
+                                <input type="hidden" id="street_kladr_id" name="street_kladr_id" value="">
+                                <input id="address_city" name="address_city" type="text" value="" placeholder="Населенный пункт" autocomplete="new-password" autocorrect="off" autocapitalize="off" spellcheck="false" class="suggestions-input" style="box-sizing: border-box;"><div class="suggestions-wrapper"><div class="suggestions-suggestions" style="display: none;"></div></div>
+                                <br><br>
+                            </div>
+                        </div> </div>
+                </div>
+            </div>
+
+
+            <div class="checkout-right">
+                <div class="cart-sidebar">
+                    <div class="cart-sidebar__title"><h3>Корзина</h3><a href="https://vsestulya.ru/cart">Изменить</a>
+                    </div>
+                    <ul class="cart__list">
+                        <li class="cart__list-item">
+                            <div class="cart__img">
+                                <a href="https://vsestulya.ru/c/skladnye-stulya/raskladnoj-stul-dzhingo"><img
+                                        src="https://vsestulya.ru/image/cache/catalog/Stulya/SKLADNYE-Stulya/DZHINGO-(KOMFORT)/djingo-komfort-01-150x150.jpg"
+                                        alt="Раскладной стул ДЖИНГО"></a>
+                            </div>
+                            <div class="cart__descr">
+                                <span class="cart__article">Стул Комфорт Раскладной</span>
+                                <a href="https://vsestulya.ru/c/skladnye-stulya/raskladnoj-stul-dzhingo"
+                                   class="cart__model">Раскладной стул ДЖИНГО</a>
+                                <span class="cart__price"> 1850 руб.</span>
+                                <span class="cart__count">1 шт.</span>
+                                <span class="cart__count">Цвет обивки Бежевый</span>
+                                <span class="cart__count">Цвет каркаса Черный</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="cart-sidebar__bottom">
+																																		<span class="cart-sidebar__info"
+                                                                                                                                              id="cart-sub-total-summ">
+									Сумма <span> 1850 руб.</span>
+								</span>
+                        <span class="cart-sidebar__total">Итого <span>1850 руб.</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @@include('./html/_subscribe.html')
+
+
+</main>
+
+@@include('./html/_footer.html')
+@@include('./html/_script.html')
+
